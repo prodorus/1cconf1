@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Запрос</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстатокРасчеты</dataPath>
+			<field>ОстатокРасчеты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По регистрам расчетов</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстатокХозрасчетный</dataPath>
+			<field>ОстатокХозрасчетный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По счетам учета</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетУчета</dataPath>
+			<field>СчетУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет учета</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументРасчетов</dataPath>
+			<field>ДокументРасчетов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ расчетов</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстатокВзаиморасчеты</dataPath>
+			<field>ОстатокВзаиморасчеты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По регистру "Взаиморасчеты с контрагентами"</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сделка</dataPath>
+			<field>Сделка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделка</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВсеДанные.Организация КАК Организация,
+	ВсеДанные.Контрагент КАК Контрагент,
+	ВсеДанные.ДоговорКонтрагента КАК ДоговорКонтрагента,
+	ВсеДанные.ОстатокХозрасчетный КАК ОстатокХозрасчетный,
+	ВсеДанные.ОстатокРасчеты КАК ОстатокРасчеты,
+	ВсеДанные.СчетУчета КАК СчетУчета,
+	ВсеДанные.ДокументРасчетов КАК ДокументРасчетов,
+	ВсеДанные.ОстатокВзаиморасчеты КАК ОстатокВзаиморасчеты,
+	ВсеДанные.Сделка КАК Сделка
+{ВЫБРАТЬ
+	Организация.*,
+	Контрагент.*,
+	ДоговорКонтрагента.*,
+	ОстатокХозрасчетный,
+	ОстатокРасчеты,
+	ОстатокВзаиморасчеты,
+	СчетУчета.*,
+	Сделка.*,
+	ДокументРасчетов.*}
+ИЗ
+	(ВЫБРАТЬ
+		ХозрасчетныйОстатки.Организация КАК Организация,
+		ВЫРАЗИТЬ(ХозрасчетныйОстатки.Субконто1.Владелец КАК Справочник.Контрагенты) КАК Контрагент,
+		ВЫРАЗИТЬ(ХозрасчетныйОстатки.Субконто1 КАК Справочник.ДоговорыКонтрагентов) КАК ДоговорКонтрагента,
+		ХозрасчетныйОстатки.СуммаОстаток КАК ОстатокХозрасчетный,
+		NULL КАК ДокументРасчетов,
+		0 КАК ОстатокРасчеты,
+		ХозрасчетныйОстатки.Счет КАК СчетУчета,
+		NULL КАК Сделка,
+		0 КАК ОстатокВзаиморасчеты
+	ИЗ
+		РегистрБухгалтерии.Хозрасчетный.Остатки(
+				{(&amp;Период)},
+				Счет.ВидыСубконто.ВидСубконто = &amp;ВидСубконтоДоговоры,
+				&amp;ВидСубконтоДоговоры,
+				(Субконто1.ВидДоговора В (&amp;ВидыДоговоровПокупатели)
+						И &amp;ВидРасчетов = 0
+					ИЛИ Субконто1.ВидДоговора В (&amp;ВидыДоговоровПоставщики)
+						И &amp;ВидРасчетов &lt;&gt; 0)
+					И Валюта.Код ЕСТЬ NULL 
+					И Субконто1.ВалютаВзаиморасчетов = &amp;ВалютаРеглУчета
+					) КАК ХозрасчетныйОстатки
+	{ГДЕ
+		ХозрасчетныйОстатки.Счет.* КАК СчетУчета}
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		РасчетыПоРеализацииВУсловныхЕдиницахОрганизацииОстатки.Организация,
+		РасчетыПоРеализацииВУсловныхЕдиницахОрганизацииОстатки.Контрагент,
+		РасчетыПоРеализацииВУсловныхЕдиницахОрганизацииОстатки.ДоговорКонтрагента,
+		0,
+		РасчетыПоРеализацииВУсловныхЕдиницахОрганизацииОстатки.Документ,
+		-РасчетыПоРеализацииВУсловныхЕдиницахОрганизацииОстатки.СуммаРегОстаток,
+		РасчетыПоРеализацииВУсловныхЕдиницахОрганизацииОстатки.СчетОплаты,
+		РасчетыПоРеализацииВУсловныхЕдиницахОрганизацииОстатки.Сделка,
+		0
+	ИЗ
+		РегистрНакопления.РасчетыПоРеализацииВУсловныхЕдиницахОрганизации.Остатки(
+				{(&amp;Период)},
+				(ДоговорКонтрагента.ВидДоговора В (&amp;ВидыДоговоровПокупатели)
+						И &amp;ВидРасчетов = 0)
+					И ДоговорКонтрагента.ВалютаВзаиморасчетов = &amp;ВалютаРеглУчета) КАК РасчетыПоРеализацииВУсловныхЕдиницахОрганизацииОстатки
+	{ГДЕ
+		РасчетыПоРеализацииВУсловныхЕдиницахОрганизацииОстатки.СчетОплаты.* КАК СчетУчета,
+		РасчетыПоРеализацииВУсловныхЕдиницахОрганизацииОстатки.Сделка.*}
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		РасчетыПоПриобретениюВУсловныхЕдиницахОрганизацииОстатки.Организация,
+		РасчетыПоПриобретениюВУсловныхЕдиницахОрганизацииОстатки.Контрагент,
+		РасчетыПоПриобретениюВУсловныхЕдиницахОрганизацииОстатки.ДоговорКонтрагента,
+		0,
+		РасчетыПоПриобретениюВУсловныхЕдиницахОрганизацииОстатки.Документ,
+		РасчетыПоПриобретениюВУсловныхЕдиницахОрганизацииОстатки.СуммаРегОстаток,
+		РасчетыПоПриобретениюВУсловныхЕдиницахОрганизацииОстатки.СчетОплаты,
+		РасчетыПоПриобретениюВУсловныхЕдиницахОрганизацииОстатки.Сделка,
+		0
+	ИЗ
+		РегистрНакопления.РасчетыПоПриобретениюВУсловныхЕдиницахОрганизации.Остатки(
+				{(&amp;Период)},
+				(ДоговорКонтрагента.ВидДоговора В (&amp;ВидыДоговоровПоставщики)
+						И &amp;ВидРасчетов &lt;&gt; 0)
+					И ДоговорКонтрагента.ВалютаВзаиморасчетов = &amp;ВалютаРеглУчета) КАК РасчетыПоПриобретениюВУсловныхЕдиницахОрганизацииОстатки
+	{ГДЕ
+		РасчетыПоПриобретениюВУсловныхЕдиницахОрганизацииОстатки.СчетОплаты.* КАК СчетУчета,
+		РасчетыПоПриобретениюВУсловныхЕдиницахОрганизацииОстатки.Сделка.*}
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ВзаиморасчетыСКонтрагентамиОстатки.Организация,
+		ВзаиморасчетыСКонтрагентамиОстатки.Контрагент,
+		ВзаиморасчетыСКонтрагентамиОстатки.ДоговорКонтрагента,
+		0,
+		NULL,
+		0,
+		NULL,
+		ВзаиморасчетыСКонтрагентамиОстатки.Сделка,
+		ВзаиморасчетыСКонтрагентамиОстатки.СуммаВзаиморасчетовОстаток
+	ИЗ
+		РегистрНакопления.ВзаиморасчетыСКонтрагентами.Остатки(
+				{(&amp;Период)},
+				Организация.ОтражатьВРегламентированномУчете
+					И ДоговорКонтрагента.ВалютаВзаиморасчетов = &amp;ВалютаРеглУчета
+					И (ДоговорКонтрагента.ВидДоговора В (&amp;ВидыДоговоровПокупатели)
+							И &amp;ВидРасчетов = 0
+						ИЛИ ДоговорКонтрагента.ВидДоговора В (&amp;ВидыДоговоровПоставщики)
+							И &amp;ВидРасчетов &lt;&gt; 0)) КАК ВзаиморасчетыСКонтрагентамиОстатки
+	{ГДЕ
+		ВзаиморасчетыСКонтрагентамиОстатки.Сделка.*}) КАК ВсеДанные
+{ГДЕ
+	ВсеДанные.Организация.*,
+	ВсеДанные.Контрагент.*,
+	ВсеДанные.ДоговорКонтрагента.*,
+	ВсеДанные.ОстатокХозрасчетный,
+	ВсеДанные.ОстатокРасчеты,
+	ВсеДанные.ОстатокВзаиморасчеты}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<calculatedField>
+		<dataPath>РасхождениеХозрасчетный_НДС</dataPath>
+		<expression>ОстатокХозрасчетный - ОстатокНДС</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождение между счетами учета и регистрами НДС</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>РасхождениеХозрасчетный_Расчеты</dataPath>
+		<expression>ОстатокХозрасчетный - ОстатокРасчеты</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождение между счетами учета и регистрами расчетов</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>РасхождениеХозрасчетный_Взаиморасчеты</dataPath>
+		<expression>ОстатокХозрасчетный - ОстатокВзаиморасчеты</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождение между счетами учета и регистром "Взаиморасчеты с контрагентами"</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>РасхождениеРасчеты_Взаиморасчеты</dataPath>
+		<expression>ОстатокРасчеты - ОстатокВзаиморасчеты</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождение между регистрами расчетов и регистром "Взаиморасчеты с контрагентами"</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<totalField>
+		<dataPath>РасхождениеХозрасчетный_НДС</dataPath>
+		<expression>Сумма(РасхождениеХозрасчетный_НДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОстатокРасчеты</dataPath>
+		<expression>Сумма(ОстатокРасчеты)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОстатокХозрасчетный</dataPath>
+		<expression>Сумма(ОстатокХозрасчетный)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РасхождениеХозрасчетный_Расчеты</dataPath>
+		<expression>Сумма(РасхождениеХозрасчетный_Расчеты)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РасхождениеРасчеты_Взаиморасчеты</dataPath>
+		<expression>Сумма(РасхождениеРасчеты_Взаиморасчеты)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РасхождениеХозрасчетный_Взаиморасчеты</dataPath>
+		<expression>Сумма(РасхождениеХозрасчетный_Взаиморасчеты)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОстатокВзаиморасчеты</dataPath>
+		<expression>Сумма(ОстатокВзаиморасчеты)</expression>
+	</totalField>
+	<parameter>
+		<name>ВидСубконтоДоговоры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид субконто договоры</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.Договоры</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВидыДоговоровПокупатели</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Виды договоров покупатели</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыДоговоровКонтрагентов</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыДоговоровКонтрагентов.СПокупателем</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыДоговоровКонтрагентов.СКомиссионером</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВидыДоговоровПоставщики</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Виды договоров поставщики</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыДоговоровКонтрагентов</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыДоговоровКонтрагентов.СПоставщиком</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыДоговоровКонтрагентов.СКомитентом</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВалютаРеглУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта регл учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Валюты.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВидРасчетов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид расчетов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:decimal">0</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С покупателями</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С поставщиками</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстатокХозрасчетный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстатокРасчеты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстатокВзаиморасчеты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РасхождениеХозрасчетный_НДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РасхождениеХозрасчетный_Расчеты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РасхождениеРасчеты_Взаиморасчеты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РасхождениеХозрасчетный_Взаиморасчеты</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ДоговорКонтрагента</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:outputParameters>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+								<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+							</dcscor:item>
+						</dcsset:outputParameters>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

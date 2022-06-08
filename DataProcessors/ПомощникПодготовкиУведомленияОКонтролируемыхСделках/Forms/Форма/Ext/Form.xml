@@ -1,0 +1,975 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОрганизация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОрганизацияРасширеннаяПодсказка" id="187"/>
+			<ChildItems>
+				<InputField name="Организация" id="1">
+					<DataPath>Объект.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>50</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="188"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОтчетныйГод" id="3">
+					<DataPath>Объект.ОтчетныйГод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<SpinButton>true</SpinButton>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=4; ЧГ=0</v8:content>
+						</v8:item>
+					</EditFormat>
+					<MinValue xsi:type="xs:decimal">2000</MinValue>
+					<MaxValue xsi:type="xs:decimal">2100</MaxValue>
+					<ContextMenu name="ОтчетныйГодКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ОтчетныйГодРасширеннаяПодсказка" id="189"/>
+					<Events>
+						<Event name="OnChange">ОтчетныйГодПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="Справка" id="111">
+					<Type>Hyperlink</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="190"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСписокУведомлений" id="86">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список уведомлений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>80</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСписокУведомленийРасширеннаяПодсказка" id="191"/>
+			<ChildItems>
+				<RadioButtonField name="ТипУведомления" id="92">
+					<DataPath>ТипУведомления</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомление</v8:content>
+						</v8:item>
+					</Title>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Первичное</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Корректировка</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ТипУведомленияКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ТипУведомленияРасширеннаяПодсказка" id="192"/>
+					<Events>
+						<Event name="OnChange">ТипУведомленияПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<InputField name="НомерКорректировки" id="94">
+					<DataPath>НомерКорректировки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Корректировка</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<SpinButton>true</SpinButton>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<MaxValue xsi:type="xs:decimal">999</MaxValue>
+					<ContextMenu name="НомерКорректировкиКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="НомерКорректировкиРасширеннаяПодсказка" id="193"/>
+					<Events>
+						<Event name="OnChange">НомерКорректировкиПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаФормированиеСпискаСделок" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа: Формирование списка сделок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа: Предварительные настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФормированиеСпискаСделокРасширеннаяПодсказка" id="194"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗаголовокПредварительныеНастройки" id="58">
+					<Width>80</Width>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1. Формирование списка контролируемых сделок в соответствии с п.1 ст.105.14 НК РФ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЗаголовокПредварительныеНастройкиКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ДекорацияЗаголовокПредварительныеНастройкиРасширеннаяПодсказка" id="195"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияПредварительныеНастройки" id="68">
+					<Width>80</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контролю могут подлежать сделки с взаимозависимыми лицами, а также: сделки с независимым посредником (пп.1), сделки в области внешней торговли товарами мировой биржевой торговли (пп.2), сделки с контрагентами, зарегистрированными в офшорах (пп.3)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПредварительныеНастройкиКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ДекорацияПредварительныеНастройкиРасширеннаяПодсказка" id="196"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаНастройки" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа "Настройки"</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сведения об организации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="197"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройки1" id="108">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройки1РасширеннаяПодсказка" id="198"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияВзаимозависимыеЛица" id="9">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Взаимозависимые лица</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ДекорацияВзаимозависимыеЛицаКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="ДекорацияВзаимозависимыеЛицаРасширеннаяПодсказка" id="199"/>
+									<Events>
+										<Event name="Click">ДекорацияВзаимозависимыеЛицаНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияКонтрагентыНеРФ" id="11">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контрагенты, зарегистрированные за пределами РФ</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ДекорацияКонтрагентыНеРФКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ДекорацияКонтрагентыНеРФРасширеннаяПодсказка" id="200"/>
+									<Events>
+										<Event name="Click">ДекорацияКонтрагентыОфшорыНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияТоварыМировойБиржевойТорговли" id="13">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары мировой биржевой торговли</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ДекорацияТоварыМировойБиржевойТорговлиКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ДекорацияТоварыМировойБиржевойТорговлиРасширеннаяПодсказка" id="201"/>
+									<Events>
+										<Event name="Click">ДекорацияТоварыМировойБиржевойТорговлиНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<LabelField name="ТекстНастройкиФормированияСпискаСделок" id="133">
+					<DataPath>ТекстНастройкиФормированияСпискаСделок</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="ТекстНастройкиФормированияСпискаСделокКонтекстноеМеню" id="134"/>
+					<ExtendedTooltip name="ТекстНастройкиФормированияСпискаСделокРасширеннаяПодсказка" id="202"/>
+					<Events>
+						<Event name="Click">ТекстНастройкиФормированияСпискаСделокНажатие</Event>
+					</Events>
+				</LabelField>
+				<UsualGroup name="ГруппаСделки" id="115">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сделки (группа)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сделки (группа)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСделкиРасширеннаяПодсказка" id="203"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗаполнениеСпискаСделок" id="100">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заполнение списка сделок</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заполнение списка сделок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗаполнениеСпискаСделокРасширеннаяПодсказка" id="204"/>
+							<ChildItems>
+								<Button name="КомандаСформироватьСписокСделок" id="99">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаСформироватьСписокСделок</CommandName>
+									<ExtendedTooltip name="КомандаСформироватьСписокСделокРасширеннаяПодсказка" id="205"/>
+								</Button>
+								<LabelField name="ПредставлениеСделок" id="116">
+									<DataPath>ПредставлениеСделок</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<TextColor>0:4cf793cf-87d8-460a-b7dc-198493035595</TextColor>
+									<ContextMenu name="ПредставлениеСделокКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ПредставлениеСделокРасширеннаяПодсказка" id="206"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПрочиеКонтролируемыеСделки" id="112">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прочие контролируемые сделки (группа)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прочие контролируемые сделки (группа элементов)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПрочиеКонтролируемыеСделкиРасширеннаяПодсказка" id="207"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияСписокПрочихКонтролируемыхСделок" id="113">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Включение прочих сделок в состав контролируемых</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ДекорацияСписокПрочихКонтролируемыхСделокКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ДекорацияСписокПрочихКонтролируемыхСделокРасширеннаяПодсказка" id="208"/>
+									<Events>
+										<Event name="Click">ДекорацияСписокПрочихКонтролируемыхСделокНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияСписокСделок" id="118">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список контролируемых сделок</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ДекорацияСписокСделокКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ДекорацияСписокСделокРасширеннаяПодсказка" id="209"/>
+							<Events>
+								<Event name="Click">ДекорацияСписокСделокНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКонтролируемыеСделки" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контролируемые сделки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контролируемые сделки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКонтролируемыеСделкиРасширеннаяПодсказка" id="210"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗаголовокКонтролируемыеСделки" id="60">
+					<Width>80</Width>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>2. Проверка данных для подготовки уведомления о контролируемых сделках</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЗаголовокКонтролируемыеСделкиКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ДекорацияЗаголовокКонтролируемыеСделкиРасширеннаяПодсказка" id="211"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияКонтролируемыеСделкиОписание" id="70">
+					<Width>80</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверьте и уточните дополнительные сведения, необходимые для формирования уведомления</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияКонтролируемыеСделкиОписаниеКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ДекорацияКонтролируемыеСделкиОписаниеРасширеннаяПодсказка" id="212"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаНастройкиОбъектовСделок" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа: Настройки объектов контролируемых сделок</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа: Настройки объектов контролируемых сделок</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиОбъектовСделокРасширеннаяПодсказка" id="213"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияСведенияОбОрганизации" id="7">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения об организации</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ДекорацияСведенияОбОрганизацииКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ДекорацияСведенияОбОрганизацииРасширеннаяПодсказка" id="214"/>
+							<Events>
+								<Event name="Click">ДекорацияСведенияОбОрганизацииНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияСведенияОВзаимозависимыхЛицах" id="104">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения о взаимозависимых лицах</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ДекорацияСведенияОВзаимозависимыхЛицахКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="ДекорацияСведенияОВзаимозависимыхЛицахРасширеннаяПодсказка" id="215"/>
+							<Events>
+								<Event name="Click">ДекорацияСведенияОВзаимозависимыхЛицахНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<Button name="КнопкаОтчетНастройкиКонтрагентов" id="90">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.КомандаОтчетНастройкиКонтрагентов</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения о контрагентах контролируемых сделок</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаОтчетНастройкиКонтрагентовРасширеннаяПодсказка" id="216"/>
+						</Button>
+						<LabelDecoration name="ДекорацияНастройкиПредметов" id="33">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения о предметах контролируемых сделок</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ДекорацияНастройкиПредметовКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ДекорацияНастройкиПредметовРасширеннаяПодсказка" id="217"/>
+							<Events>
+								<Event name="Click">ДекорацияНастройкиПредметовНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУведомление" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формирование уведомления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа: Этап 3 (Формирование уведомления)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУведомлениеРасширеннаяПодсказка" id="218"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗаголовокУведомление" id="63">
+					<Width>80</Width>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>3. Подготовка уведомления о контролируемых сделках</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЗаголовокУведомлениеКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ДекорацияЗаголовокУведомлениеРасширеннаяПодсказка" id="219"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияУведомление" id="72">
+					<Width>80</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В уведомление попадут только те контролируемые сделки, которые необходимо включать в уведомление согласно  ст.105.14 НК РФ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияУведомлениеКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ДекорацияУведомлениеРасширеннаяПодсказка" id="220"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияСведенияГраницахВключения" id="101">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Границы включения сделок в уведомление</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДекорацияСведенияГраницахВключенияКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="ДекорацияСведенияГраницахВключенияРасширеннаяПодсказка" id="221"/>
+					<Events>
+						<Event name="Click">ДекорацияСведенияГраницахВключенияНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаСписокКонтролируемыхСделок" id="62">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сведения об организации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сведения об организации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСписокКонтролируемыхСделокРасширеннаяПодсказка" id="222"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияСписокКонтролируемыхСделок" id="54">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контролируемые сделки для включения в уведомление</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ДекорацияСписокКонтролируемыхСделокКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ДекорацияСписокКонтролируемыхСделокРасширеннаяПодсказка" id="223"/>
+							<Events>
+								<Event name="Click">ДекорацияСписокКонтролируемыхСделокНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройкиЗаполнение" id="129">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки заполнения уведомления (группа)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки заполнения уведомления (группа)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиЗаполнениеРасширеннаяПодсказка" id="224"/>
+					<ChildItems>
+						<LabelField name="ТекстНастройкиЗаполненияУведомления" id="135">
+							<DataPath>ТекстНастройкиЗаполненияУведомления</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ТекстНастройкиЗаполненияУведомленияКонтекстноеМеню" id="136"/>
+							<ExtendedTooltip name="ТекстНастройкиЗаполненияУведомленияРасширеннаяПодсказка" id="225"/>
+							<Events>
+								<Event name="Click">ТекстНастройкиЗаполненияУведомленияНажатие</Event>
+							</Events>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаУведомлениеПоКонтролируемымСделкам" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сведения об организации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сведения об организации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУведомлениеПоКонтролируемымСделкамРасширеннаяПодсказка" id="226"/>
+					<ChildItems>
+						<Button name="КомандаЗаполнитьУведомление" id="103">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаЗаполнитьУведомление</CommandName>
+							<ExtendedTooltip name="КомандаЗаполнитьУведомлениеРасширеннаяПодсказка" id="227"/>
+						</Button>
+						<LabelField name="ПредставлениеУведомления" id="109">
+							<DataPath>ПредставлениеУведомления</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ПредставлениеУведомленияКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="ПредставлениеУведомленияРасширеннаяПодсказка" id="228"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСоставУведомления" id="124">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состав уведомления</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состав уведомления</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСоставУведомленияРасширеннаяПодсказка" id="229"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияСоставУведомления" id="125">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состав уведомления (листы 1А и 1Б)</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ДекорацияСоставУведомленияКонтекстноеМеню" id="126"/>
+							<ExtendedTooltip name="ДекорацияСоставУведомленияРасширеннаяПодсказка" id="230"/>
+							<Events>
+								<Event name="Click">ДекорацияСоставУведомленияНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияАнализУведомления" id="127">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Анализ уведомления</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ДекорацияАнализУведомленияКонтекстноеМеню" id="128"/>
+							<ExtendedTooltip name="ДекорацияАнализУведомленияРасширеннаяПодсказка" id="231"/>
+							<Events>
+								<Event name="Click">ДекорацияАнализУведомленияНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаУведомлениеПоКонтролируемымСделкамДействие" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать уведомления</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сведения об организации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУведомлениеПоКонтролируемымСделкамДействиеРасширеннаяПодсказка" id="232"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУведомлениеПоКонтролируемымСделкам502" id="186">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа уведомление по контролируемым сделкам502</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаУведомлениеПоКонтролируемымСделкам502РасширеннаяПодсказка" id="233"/>
+							<ChildItems>
+								<Button name="КомандаВыгрузитьУведомлениеВXML502" id="132">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаВыгрузитьУведомлениеВXML502</CommandName>
+									<ExtendedTooltip name="КомандаВыгрузитьУведомлениеВXML502РасширеннаяПодсказка" id="234"/>
+								</Button>
+								<Button name="КомандаВыгрузитьУведомлениеВXML" id="81">
+									<Type>UsualButton</Type>
+									<Width>40</Width>
+									<CommandName>Form.Command.КомандаВыгрузитьУведомлениеВXML</CommandName>
+									<ExtendedTooltip name="КомандаВыгрузитьУведомлениеВXMLРасширеннаяПодсказка" id="235"/>
+								</Button>
+								<Button name="КомандаПечатьУведомленияОКонтролируемыхСделках" id="80">
+									<Type>UsualButton</Type>
+									<Width>4</Width>
+									<CommandName>Form.Command.КомандаПечатьУведомленияОКонтролируемыхСделках</CommandName>
+									<ExtendedTooltip name="КомандаПечатьУведомленияОКонтролируемыхСделкахРасширеннаяПодсказка" id="236"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникПодготовкиУведомленияОКонтролируемыхСделках</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТипУведомления" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерКорректировки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер корректировки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеСделок" id="5">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СделкиСуществуют" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделки существуют</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеУведомления" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УведомлениеЗаполнено" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомление заполнено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиПредупреждений" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки предупреждений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТекстНастройкиФормированияСпискаСделок" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст настройки формирования списка сделок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстНастройкиЗаполненияУведомления" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки заполнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаПечатьУведомленияОКонтролируемыхСделках" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомление о контролируемых сделках</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать уведомления о контролируемых сделках</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаПечатьУведомленияОКонтролируемыхСделках</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="КомандаВыгрузитьУведомлениеВXML" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в XML 5.01 (без разделения)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить уведомление В XML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыгрузитьУведомлениеВXML</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаОтчетНастройкиКонтрагентов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по настройкам контрагентов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтчетНастройкиКонтрагентовНажатие</Action>
+		</Command>
+		<Command name="КомандаСформироватьСписокСделок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать список сделок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать список сделок по данным учета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьСписокСделок</Action>
+		</Command>
+		<Command name="КомандаЗаполнитьУведомление" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить уведомление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить уведомление по списку контролируемых сделок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьУведомление</Action>
+		</Command>
+		<Command name="КомандаВыгрузитьУведомлениеВXML502" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в XML (с разделением по 100 Мб)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить уведомление В XML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыгрузитьУведомлениеВXML502</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

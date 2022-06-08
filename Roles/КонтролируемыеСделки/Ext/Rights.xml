@@ -1,0 +1,1443 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.7">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>Catalog.ОбъектыСтроительства</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.РасчетыПоРеализацииВУсловныхЕдиницахОрганизации</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация("Контрагент","Организация")</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.НДСПредъявленный</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация("Поставщик", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПрочиеКонтролируемыеСделки.Command.КомандаДвиженияДокумента</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПоступлениеТоваровУслуг.Command.ПечатьТОРГ12СУслугами</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияТоваровУслуг.Command.ПечатьТОРГ12СУслугами</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПолучениеУслугПоПереработке</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизацияПодразделение("Контрагент", "Организация", "Подразделение")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПоступлениеТоваровУслуг.Command.ПечатьТОРГ12</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияТоваровУслуг.Command.ПечатьАктНаПередачуПрав</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияТоваровУслуг.Command.СоздатьПоНастройке</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.АнализУведомления</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.НематериальныеАктивы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ПомощникПодготовкиУведомленияОКонтролируемыхСделках</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.НДСНачисленный</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация("Покупатель", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ОсновныеСредства</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПоступлениеТоваровУслуг.Command.ПечатьТОРГ4</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.НастройкиФормированияКонтролируемыхСделок</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПоступлениеТоваровУслуг</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизацияСклад("Контрагент", "Организация", "СкладОрдер")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияТоваровУслуг.Command.ПечатьАктВыполненныхРабот</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияОтгруженныхТоваров</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ГраницыКонтролируемостиСделок</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.КонтролируемыеСделкиОрганизаций</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация_Запись("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ВзаимозависимыеЛица</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация_Запись("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УчастникиКонтролируемыхСделок</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Контрагент("Контрагент")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Контрагент_Запись("Контрагент")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.СведенияОбОрганизацииДляКонтролируемыхСделок</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Организация("Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Организация_Запись("Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccountingRegister.Хозрасчетный</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Организация("Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияТоваровУслуг.Command.ПечатьУПД</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ЛицаПринявшиеТовары</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.КонтролируемаяСделка</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация_Запись("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация_Запись("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.РасчетыПоПриобретениюВУсловныхЕдиницахОрганизации</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияТоваровУслуг</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизацияСклад("Контрагент", "Организация", "Склад")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.КонтролируемыеСделкиДляВключенияВУведомление</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.СпособыОпределенияЦенКонтролируемыхСделок</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДоговорыУчастниковКонтролируемыхСделок</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизация_Запись("Контрагент", "Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.АктОбОказанииПроизводственныхУслуг</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизацияПодразделениеПроект("Контрагент", "Организация", "Подразделение", "Проект")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ОбщиеОбъектыРегламентированнойОтчетности</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияУслугПоПереработке</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизацияПодразделениеПроект("Контрагент", "Организация", "Подразделение", "Проект")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УведомлениеОКонтролируемыхСделках</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Организация("Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Организация_Запись("Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Организация_Запись("Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПоступлениеТоваровУслуг.Command.ПечатьПоступлениеТоваров</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ВводитьИнформациюОЛицахПринявшихТоварыВЭД</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Configuration.УправлениеПроизводственнымПредприятием</name>
+		<right>
+			<name>ThinClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>WebClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ThickClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>SaveUserData</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПоступлениеТоваровУслуг.Command.СоздатьПоНастройке</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПрочиеКонтролируемыеСделки</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Организация("Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Организация_Запись("Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Организация_Запись("Организация")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ПредметыКонтролируемыхСделок</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.СписокКонтролируемыхСделок</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияТоваровУслуг.Command.ПечатьМ15</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ВзаимозависимыеЛицаКонтролируемыхСделок</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПоступлениеТоваровУслуг.Command.ПечатьМ4</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УведомлениеОКонтролируемыхСделках.Command.ПечатьУведомленияОКонтролируемыхСделках</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияТоваровУслуг.Command.ПечатьТОРГ12</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПоступлениеДопРасходов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#КонтрагентОрганизацияПодразделение("Контрагент", "Организация", "Подразделение")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.КонтрагентыКонтролируемыхСделок</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РеализацияТоваровУслуг.Command.ПечатьРеализацияТоваров</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.БухгалтерскийУчет.Subsystem.КонтролируемыеСделки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПредметыКонтролируемыхСделок</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<restrictionTemplate>
+		<name>Контрагент</name>
+		<condition>#Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица
+        ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+            СоставГруппы.Ссылка КАК ГруппаПользователей
+        ИЗ
+            Справочник.ГруппыПользователей.ПользователиГруппы КАК СоставГруппы
+        ГДЕ
+            СоставГруппы.Пользователь = &amp;ТекущийПользователь) КАК ГруппыПользователей
+        ПО (ИСТИНА)
+ГДЕ
+НЕ ГруппыПользователей.ГруппаПользователей ЕСТЬ NULL
+И
+    (НЕ 1 В
+                (ВЫБРАТЬ ПЕРВЫЕ 1
+                    1
+                ИЗ
+                    РегистрСведений.НазначениеВидовОбъектовДоступа КАК НазначениеВидовОбъектовДоступа
+                                                                
+                    ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+                    ПО Контрагенты.Ссылка = ТекущаяТаблица.#Параметр(1)                 
+                    
+                    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
+                        ПО
+                            НастройкиПравДоступаПользователей.ОбъектДоступа = ЕСТЬNULL(Контрагенты.ГруппаДоступаКонтрагента, ЗНАЧЕНИЕ(Справочник.ГруппыДоступаКонтрагентов.ПустаяСсылка))
+                                И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа
+                                И НастройкиПравДоступаПользователей.ОбластьДанных = ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.КонтрагентыДанные)
+                                                                                                
+                                И НастройкиПравДоступаПользователей.Пользователь = ГруппыПользователей.ГруппаПользователей
+                ГДЕ                 
+                     НазначениеВидовОбъектовДоступа.ГруппаПользователей = ГруппыПользователей.ГруппаПользователей
+                           И НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа В (ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты))
+                
+                    И НастройкиПравДоступаПользователей.ОбъектДоступа ЕСТЬ NULL))
+#КонецЕсли</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>Контрагент_Запись</name>
+		<condition>#Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица
+        ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+            СоставГруппы.Ссылка КАК ГруппаПользователей
+        ИЗ
+            Справочник.ГруппыПользователей.ПользователиГруппы КАК СоставГруппы
+        ГДЕ
+            СоставГруппы.Пользователь = &amp;ТекущийПользователь) КАК ГруппыПользователей
+        ПО (ИСТИНА)
+ГДЕ
+НЕ ГруппыПользователей.ГруппаПользователей ЕСТЬ NULL
+И
+    (НЕ 1 В
+                (ВЫБРАТЬ ПЕРВЫЕ 1
+                    1
+                ИЗ
+                    РегистрСведений.НазначениеВидовОбъектовДоступа КАК НазначениеВидовОбъектовДоступа
+                                                                
+                    ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+                    ПО Контрагенты.Ссылка = ТекущаяТаблица.#Параметр(1)                 
+                    
+                    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
+                        ПО
+                            НастройкиПравДоступаПользователей.ОбъектДоступа = ЕСТЬNULL(Контрагенты.ГруппаДоступаКонтрагента, ЗНАЧЕНИЕ(Справочник.ГруппыДоступаКонтрагентов.ПустаяСсылка))
+                                И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа
+                                И НастройкиПравДоступаПользователей.ОбластьДанных = ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.КонтрагентыДанные)
+                                                                                                
+                                И НастройкиПравДоступаПользователей.Пользователь = ГруппыПользователей.ГруппаПользователей
+                                И НастройкиПравДоступаПользователей.Запись = ИСТИНА
+                ГДЕ                 
+                     НазначениеВидовОбъектовДоступа.ГруппаПользователей = ГруппыПользователей.ГруппаПользователей
+                           И НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа В (ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты))
+                
+                    И НастройкиПравДоступаПользователей.ОбъектДоступа ЕСТЬ NULL))
+#КонецЕсли</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>КонтрагентОрганизация</name>
+		<condition>#Если &amp;ИспользоватьОграничениеПоКонтрагенты ИЛИ &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица
+        ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+            СоставГруппы.Ссылка КАК ГруппаПользователей
+        ИЗ
+            Справочник.ГруппыПользователей.ПользователиГруппы КАК СоставГруппы
+        ГДЕ
+            СоставГруппы.Пользователь = &amp;ТекущийПользователь) КАК ГруппыПользователей
+        ПО (ИСТИНА)
+ГДЕ
+НЕ ГруппыПользователей.ГруппаПользователей ЕСТЬ NULL
+И
+    (НЕ 1 В
+                (ВЫБРАТЬ ПЕРВЫЕ 1
+                    1
+                ИЗ
+                    РегистрСведений.НазначениеВидовОбъектовДоступа КАК НазначениеВидовОбъектовДоступа
+                                            
+                    #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                    ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+                    ПО Контрагенты.Ссылка = ТекущаяТаблица.#Параметр(1)
+                    #КонецЕсли                                                                                
+                    
+                    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
+                        ПО
+                            НастройкиПравДоступаПользователей.ОбъектДоступа = ВЫБОР
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                        ТОГДА ЕСТЬNULL(Контрагенты.ГруппаДоступаКонтрагента, ЗНАЧЕНИЕ(Справочник.ГруппыДоступаКонтрагентов.ПустаяСсылка))
+                                    #КонецЕсли
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
+                                        ТОГДА ТекущаяТаблица.#Параметр(2)
+                                    #КонецЕсли
+                            
+                                КОНЕЦ
+                                И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа
+                                И                               
+                                НастройкиПравДоступаПользователей.ОбластьДанных =
+                                #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                    ВЫБОР КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                        ТОГДА ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.КонтрагентыДанные)
+                                    ИНАЧЕ
+                                        ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)
+                                    КОНЕЦ
+                                #Иначе                                  
+                                    ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)
+                                #КонецЕсли
+                                                                                                
+                                И НастройкиПравДоступаПользователей.Пользователь = ГруппыПользователей.ГруппаПользователей
+                ГДЕ                 
+                     НазначениеВидовОбъектовДоступа.ГруппаПользователей = ГруппыПользователей.ГруппаПользователей
+                           И НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа В (
+                                                                                  ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.ПустаяСсылка)
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  )
+                
+                    И НастройкиПравДоступаПользователей.ОбъектДоступа ЕСТЬ NULL))
+#КонецЕсли</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>КонтрагентОрганизация_Запись</name>
+		<condition>#Если &amp;ИспользоватьОграничениеПоКонтрагенты ИЛИ &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица
+        ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+            СоставГруппы.Ссылка КАК ГруппаПользователей
+        ИЗ
+            Справочник.ГруппыПользователей.ПользователиГруппы КАК СоставГруппы
+        ГДЕ
+            СоставГруппы.Пользователь = &amp;ТекущийПользователь) КАК ГруппыПользователей
+        ПО (ИСТИНА)
+ГДЕ
+НЕ ГруппыПользователей.ГруппаПользователей ЕСТЬ NULL
+И
+    (НЕ 1 В
+                (ВЫБРАТЬ ПЕРВЫЕ 1
+                    1
+                ИЗ
+                    РегистрСведений.НазначениеВидовОбъектовДоступа КАК НазначениеВидовОбъектовДоступа
+                                            
+                    #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                    ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+                    ПО Контрагенты.Ссылка = ТекущаяТаблица.#Параметр(1)
+                    #КонецЕсли                                                                                
+                    
+                    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
+                        ПО
+                            НастройкиПравДоступаПользователей.ОбъектДоступа = ВЫБОР
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                        ТОГДА ЕСТЬNULL(Контрагенты.ГруппаДоступаКонтрагента, ЗНАЧЕНИЕ(Справочник.ГруппыДоступаКонтрагентов.ПустаяСсылка))
+                                    #КонецЕсли
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
+                                        ТОГДА ТекущаяТаблица.#Параметр(2)
+                                    #КонецЕсли
+                            
+                                КОНЕЦ
+                                И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа
+                                И                               
+                                НастройкиПравДоступаПользователей.ОбластьДанных =
+                                #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                    ВЫБОР КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                        ТОГДА ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.КонтрагентыДанные)
+                                    ИНАЧЕ
+                                        ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)
+                                    КОНЕЦ
+                                #Иначе                                  
+                                    ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)
+                                #КонецЕсли
+                                                                                                
+                                И НастройкиПравДоступаПользователей.Пользователь = ГруппыПользователей.ГруппаПользователей
+                                И НастройкиПравДоступаПользователей.Запись = ИСТИНА
+                ГДЕ                 
+                     НазначениеВидовОбъектовДоступа.ГруппаПользователей = ГруппыПользователей.ГруппаПользователей
+                           И НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа В (
+                                                                                  ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.ПустаяСсылка)
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  )
+                
+                    И НастройкиПравДоступаПользователей.ОбъектДоступа ЕСТЬ NULL))
+#КонецЕсли</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>КонтрагентОрганизацияПодразделение</name>
+		<condition>#Если &amp;ИспользоватьОграничениеПоКонтрагенты ИЛИ &amp;ИспользоватьОграничениеПоОрганизации ИЛИ &amp;ИспользоватьОграничениеПоПодразделения #Тогда
+ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица
+        ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+            СоставГруппы.Ссылка КАК ГруппаПользователей
+        ИЗ
+            Справочник.ГруппыПользователей.ПользователиГруппы КАК СоставГруппы
+        ГДЕ
+            СоставГруппы.Пользователь = &amp;ТекущийПользователь) КАК ГруппыПользователей
+        ПО (ИСТИНА)
+ГДЕ
+НЕ ГруппыПользователей.ГруппаПользователей ЕСТЬ NULL
+И
+    (НЕ 1 В
+                (ВЫБРАТЬ ПЕРВЫЕ 1
+                    1
+                ИЗ
+                    РегистрСведений.НазначениеВидовОбъектовДоступа КАК НазначениеВидовОбъектовДоступа
+                                            
+                    #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                    ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+                    ПО Контрагенты.Ссылка = ТекущаяТаблица.#Параметр(1)
+                    #КонецЕсли                                                                               
+                    
+                    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
+                        ПО
+                            НастройкиПравДоступаПользователей.ОбъектДоступа = ВЫБОР
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                        ТОГДА ЕСТЬNULL(Контрагенты.ГруппаДоступаКонтрагента, ЗНАЧЕНИЕ(Справочник.ГруппыДоступаКонтрагентов.ПустаяСсылка))
+                                    #КонецЕсли
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
+                                        ТОГДА ТекущаяТаблица.#Параметр(2)
+                                    #КонецЕсли
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоПодразделения #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Подразделения)
+                                        ТОГДА ТекущаяТаблица.#Параметр(3)
+                                    #КонецЕсли
+                            
+                                КОНЕЦ
+                                И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа
+                                И                               
+                                НастройкиПравДоступаПользователей.ОбластьДанных =
+                                #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                    ВЫБОР КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                        ТОГДА ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.КонтрагентыДанные)
+                                    ИНАЧЕ
+                                        ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)
+                                    КОНЕЦ
+                                #Иначе                                  
+                                    ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)
+                                #КонецЕсли
+                                                                                                
+                                И НастройкиПравДоступаПользователей.Пользователь = ГруппыПользователей.ГруппаПользователей
+                ГДЕ                 
+                     НазначениеВидовОбъектовДоступа.ГруппаПользователей = ГруппыПользователей.ГруппаПользователей
+                           И НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа В (
+                                                                                  ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.ПустаяСсылка)
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоПодразделения #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Подразделения)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  )
+                
+                    И НастройкиПравДоступаПользователей.ОбъектДоступа ЕСТЬ NULL))
+#КонецЕсли</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>КонтрагентОрганизацияПодразделениеПроект</name>
+		<condition>#Если &amp;ИспользоватьОграничениеПоКонтрагенты ИЛИ &amp;ИспользоватьОграничениеПоОрганизации ИЛИ &amp;ИспользоватьОграничениеПоПодразделения ИЛИ &amp;ИспользоватьОграничениеПоПроекты #Тогда
+ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица
+        ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+            СоставГруппы.Ссылка КАК ГруппаПользователей
+        ИЗ
+            Справочник.ГруппыПользователей.ПользователиГруппы КАК СоставГруппы
+        ГДЕ
+            СоставГруппы.Пользователь = &amp;ТекущийПользователь) КАК ГруппыПользователей
+        ПО (ИСТИНА)
+ГДЕ
+НЕ ГруппыПользователей.ГруппаПользователей ЕСТЬ NULL
+И
+    (НЕ 1 В
+                (ВЫБРАТЬ ПЕРВЫЕ 1
+                    1
+                ИЗ
+                    РегистрСведений.НазначениеВидовОбъектовДоступа КАК НазначениеВидовОбъектовДоступа
+                                            
+                    #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                    ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+                    ПО Контрагенты.Ссылка = ТекущаяТаблица.#Параметр(1)
+                    #КонецЕсли                                                                               
+                    
+                    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
+                        ПО
+                            НастройкиПравДоступаПользователей.ОбъектДоступа = ВЫБОР
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                        ТОГДА ЕСТЬNULL(Контрагенты.ГруппаДоступаКонтрагента, ЗНАЧЕНИЕ(Справочник.ГруппыДоступаКонтрагентов.ПустаяСсылка))
+                                    #КонецЕсли
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
+                                        ТОГДА ТекущаяТаблица.#Параметр(2)
+                                    #КонецЕсли
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоПодразделения #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Подразделения)
+                                        ТОГДА ТекущаяТаблица.#Параметр(3)
+                                    #КонецЕсли
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоПроекты #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Проекты)
+                                        ТОГДА ТекущаяТаблица.#Параметр(4)
+                                    #КонецЕсли
+                            
+                                КОНЕЦ
+                                И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа
+                                И                               
+                                НастройкиПравДоступаПользователей.ОбластьДанных =
+                                #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                    ВЫБОР КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                        ТОГДА ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.КонтрагентыДанные)
+                                    ИНАЧЕ
+                                        ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)
+                                    КОНЕЦ
+                                #Иначе                                  
+                                    ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)
+                                #КонецЕсли
+                                                                                                
+                                И НастройкиПравДоступаПользователей.Пользователь = ГруппыПользователей.ГруппаПользователей
+                ГДЕ                 
+                     НазначениеВидовОбъектовДоступа.ГруппаПользователей = ГруппыПользователей.ГруппаПользователей
+                           И НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа В (
+                                                                                  ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.ПустаяСсылка)
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоПодразделения #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Подразделения)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоПроекты #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Проекты)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  )
+                
+                    И НастройкиПравДоступаПользователей.ОбъектДоступа ЕСТЬ NULL))
+#КонецЕсли</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>КонтрагентОрганизацияСклад</name>
+		<condition>#Если &amp;ИспользоватьОграничениеПоКонтрагенты ИЛИ &amp;ИспользоватьОграничениеПоОрганизации ИЛИ &amp;ИспользоватьОграничениеПоСклады #Тогда
+ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица
+        ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+            СоставГруппы.Ссылка КАК ГруппаПользователей
+        ИЗ
+            Справочник.ГруппыПользователей.ПользователиГруппы КАК СоставГруппы
+        ГДЕ
+            СоставГруппы.Пользователь = &amp;ТекущийПользователь) КАК ГруппыПользователей
+        ПО (ИСТИНА)
+ГДЕ
+НЕ ГруппыПользователей.ГруппаПользователей ЕСТЬ NULL
+И
+    (НЕ 1 В
+                (ВЫБРАТЬ ПЕРВЫЕ 1
+                    1
+                ИЗ
+                    РегистрСведений.НазначениеВидовОбъектовДоступа КАК НазначениеВидовОбъектовДоступа
+                                            
+                    #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                    ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+                    ПО Контрагенты.Ссылка = ТекущаяТаблица.#Параметр(1)
+                    #КонецЕсли                                                                               
+                    
+                    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
+                        ПО
+                            НастройкиПравДоступаПользователей.ОбъектДоступа = ВЫБОР
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                        ТОГДА ЕСТЬNULL(Контрагенты.ГруппаДоступаКонтрагента, ЗНАЧЕНИЕ(Справочник.ГруппыДоступаКонтрагентов.ПустаяСсылка))
+                                    #КонецЕсли
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
+                                        ТОГДА ТекущаяТаблица.#Параметр(2)
+                                    #КонецЕсли
+                                    
+                                    #Если &amp;ИспользоватьОграничениеПоСклады #Тогда
+                                    КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Склады)
+                                        ТОГДА ТекущаяТаблица.#Параметр(3)
+                                    #КонецЕсли
+                            
+                                КОНЕЦ
+                                И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа
+                                И                               
+                                НастройкиПравДоступаПользователей.ОбластьДанных =
+                                #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                    ВЫБОР КОГДА НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                        ТОГДА ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.КонтрагентыДанные)
+                                    ИНАЧЕ
+                                        ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)
+                                    КОНЕЦ
+                                #Иначе                                  
+                                    ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)
+                                #КонецЕсли
+                                                                                                
+                                И НастройкиПравДоступаПользователей.Пользователь = ГруппыПользователей.ГруппаПользователей
+                ГДЕ                 
+                     НазначениеВидовОбъектовДоступа.ГруппаПользователей = ГруппыПользователей.ГруппаПользователей
+                           И НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа В (
+                                                                                  ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.ПустаяСсылка)
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоКонтрагенты #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Контрагенты)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  #Если &amp;ИспользоватьОграничениеПоСклады #Тогда
+                                                                                  , ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Склады)
+                                                                                  #КонецЕсли
+                                                                                  
+                                                                                  )
+                
+                    И НастройкиПравДоступаПользователей.ОбъектДоступа ЕСТЬ NULL))
+#КонецЕсли</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>Организация</name>
+		<condition>#Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица
+        ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+            СоставГруппы.Ссылка КАК ГруппаПользователей
+        ИЗ
+            Справочник.ГруппыПользователей.ПользователиГруппы КАК СоставГруппы
+        ГДЕ
+            СоставГруппы.Пользователь = &amp;ТекущийПользователь) КАК ГруппыПользователей
+        ПО (ИСТИНА)
+ГДЕ
+НЕ ГруппыПользователей.ГруппаПользователей ЕСТЬ NULL
+И
+    (НЕ 1 В
+                (ВЫБРАТЬ ПЕРВЫЕ 1
+                    1
+                ИЗ
+                    РегистрСведений.НазначениеВидовОбъектовДоступа КАК НазначениеВидовОбъектовДоступа
+                                                                
+                    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
+                        ПО
+                            НастройкиПравДоступаПользователей.ОбъектДоступа = ТекущаяТаблица.#Параметр(1)
+
+                                И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа
+                                И НастройкиПравДоступаПользователей.ОбластьДанных = ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)                                                                                                
+                                И НастройкиПравДоступаПользователей.Пользователь = ГруппыПользователей.ГруппаПользователей
+                ГДЕ                 
+                     НазначениеВидовОбъектовДоступа.ГруппаПользователей = ГруппыПользователей.ГруппаПользователей
+                           И НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа В (ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации))
+                
+                    И НастройкиПравДоступаПользователей.ОбъектДоступа ЕСТЬ NULL))
+#КонецЕсли</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>Организация_Запись</name>
+		<condition>#Если &amp;ИспользоватьОграничениеПоОрганизации #Тогда
+ТекущаяТаблица
+ИЗ
+	#ТекущаяТаблица КАК ТекущаяТаблица
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			СоставГруппы.Ссылка КАК ГруппаПользователей
+		ИЗ
+			Справочник.ГруппыПользователей.ПользователиГруппы КАК СоставГруппы
+		ГДЕ
+			СоставГруппы.Пользователь = &amp;ТекущийПользователь) КАК ГруппыПользователей
+		ПО (ИСТИНА)
+ГДЕ
+НЕ ГруппыПользователей.ГруппаПользователей ЕСТЬ NULL
+И
+	(НЕ 1 В
+				(ВЫБРАТЬ ПЕРВЫЕ 1
+					1
+				ИЗ
+					РегистрСведений.НазначениеВидовОбъектовДоступа КАК НазначениеВидовОбъектовДоступа
+																
+					ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
+						ПО
+							НастройкиПравДоступаПользователей.ОбъектДоступа = ТекущаяТаблица.#Параметр(1)
+
+								И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа
+								И НастройкиПравДоступаПользователей.ОбластьДанных = ЗНАЧЕНИЕ(Перечисление.ОбластиДанныхОбъектовДоступа.ПустаяСсылка)																								
+								И НастройкиПравДоступаПользователей.Пользователь = ГруппыПользователей.ГруппаПользователей
+								И НастройкиПравДоступаПользователей.Запись = ИСТИНА
+				ГДЕ					
+					 НазначениеВидовОбъектовДоступа.ГруппаПользователей = ГруппыПользователей.ГруппаПользователей
+						   И НазначениеВидовОбъектовДоступа.ВидОбъектаДоступа В (ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации))
+				
+					И НастройкиПравДоступаПользователей.ОбъектДоступа ЕСТЬ NULL))
+#КонецЕсли</condition>
+	</restrictionTemplate>
+</Rights>

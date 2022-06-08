@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="44"/>
+		</InputField>
+		<UsualGroup name="ГруппаШапка" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаЛево" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаЛевоРасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<InputField name="АлкогольнаяПродукция" id="22">
+							<DataPath>Объект.АлкогольнаяПродукция</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="АлкогольнаяПродукцияКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="АлкогольнаяПродукцияРасширеннаяПодсказка" id="47"/>
+						</InputField>
+						<InputField name="Грузоотправитель" id="13">
+							<DataPath>Объект.Грузоотправитель</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ГрузоотправительКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ГрузоотправительРасширеннаяПодсказка" id="48"/>
+						</InputField>
+						<InputField name="НомерТТН" id="7">
+							<DataPath>Объект.НомерТТН</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерТТНКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НомерТТНРасширеннаяПодсказка" id="49"/>
+						</InputField>
+						<InputField name="НомерПодтвержденияЕГАИС" id="31">
+							<DataPath>Объект.НомерПодтвержденияЕГАИС</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерПодтвержденияЕГАИСКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="НомерПодтвержденияЕГАИСРасширеннаяПодсказка" id="50"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаПраво" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаПравоРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<InputField name="РегистрационныйНомер" id="4">
+							<DataPath>Объект.РегистрационныйНомер</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РегистрационныйНомерКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="РегистрационныйНомерРасширеннаяПодсказка" id="52"/>
+						</InputField>
+						<InputField name="Грузополучатель" id="16">
+							<DataPath>Объект.Грузополучатель</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ГрузополучательКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ГрузополучательРасширеннаяПодсказка" id="53"/>
+						</InputField>
+						<InputField name="ДатаТТН" id="10">
+							<DataPath>Объект.ДатаТТН</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаТТНКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ДатаТТНРасширеннаяПодсказка" id="54"/>
+						</InputField>
+						<InputField name="ДатаПодтвержденияЕГАИС" id="34">
+							<DataPath>Объект.ДатаПодтвержденияЕГАИС</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаПодтвержденияЕГАИСКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ДатаПодтвержденияЕГАИСРасширеннаяПодсказка" id="55"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоличествоДатыОтгрузкиРозлива" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа количество даты отгрузки розлива</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа количество даты отгрузки розлива</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоличествоДатыОтгрузкиРозливаРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<InputField name="Количество" id="28">
+					<DataPath>Объект.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="57"/>
+				</InputField>
+				<InputField name="ДатаОтгрузки" id="19">
+					<DataPath>Объект.ДатаОтгрузки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаОтгрузкиКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДатаОтгрузкиРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="ДатаРозлива" id="25">
+					<DataPath>Объект.ДатаРозлива</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаРозливаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДатаРозливаРасширеннаяПодсказка" id="59"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Справки1ЕГАИС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Данные</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЗанятости</dataPath>
+			<field>ВидЗанятости</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид занятости</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидПособияСоциальногоСтрахования</dataPath>
+			<field>ВидПособияСоциальногоСтрахования</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид пособия социального страхования</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:EnumRef.ВидыПособийСоциальногоСтрахования</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВыплатаЗаСчетФедеральногоБюджета</dataPath>
+			<field>ВыплатаЗаСчетФедеральногоБюджета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выплата за счет федерального бюджета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплаченныеДни</dataPath>
+			<field>ОплаченныеДни</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплаченные дни</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Режим</dataPath>
+			<field>Режим</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+			<availableValue>
+				<value xsi:type="xs:string">ОСН</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Налоговый режим предприятия</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">УСН</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>УСН</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">ЕСХН</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЕСХН</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">ЕНВД</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЕНВД</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтраховыеСлучаи</dataPath>
+			<field>СтраховыеСлучаи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страховые случаи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВсего</dataPath>
+			<field>СуммаВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма всего</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаСверхНорм</dataPath>
+			<field>СуммаСверхНорм</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма сверх норм</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ФизическиеЛица</v8:Type>
+			</valueType>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ) КАК Период
+ПОМЕСТИТЬ ВТПериоды
+ИЗ
+	РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+ГДЕ
+	РегламентированныйПроизводственныйКалендарь.ДатаКалендаря МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДАТАВРЕМЯ(1, 1, 1) КАК Период,
+	ДАТАВРЕМЯ(1, 1, 1) КАК ДатаРегистрацииИзменений,
+	ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка) КАК Организация,
+	ЗНАЧЕНИЕ(Перечисление.ТарифыСтраховыхВзносов.ПустаяСсылка) КАК ВидТарифаСтраховыхВзносов,
+	ЛОЖЬ КАК УплачиватьДобровольныеВзносыВФСС
+ПОМЕСТИТЬ ВТНалоговыйУчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	НАЧАЛОПЕРИОДА(Периоды.Период, МЕСЯЦ) КАК Месяц,
+	УчетнаяПолитикаНалоговыйУчет.ВидТарифаСтраховыхВзносов КАК ТарифВзносов,
+	УчетнаяПолитикаНалоговыйУчет.Организация,
+	УчетнаяПолитикаНалоговыйУчет.УплачиватьДобровольныеВзносыВФСС
+ПОМЕСТИТЬ ВТУчетнаяПолитикаНалоговыйУчет
+ИЗ
+	(ВЫБРАТЬ
+		Периоды.Период КАК Период,
+		УчетнаяПолитикаНалоговыйУчет.Организация КАК Организация,
+		МАКСИМУМ(УчетнаяПолитикаНалоговыйУчет.Период) КАК ПериодРегистра
+	ИЗ
+		ВТПериоды КАК Периоды
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТНалоговыйУчет КАК УчетнаяПолитикаНалоговыйУчет
+			ПО Периоды.Период &gt;= УчетнаяПолитикаНалоговыйУчет.Период
+	
+	СГРУППИРОВАТЬ ПО
+		Периоды.Период,
+		УчетнаяПолитикаНалоговыйУчет.Организация) КАК Периоды
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТНалоговыйУчет КАК УчетнаяПолитикаНалоговыйУчет
+		ПО Периоды.ПериодРегистра = УчетнаяПолитикаНалоговыйУчет.Период
+			И Периоды.Организация = УчетнаяПолитикаНалоговыйУчет.Организация
+ГДЕ
+	УчетнаяПолитикаНалоговыйУчет.ВидТарифаСтраховыхВзносов = ЗНАЧЕНИЕ(Перечисление.ТарифыСтраховыхВзносов.УпрощенныйНалоговыйРежим)
+
+ИНДЕКСИРОВАТЬ ПО
+	Месяц
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПособияСоциальномуСтрахованию.Организация,
+	ПособияСоциальномуСтрахованию.ВидПособияСоциальногоСтрахования,
+	ПособияСоциальномуСтрахованию.ВидЗанятости,
+	ВЫБОР
+		КОГДА ПособияСоциальномуСтрахованию.Сотрудник ССЫЛКА Справочник.СотрудникиОрганизаций
+			ТОГДА ПособияСоциальномуСтрахованию.Сотрудник.Физлицо
+		ИНАЧЕ ПособияСоциальномуСтрахованию.Сотрудник
+	КОНЕЦ КАК ФизЛицо,
+	ПособияСоциальномуСтрахованию.СтраховыеСлучаи,
+	ПособияСоциальномуСтрахованию.ОплаченныеДни,
+	ПособияСоциальномуСтрахованию.СуммаВсего,
+	ПособияСоциальномуСтрахованию.СуммаСверхНорм,
+	ПособияСоциальномуСтрахованию.ВыплатаЗаСчетФедеральногоБюджета,
+	ВЫБОР
+		КОГДА ПособияСоциальномуСтрахованию.ОблагаетсяЕНВД
+			ТОГДА "ЕНВД"
+		КОГДА НЕ ПособияСоциальномуСтрахованию.ОблагаетсяЕНВД
+				И ВТУчетнаяПолитикаНалоговыйУчет.ТарифВзносов = ЗНАЧЕНИЕ(Перечисление.ТарифыСтраховыхВзносов.УпрощенныйНалоговыйРежим)
+			ТОГДА "УСН"
+		КОГДА НЕ ПособияСоциальномуСтрахованию.ОблагаетсяЕНВД
+				И ВТУчетнаяПолитикаНалоговыйУчет.ТарифВзносов = ЗНАЧЕНИЕ(Перечисление.ТарифыСтраховыхВзносов.ЕСХН)
+			ТОГДА "ЕСХН"
+		ИНАЧЕ "ОСН"
+	КОНЕЦ КАК Режим
+ИЗ
+	РегистрНакопления.ПособияСоциальномуСтрахованию КАК ПособияСоциальномуСтрахованию
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТУчетнаяПолитикаНалоговыйУчет КАК ВТУчетнаяПолитикаНалоговыйУчет
+		ПО ПособияСоциальномуСтрахованию.Организация = ВТУчетнаяПолитикаНалоговыйУчет.Организация
+			И (НАЧАЛОПЕРИОДА(ПособияСоциальномуСтрахованию.Период, МЕСЯЦ) = ВТУчетнаяПолитикаНалоговыйУчет.Месяц)
+ГДЕ
+	ПособияСоциальномуСтрахованию.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПособияПоУходуЗаРебенкомДоПолутораЛет.Организация,
+	ЗНАЧЕНИЕ(Перечисление.ВидыПособийСоциальногоСтрахования.ПоУходуЗаРебенкомДоПолутораЛет),
+	ПособияПоУходуЗаРебенкомДоПолутораЛет.Сотрудник.ВидЗанятости,
+	ПособияПоУходуЗаРебенкомДоПолутораЛет.ФизЛицо,
+	ПособияПоУходуЗаРебенкомДоПолутораЛет.СтраховыеСлучаи,
+	0,
+	ПособияПоУходуЗаРебенкомДоПолутораЛет.СуммаВсего,
+	ПособияПоУходуЗаРебенкомДоПолутораЛет.СуммаСверхНорм,
+	ПособияПоУходуЗаРебенкомДоПолутораЛет.ВыплатаЗаСчетФедеральногоБюджета,
+	ВЫБОР
+		КОГДА ПособияПоУходуЗаРебенкомДоПолутораЛет.ОблагаетсяЕНВД
+			ТОГДА "ЕНВД"
+		КОГДА НЕ ПособияПоУходуЗаРебенкомДоПолутораЛет.ОблагаетсяЕНВД
+				И ВТУчетнаяПолитикаНалоговыйУчет.ТарифВзносов = ЗНАЧЕНИЕ(Перечисление.ТарифыСтраховыхВзносов.УпрощенныйНалоговыйРежим)
+			ТОГДА "УСН"
+		КОГДА НЕ ПособияПоУходуЗаРебенкомДоПолутораЛет.ОблагаетсяЕНВД
+				И ВТУчетнаяПолитикаНалоговыйУчет.ТарифВзносов = ЗНАЧЕНИЕ(Перечисление.ТарифыСтраховыхВзносов.ЕСХН)
+			ТОГДА "ЕСХН"
+		ИНАЧЕ "ОСН"
+	КОНЕЦ
+ИЗ
+	РегистрНакопления.ПособияПоУходуЗаРебенкомДоПолутораЛет КАК ПособияПоУходуЗаРебенкомДоПолутораЛет
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТУчетнаяПолитикаНалоговыйУчет КАК ВТУчетнаяПолитикаНалоговыйУчет
+		ПО ПособияПоУходуЗаРебенкомДоПолутораЛет.Организация = ВТУчетнаяПолитикаНалоговыйУчет.Организация
+			И (НАЧАЛОПЕРИОДА(ПособияПоУходуЗаРебенкомДоПолутораЛет.Период, МЕСЯЦ) = ВТУчетнаяПолитикаНалоговыйУчет.Месяц)
+ГДЕ
+	ПособияПоУходуЗаРебенкомДоПолутораЛет.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ОплаченныеДни</dataPath>
+		<expression>Сумма(ОплаченныеДни)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтраховыеСлучаи</dataPath>
+		<expression>Сумма(СтраховыеСлучаи)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВсего</dataPath>
+		<expression>Сумма(СуммаВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаСверхНорм</dataPath>
+		<expression>Сумма(СуммаСверхНорм)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОплаченныеДни</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтраховыеСлучаи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаВсего</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаСверхНорм</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр получателей страхового обеспечения</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Режим</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидПособияСоциальногоСтрахования</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

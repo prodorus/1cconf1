@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Контрагенты, зарегистрированные за пределами РФ</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Group>Horizontal</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКонтрагентыЗарегистрированныеЗаПределамиРФ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагенты, зарегистрированные за пределами РФ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа: Контрагенты, зарегистрированные за пределами РФ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКонтрагентыЗарегистрированныеЗаПределамиРФРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<Table name="УчастникиКонтролируемыхСделок" id="21">
+					<Representation>List</Representation>
+					<Width>65</Width>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>УчастникиКонтролируемыхСделок</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="УчастникиКонтролируемыхСделокКонтекстноеМеню" id="22"/>
+					<AutoCommandBar name="УчастникиКонтролируемыхСделокКоманднаяПанель" id="23">
+						<ChildItems>
+							<Button name="УчастникиКонтролируемыхСделокКомандаПодобратьИзОтчетногоГода" id="30">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаПодобратьИзОтчетногоГода</CommandName>
+								<ExtendedTooltip name="УчастникиКонтролируемыхСделокКомандаПодобратьИзОтчетногоГодаРасширеннаяПодсказка" id="33"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="УчастникиКонтролируемыхСделокРасширеннаяПодсказка" id="34"/>
+					<SearchStringAddition name="УчастникиКонтролируемыхСделокСтрокаПоиска" id="35">
+						<AdditionSource>
+							<Item>УчастникиКонтролируемыхСделок</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УчастникиКонтролируемыхСделокСтрокаПоискаКонтекстноеМеню" id="36"/>
+						<ExtendedTooltip name="УчастникиКонтролируемыхСделокСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="УчастникиКонтролируемыхСделокСостояниеПросмотра" id="38">
+						<AdditionSource>
+							<Item>УчастникиКонтролируемыхСделок</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УчастникиКонтролируемыхСделокСостояниеПросмотраКонтекстноеМеню" id="39"/>
+						<ExtendedTooltip name="УчастникиКонтролируемыхСделокСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="УчастникиКонтролируемыхСделокУправлениеПоиском" id="41">
+						<AdditionSource>
+							<Item>УчастникиКонтролируемыхСделок</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="УчастникиКонтролируемыхСделокУправлениеПоискомКонтекстноеМеню" id="42"/>
+						<ExtendedTooltip name="УчастникиКонтролируемыхСделокУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">УчастникиКонтролируемыхСделокПередНачаломДобавления</Event>
+						<Event name="BeforeDeleteRow">УчастникиКонтролируемыхСделокПередУдалением</Event>
+						<Event name="ChoiceProcessing">УчастникиКонтролируемыхСделокОбработкаВыбора</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="УчастникиКонтролируемыхСделокКонтрагент" id="24">
+							<DataPath>УчастникиКонтролируемыхСделок.Контрагент</DataPath>
+							<EditMode>Directly</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="УчастникиКонтролируемыхСделокКонтрагентКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="УчастникиКонтролируемыхСделокКонтрагентРасширеннаяПодсказка" id="44"/>
+						</InputField>
+						<InputField name="УчастникиКонтролируемыхСделокСтранаРегистрации" id="26">
+							<DataPath>УчастникиКонтролируемыхСделок.СтранаРегистрации</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="УчастникиКонтролируемыхСделокСтранаРегистрацииКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="УчастникиКонтролируемыхСделокСтранаРегистрацииРасширеннаяПодсказка" id="45"/>
+						</InputField>
+						<CheckBoxField name="УчастникиКонтролируемыхСделокЗарегистрированВСтранеСЛьготнымНалогообложением" id="28">
+							<DataPath>УчастникиКонтролируемыхСделок.ЗарегистрированВСтранеСЛьготнымНалогообложением</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Офшор</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчастникиКонтролируемыхСделокЗарегистрированВСтранеСЛьготнымНалогообложениемКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="УчастникиКонтролируемыхСделокЗарегистрированВСтранеСЛьготнымНалогообложениемРасширеннаяПодсказка" id="46"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКонтрагентыОтчетногоГода" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагенты отчетного года</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа: Контрагенты отчетного года</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКонтрагентыОтчетногоГодаРасширеннаяПодсказка" id="47"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникПодготовкиУведомленияОКонтролируемыхСделках</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="УчастникиКонтролируемыхСделок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участники контролируемых сделок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.УчастникиКонтролируемыхСделок</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтранаРегистрации</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КлассификаторСтранМира.Россия</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаПодобратьИзОтчетногоГода" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать по данным отчетного года</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать контрагентов, зарегистрированных за рубежом, по данным отчетного года</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПодобратьИзОтчетногоГода</Action>
+		</Command>
+	</Commands>
+</Form>

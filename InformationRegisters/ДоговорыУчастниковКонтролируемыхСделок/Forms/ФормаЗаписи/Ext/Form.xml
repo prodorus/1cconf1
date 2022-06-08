@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="1">
+			<DataPath>Запись.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="56"/>
+		</InputField>
+		<InputField name="Контрагент" id="5">
+			<DataPath>Запись.Контрагент</DataPath>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="57"/>
+		</InputField>
+		<InputField name="ДоговорКонтрагента" id="7">
+			<DataPath>Запись.ДоговорКонтрагента</DataPath>
+			<ContextMenu name="ДоговорКонтрагентаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДоговорКонтрагентаРасширеннаяПодсказка" id="58"/>
+		</InputField>
+		<UsualGroup name="ГруппаОбщее" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о договоре</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщееРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<InputField name="КодНаименованияСделки" id="9">
+					<DataPath>Запись.КодНаименованияСделки</DataPath>
+					<Width>40</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ChoiceButton>true</ChoiceButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="КодНаименованияСделкиКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="КодНаименованияСделкиРасширеннаяПодсказка" id="60"/>
+				</InputField>
+				<InputField name="ПризнакОпределенияЦеныСделки" id="11">
+					<DataPath>Запись.СпособОпределенияЦеныСделки</DataPath>
+					<ContextMenu name="ПризнакОпределенияЦеныСделкиКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ПризнакОпределенияЦеныСделкиРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="КодУсловийПоставки" id="39">
+					<DataPath>Запись.КодУсловийПоставки</DataPath>
+					<ChoiceListButton>true</ChoiceListButton>
+					<DropListWidth>60</DropListWidth>
+					<ContextMenu name="КодУсловийПоставкиКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="КодУсловийПоставкиРасширеннаяПодсказка" id="62"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНалогообложения" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Особенности налогообложения сделки у контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа налогообложения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНалогообложенияРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<CheckBoxField name="СделкаОблагаетсяЕНВД" id="51">
+					<DataPath>Запись.СделкаОблагаетсяЕНВД</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СделкаОблагаетсяЕНВДКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="СделкаОблагаетсяЕНВДРасширеннаяПодсказка" id="64"/>
+				</CheckBoxField>
+				<CheckBoxField name="СделкаОтноситсяКДеятельностиНовогоМорскогоМесторождения" id="54">
+					<DataPath>Запись.СделкаОтноситсяКДеятельностиНовогоМорскогоМесторождения</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СделкаОтноситсяКДеятельностиНовогоМорскогоМесторожденияКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="СделкаОтноситсяКДеятельностиНовогоМорскогоМесторожденияРасширеннаяПодсказка" id="65"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ДоговорыУчастниковКонтролируемыхСделок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

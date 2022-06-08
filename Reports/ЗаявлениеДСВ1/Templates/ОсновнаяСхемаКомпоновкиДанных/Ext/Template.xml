@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Данные</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресДляИнформирования</dataPath>
+			<field>АдресДляИнформирования</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Имя</dataPath>
+			<field>Имя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отчество</dataPath>
+			<field>Отчество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтраховойНомерПФР</dataPath>
+			<field>СтраховойНомерПФР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страховой номер ПФР</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Фамилия</dataPath>
+			<field>Фамилия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеПФР</dataPath>
+			<field>НаименованиеПФР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ПФР</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГоловнаяОрганизация</dataPath>
+			<field>ГоловнаяОрганизация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физическое лицо</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	Сотрудники.Физлицо.СтраховойНомерПФР КАК ФизлицоСтраховойНомерПФР,
+	ФИОФизЛицСрезПоследних.Фамилия КАК Фамилия,
+	ФИОФизЛицСрезПоследних.Имя КАК Имя,
+	ФИОФизЛицСрезПоследних.Отчество КАК Отчество,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА АдресаДляИнформирования.Поле1 ЕСТЬ НЕ NULL 
+				ТОГДА АдресаДляИнформирования.Представление
+			КОГДА АдресаФактические.Поле1 ЕСТЬ НЕ NULL 
+				ТОГДА АдресаФактические.Представление
+			КОГДА АдресаРегистрации.Поле1 ЕСТЬ НЕ NULL 
+				ТОГДА АдресаРегистрации.Представление
+			ИНАЧЕ """"
+		КОНЕЦ КАК СТРОКА(300)) КАК АдресДляИнформирования,
+	ВЫБОР
+		КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt; &amp;Период
+			ТОГДА РаботникиОрганизацийСрезПоследних.ОбособленноеПодразделениеЗавершения
+		ИНАЧЕ РаботникиОрганизацийСрезПоследних.ОбособленноеПодразделение
+	КОНЕЦ КАК Организация,
+	ЕСТЬNULL((ВЫБОР
+		КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt; &amp;Период
+			ТОГДА РаботникиОрганизацийСрезПоследних.ОбособленноеПодразделениеЗавершения
+		ИНАЧЕ РаботникиОрганизацийСрезПоследних.ОбособленноеПодразделение
+	КОНЕЦ).НаименованиеТерриториальногоОрганаПФР, "") КАК НаименованиеПФР,
+	Сотрудники.Физлицо КАК ФизЛицо
+{ВЫБРАТЬ
+	ФизлицоСтраховойНомерПФР КАК СтраховойНомерПФР,
+	Фамилия,
+	Имя,
+	Отчество,
+	АдресДляИнформирования,
+	Организация.*,
+	НаименованиеПФР,
+	ФизЛицо.*}
+ИЗ
+	Справочник.СотрудникиОрганизаций КАК Сотрудники
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КонтактнаяИнформация КАК АдресаФактические
+		ПО Сотрудники.Физлицо = АдресаФактические.Объект
+			И (АдресаФактические.Вид = ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ФактАдресФизЛица))
+			И (АдресаФактические.Тип = ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Адрес))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КонтактнаяИнформация КАК АдресаРегистрации
+		ПО Сотрудники.Физлицо = АдресаРегистрации.Объект
+			И (АдресаРегистрации.Тип = ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Адрес))
+			И (АдресаРегистрации.Вид = ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ЮрАдресФизЛица))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КонтактнаяИнформация КАК АдресаДляИнформирования
+		ПО Сотрудники.Физлицо = АдресаДляИнформирования.Объект
+			И (АдресаДляИнформирования.Вид = ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ИнформАдресФизЛица))
+			И (АдресаДляИнформирования.Тип = ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Адрес))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций.СрезПоследних(&amp;ПЕриод {(&amp;ПЕриод)}, {(Сотрудник), (Сотрудник.Физлицо) КАК ФизЛицо, (Организация) КАК ГоловнаяОрганизация}) КАК РаботникиОрганизацийСрезПоследних
+		ПО Сотрудники.Ссылка = РаботникиОрганизацийСрезПоследних.Сотрудник
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизЛиц.СрезПоследних({(&amp;ПЕриод)}, {(ФизЛицо)}) КАК ФИОФизЛицСрезПоследних
+		ПО Сотрудники.Физлицо = ФИОФизЛицСрезПоследних.ФизЛицо
+ГДЕ
+	(НЕ Сотрудники.ЭтоГруппа)
+{ГДЕ
+	Сотрудники.Ссылка.* КАК Сотрудник,
+	(ВЫБОР
+			КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt; &amp;Период
+				ТОГДА РаботникиОрганизацийСрезПоследних.ОбособленноеПодразделениеЗавершения
+			ИНАЧЕ РаботникиОрганизацийСрезПоследних.ОбособленноеПодразделение
+		КОНЕЦ).* КАК Организация,
+	Сотрудники.Физлицо.*}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<totalField>
+		<dataPath>Отчество</dataPath>
+		<expression>Максимум(Отчество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Фамилия</dataPath>
+		<expression>Максимум(Фамилия)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Имя</dataPath>
+		<expression>Максимум(Имя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АдресДляИнформирования</dataPath>
+		<expression>Максимум(АдресДляИнформирования)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтраховойНомерПФР</dataPath>
+		<expression>Максимум(СтраховойНомерПФР)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НаименованиеПФР</dataPath>
+		<expression>Максимум(НаименованиеПФР)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявление ДСВ - 1</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

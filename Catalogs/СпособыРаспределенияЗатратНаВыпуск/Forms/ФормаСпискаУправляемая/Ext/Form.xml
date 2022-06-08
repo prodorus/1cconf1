@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Choose</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КнопкаВыбрать" id="25">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Item.Список.StandardCommand.Choose</CommandName>
+				<ExtendedTooltip name="КнопкаВыбратьРасширеннаяПодсказка" id="26"/>
+			</Button>
+			<Button name="КнопкаСоздать" id="24">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Create</CommandName>
+				<ExtendedTooltip name="КнопкаСоздатьРасширеннаяПодсказка" id="27"/>
+			</Button>
+			<Popup name="ГруппаСоздать" id="16">
+				<EnableContentChange>true</EnableContentChange>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа создать</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ГруппаСоздатьРасширеннаяПодсказка" id="28"/>
+				<ChildItems>
+					<Button name="КнопкаСоздатьСпособТабличный" id="22">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Create</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.Пустая32</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+							<xr:TransparentPixel x="25" y="17"/>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С типом "Табличный"</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="КнопкаСоздатьСпособТабличныйРасширеннаяПодсказка" id="29"/>
+					</Button>
+					<Button name="КнопкаСоздатьСпособСКД" id="21">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СоздатьСпособСКД</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С типом "По данным ИБ"</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="КнопкаСоздатьСпособСКДРасширеннаяПодсказка" id="30"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<ButtonGroup name="ГруппаКомандыФормы" id="23">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа команды формы</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа команды формы</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="31"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="32"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="33">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="36">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="39">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+				<Event name="BeforeRowChange">СписокПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Наименование" id="4">
+					<DataPath>Список.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="НаправлениеРаспределения" id="8">
+					<DataPath>Список.НаправлениеРаспределения</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="НаправлениеРаспределенияКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="НаправлениеРаспределенияРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="Применимость" id="10">
+					<DataPath>Список.Применимость</DataPath>
+					<ContextMenu name="ПрименимостьКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПрименимостьРасширеннаяПодсказка" id="44"/>
+				</LabelField>
+				<LabelField name="КогдаПрименять" id="12">
+					<DataPath>Список.КогдаПрименять</DataPath>
+					<Height>1</Height>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="КогдаПрименятьКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="КогдаПрименятьРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="ТипБазыРаспределения" id="14">
+					<DataPath>Список.ТипБазыРаспределения</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="ТипБазыРаспределенияКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТипБазыРаспределенияРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="6">
+					<DataPath>Список.Комментарий</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.DefaultPicture</Field>
+				<Field>Список.DeletionMark</Field>
+				<Field>Список.Description</Field>
+				<Field>Список.Predefined</Field>
+				<Field>Список.Ref</Field>
+				<Field>Список.БазаРаспределенияЗатрат</Field>
+				<Field>Список.ИспользоватьПростоеРаспределение</Field>
+				<Field>Список.КогдаПрименять</Field>
+				<Field>Список.Комментарий</Field>
+				<Field>Список.НаправлениеРаспределения</Field>
+				<Field>Список.Применимость</Field>
+				<Field>Список.ТипБазыРаспределения</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникСпособыРаспределенияЗатратНаВыпуск.Ссылка,
+	СправочникСпособыРаспределенияЗатратНаВыпуск.ПометкаУдаления,
+	СправочникСпособыРаспределенияЗатратНаВыпуск.Предопределенный,
+	СправочникСпособыРаспределенияЗатратНаВыпуск.Наименование,
+	СправочникСпособыРаспределенияЗатратНаВыпуск.Комментарий,
+	СправочникСпособыРаспределенияЗатратНаВыпуск.Применимость,
+	СправочникСпособыРаспределенияЗатратНаВыпуск.КогдаПрименять,
+	СправочникСпособыРаспределенияЗатратНаВыпуск.ИспользоватьПростоеРаспределение,
+	СправочникСпособыРаспределенияЗатратНаВыпуск.ТипБазыРаспределения,
+	СправочникСпособыРаспределенияЗатратНаВыпуск.НаправлениеРаспределения,
+	СправочникСпособыРаспределенияЗатратНаВыпуск.БазаРаспределенияЗатрат
+ИЗ
+	Справочник.СпособыРаспределенияЗатратНаВыпуск КАК СправочникСпособыРаспределенияЗатратНаВыпуск</QueryText>
+				<MainTable>Catalog.СпособыРаспределенияЗатратНаВыпуск</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Применимость</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Применимость</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ХарактерЗатрат.ПроизводственныеРасходы</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">Для производственных расходов</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Применимость</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Применимость</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ХарактерЗатрат.ОбщепроизводственныеРасходы</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">Для косвенных расходов</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Применимость</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Применимость</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ХарактерЗатрат.ОбщехозяйственныеРасходы</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">Для общехозяйственных расходов</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Применимость</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Применимость</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ХарактерЗатрат.КоммерческиеРасходы</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">Для расходов на продажу</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Применимость</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Применимость</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ХарактерЗатрат.ПустаяСсылка</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">Для всех, кроме расходов на продажу</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>НаправлениеРаспределения</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="мИспользоватьГибкуюНастройкуСпособовРаспределенияЗатрат" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М использовать гибкую настройку способов распределения затрат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мТабличныйСпособ" id="3">
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыБазРаспределения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мСКДСпособ" id="4">
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыБазРаспределения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мПустойСпособ" id="5">
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыБазРаспределения</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьСпособСКД" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать способ "По данным ИБ"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать способ СКД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.АдминистраторККМ">false</xr:Value>
+				<xr:Value name="Role.АдминистраторПользователей">false</xr:Value>
+				<xr:Value name="Role.АдминистрированиеДополнительныхФормИОбработок">false</xr:Value>
+				<xr:Value name="Role.АдминистрированиеСохраненныхНастроек">false</xr:Value>
+				<xr:Value name="Role.БанковскиеОперации">false</xr:Value>
+				<xr:Value name="Role.ВводЗаявокНаРасходованиеСредств">false</xr:Value>
+				<xr:Value name="Role.ВыплатаЗарплаты">false</xr:Value>
+				<xr:Value name="Role.ВыполнениеРегламентныхОперацийРегл">false</xr:Value>
+				<xr:Value name="Role.ДенежныеДокументы">false</xr:Value>
+				<xr:Value name="Role.ЗавершениеСмены">false</xr:Value>
+				<xr:Value name="Role.ИзменениеМакетовПечатныхФорм">false</xr:Value>
+				<xr:Value name="Role.ИспользованиеТорговогоОборудования">false</xr:Value>
+				<xr:Value name="Role.КадровикРегламентированныхДанных">false</xr:Value>
+				<xr:Value name="Role.КадровикУправленческихДанных">false</xr:Value>
+				<xr:Value name="Role.Кассир">false</xr:Value>
+				<xr:Value name="Role.Кладовщик">false</xr:Value>
+				<xr:Value name="Role.МастерСмены">false</xr:Value>
+				<xr:Value name="Role.МенеджерПоЗаказам">false</xr:Value>
+				<xr:Value name="Role.МенеджерПоЗакупкам">false</xr:Value>
+				<xr:Value name="Role.МенеджерПоНаборуПерсонала">false</xr:Value>
+				<xr:Value name="Role.МенеджерПоПродажам">false</xr:Value>
+				<xr:Value name="Role.НастройкаНСИ">false</xr:Value>
+				<xr:Value name="Role.НастройкаНСИЗатрат">true</xr:Value>
+				<xr:Value name="Role.НастройкаНСИРегл">false</xr:Value>
+				<xr:Value name="Role.НастройкаТорговогоОборудования">false</xr:Value>
+				<xr:Value name="Role.ОбменДаннымиСПрограммамиКлиентБанк">false</xr:Value>
+				<xr:Value name="Role.ОператорККМ">false</xr:Value>
+				<xr:Value name="Role.ОтражениеВРегламентированномУчете">false</xr:Value>
+				<xr:Value name="Role.Планирование">false</xr:Value>
+				<xr:Value name="Role.ПодотчетныеЛица">false</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.Пользователь">false</xr:Value>
+				<xr:Value name="Role.ПравоАдминистрирования">false</xr:Value>
+				<xr:Value name="Role.ПравоВнешнегоПодключения">false</xr:Value>
+				<xr:Value name="Role.ПравоВыводаИнформации">false</xr:Value>
+				<xr:Value name="Role.ПравоЗапускаВнешнихОтчетовИОбработок">false</xr:Value>
+				<xr:Value name="Role.ПравоИспользованияЭлектроннойПочты">false</xr:Value>
+				<xr:Value name="Role.ПравоНаЗащищенныйДокументооборотСКонтролирующимиОрганами">false</xr:Value>
+				<xr:Value name="Role.ПросмотрДанныхОперативногоУчетаПроизводства">false</xr:Value>
+				<xr:Value name="Role.ПросмотрДанныхРегламентированногоУчета">false</xr:Value>
+				<xr:Value name="Role.ПросмотрДвиженийДокументов">false</xr:Value>
+				<xr:Value name="Role.ПросмотрСтруктурыПодчиненности">false</xr:Value>
+				<xr:Value name="Role.РасчетчикРегламентированнойЗарплаты">false</xr:Value>
+				<xr:Value name="Role.РасчетчикУправленческойЗарплаты">false</xr:Value>
+				<xr:Value name="Role.РегламентированнаяОтчетность">false</xr:Value>
+				<xr:Value name="Role.РозничныеПродажи">false</xr:Value>
+				<xr:Value name="Role.Сертификация">false</xr:Value>
+				<xr:Value name="Role.СогласованиеЗаявокНаРасходованиеДС">false</xr:Value>
+				<xr:Value name="Role.Технолог">false</xr:Value>
+				<xr:Value name="Role.УстановкаДатыЗапретаИзмененияДанных">false</xr:Value>
+				<xr:Value name="Role.УчетЗатрат">false</xr:Value>
+				<xr:Value name="Role.УчетНДС">false</xr:Value>
+				<xr:Value name="Role.УчетОСиНМА">false</xr:Value>
+				<xr:Value name="Role.УчетРБП">false</xr:Value>
+				<xr:Value name="Role.УчетСпецодежды">false</xr:Value>
+				<xr:Value name="Role.Финансист">false</xr:Value>
+				<xr:Value name="Role.Ценообразование">false</xr:Value>
+				<xr:Value name="Role.ЭкономистЦеха">false</xr:Value>
+			</Use>
+			<Action>СоздатьСпособСКД</Action>
+		</Command>
+	</Commands>
+</Form>

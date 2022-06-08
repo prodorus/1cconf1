@@ -1,0 +1,3144 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Помощник корректировки остатков ЕГАИС</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ПанельОсновная" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ПанельОсновнаяРасширеннаяПодсказка" id="1231"/>
+			<ChildItems>
+				<Page name="СтраницаНачальныеДанные" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод начальных данных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница начальные данные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаНачальныеДанныеРасширеннаяПодсказка" id="1232"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОрганизацияТорговыйОбъект" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ввод начальных данных (шаг 1 из 5)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа организация торговый объект</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОрганизацияТорговыйОбъектРасширеннаяПодсказка" id="1233"/>
+							<ChildItems>
+								<InputField name="ОрганизацияЕГАИС" id="1213">
+									<DataPath>Объект.ОрганизацияЕГАИС</DataPath>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="ОрганизацияЕГАИСКонтекстноеМеню" id="1214"/>
+									<ExtendedTooltip name="ОрганизацияЕГАИСРасширеннаяПодсказка" id="1234"/>
+									<Events>
+										<Event name="OnChange">ОрганизацияЕГАИСПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<RadioButtonField name="КорректироватьТекущиеОстатки" id="996">
+							<DataPath>КорректироватьТекущиеОстатки</DataPath>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>На текущую дату</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>На дату получения остатков из ЕГАИС</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="КорректироватьТекущиеОстаткиКонтекстноеМеню" id="997"/>
+							<ExtendedTooltip name="КорректироватьТекущиеОстаткиРасширеннаяПодсказка" id="1235"/>
+							<Events>
+								<Event name="OnChange">КорректироватьТекущиеОстаткиПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<Pages name="ПанельВариантКорректировкиОстатков" id="1116">
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ПанельВариантКорректировкиОстатковРасширеннаяПодсказка" id="1236"/>
+							<ChildItems>
+								<Page name="СтраницаКорректировкаНаТекущуюДату" id="1118">
+									<ExtendedTooltip name="СтраницаКорректировкаНаТекущуюДатуРасширеннаяПодсказка" id="1237"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация1" id="1122">
+											<Width>1</Width>
+											<Height>1</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="1123"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="1238"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаКорректировкаНаДатуОстатковЕГАИС" id="1120">
+									<ExtendedTooltip name="СтраницаКорректировкаНаДатуОстатковЕГАИСРасширеннаяПодсказка" id="1239"/>
+									<ChildItems>
+										<InputField name="ОстаткиВРегистре1" id="1008">
+											<DataPath>Объект.ОстаткиВРегистре1</DataPath>
+											<ContextMenu name="ОстаткиВРегистре1КонтекстноеМеню" id="1009"/>
+											<ExtendedTooltip name="ОстаткиВРегистре1РасширеннаяПодсказка" id="1240"/>
+											<Events>
+												<Event name="OnChange">ОстаткиВРегистре1ПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОстаткиВРегистре2" id="1011">
+											<DataPath>Объект.ОстаткиВРегистре2</DataPath>
+											<ContextMenu name="ОстаткиВРегистре2КонтекстноеМеню" id="1012"/>
+											<ExtendedTooltip name="ОстаткиВРегистре2РасширеннаяПодсказка" id="1241"/>
+											<Events>
+												<Event name="OnChange">ОстаткиВРегистре2ПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПроверкаДанных" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка данных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница проверка данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПроверкаДанныхРасширеннаяПодсказка" id="1242"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПроверкаУчетныхОстатков" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предварительная проверка данных (шаг 2 из 5)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проведение инвентаризации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПроверкаУчетныхОстатковРасширеннаяПодсказка" id="1243"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПроверкаИнвентаризацииЗаголовок" id="845">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа проверка инвентаризации заголовок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПроверкаИнвентаризацииЗаголовокРасширеннаяПодсказка" id="1244"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация3" id="847">
+											<Width>4</Width>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="848"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="1245"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаНадписьПроверкаИнвентаризации" id="855">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1. Корректность учетных остатков</v8:content>
+												</v8:item>
+											</Title>
+											<TitleFont ref="sys:DefaultGUIFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа надпись проверка инвентаризации</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ExtendedTooltip name="ГруппаНадписьПроверкаИнвентаризацииРасширеннаяПодсказка" id="1246"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьПроверкаИнвентаризации" id="71">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Перед корректировкой остатков ЕГАИС рекомендуется провести полную инвентаризацию товаров.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьПроверкаИнвентаризацииКонтекстноеМеню" id="72"/>
+													<ExtendedTooltip name="НадписьПроверкаИнвентаризацииРасширеннаяПодсказка" id="1247"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<Pages name="ПанельПроверкаИнвентаризацииНаСкладе" id="697">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Панель проверка инвентаризации на складе</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ПанельПроверкаИнвентаризацииНаСкладеРасширеннаяПодсказка" id="1248"/>
+									<ChildItems>
+										<Page name="СтраницаПроверкаИнвентаризацииНаСкладе_Успешно" id="699">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инвентаризация на складе проведена</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаПроверкаИнвентаризацииНаСкладе_УспешноРасширеннаяПодсказка" id="1249"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаПроверкаИнвентаризацииНаСкладе_Успешно" id="704">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПроверкаИнвентаризацииНаСкладе_УспешноКонтекстноеМеню" id="705"/>
+													<ExtendedTooltip name="КартинкаПроверкаИнвентаризацииНаСкладе_УспешноРасширеннаяПодсказка" id="1250"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьПроверкаИнвентаризацииНаСкладе_Успешно" id="701">
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Инвентаризация товаров на складе проведена. Сформировать отчет по оформлению излишков (недостач).
+</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьПроверкаИнвентаризацииНаСкладе_УспешноКонтекстноеМеню" id="702"/>
+													<ExtendedTooltip name="НадписьПроверкаИнвентаризацииНаСкладе_УспешноРасширеннаяПодсказка" id="1251"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаПроверкаИнвентаризацииНаСкладе_УспешноБезОтчета" id="1216">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инвентаризация на складе проведена</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаПроверкаИнвентаризацииНаСкладе_УспешноБезОтчетаРасширеннаяПодсказка" id="1252"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаПроверкаИнвентаризацииНаСкладе_УспешноБезОтчета" id="1218">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПроверкаИнвентаризацииНаСкладе_УспешноБезОтчетаКонтекстноеМеню" id="1219"/>
+													<ExtendedTooltip name="КартинкаПроверкаИнвентаризацииНаСкладе_УспешноБезОтчетаРасширеннаяПодсказка" id="1253"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьПроверкаИнвентаризацииНаСкладе_УспешноБезОтчета" id="1221">
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Инвентаризация товаров на складе проведена. 
+</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьПроверкаИнвентаризацииНаСкладе_УспешноБезОтчетаКонтекстноеМеню" id="1222"/>
+													<ExtendedTooltip name="НадписьПроверкаИнвентаризацииНаСкладе_УспешноБезОтчетаРасширеннаяПодсказка" id="1254"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаПроверкаИнвентаризацииНаСкладе_Предупреждение" id="707">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инвентаризация на складе не проведена</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаПроверкаИнвентаризацииНаСкладе_ПредупреждениеРасширеннаяПодсказка" id="1255"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаПроверкаИнвентаризацииНаСкладе_Предупреждение" id="712">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПроверкаИнвентаризацииНаСкладе_ПредупреждениеКонтекстноеМеню" id="713"/>
+													<ExtendedTooltip name="КартинкаПроверкаИнвентаризацииНаСкладе_ПредупреждениеРасширеннаяПодсказка" id="1256"/>
+												</PictureDecoration>
+												<LabelField name="ТекстОшибкиПроверкиИнвентаризацииНаСкладе" id="1147">
+													<DataPath>ТекстОшибкиПроверкиИнвентаризацииНаСкладе</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<VerticalAlign>Center</VerticalAlign>
+													<Height>2</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+													<ContextMenu name="ТекстОшибкиПроверкиИнвентаризацииНаСкладеКонтекстноеМеню" id="1148"/>
+													<ExtendedTooltip name="ТекстОшибкиПроверкиИнвентаризацииНаСкладеРасширеннаяПодсказка" id="1257"/>
+												</LabelField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+								<Pages name="ПанельПроверкаИнвентаризацииВТорговомЗале" id="731">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Панель проверка инвентаризации на складе</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ПанельПроверкаИнвентаризацииВТорговомЗалеРасширеннаяПодсказка" id="1258"/>
+									<ChildItems>
+										<Page name="СтраницаПроверкаИнвентаризацииВТорговомЗале_Успешно" id="733">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инвентаризация в торговом зале проведена</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаПроверкаИнвентаризацииВТорговомЗале_УспешноРасширеннаяПодсказка" id="1259"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаПроверкаИнвентаризацииВТорговомЗале_Успешно" id="738">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПроверкаИнвентаризацииВТорговомЗале_УспешноКонтекстноеМеню" id="739"/>
+													<ExtendedTooltip name="КартинкаПроверкаИнвентаризацииВТорговомЗале_УспешноРасширеннаяПодсказка" id="1260"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьПроверкаИнвентаризацииВТорговомЗале_Успешно" id="735">
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Инвентаризация товаров в торговом зале проведена. Сформировать отчет по оформлению излишков (недостач).</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьПроверкаИнвентаризацииВТорговомЗале_УспешноКонтекстноеМеню" id="736"/>
+													<ExtendedTooltip name="НадписьПроверкаИнвентаризацииВТорговомЗале_УспешноРасширеннаяПодсказка" id="1261"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаПроверкаИнвентаризацииВТорговомЗале_УспешноБезОтчета" id="1224">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инвентаризация в торговом зале проведена</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаПроверкаИнвентаризацииВТорговомЗале_УспешноБезОтчетаРасширеннаяПодсказка" id="1262"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаПроверкаИнвентаризацииВТорговомЗале_УспешноБезОтчета" id="1226">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПроверкаИнвентаризацииВТорговомЗале_УспешноБезОтчетаКонтекстноеМеню" id="1227"/>
+													<ExtendedTooltip name="КартинкаПроверкаИнвентаризацииВТорговомЗале_УспешноБезОтчетаРасширеннаяПодсказка" id="1263"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьПроверкаИнвентаризацииВТорговомЗале_УспешноБезОтчета" id="1229">
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Инвентаризация товаров в торговом зале проведена.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьПроверкаИнвентаризацииВТорговомЗале_УспешноБезОтчетаКонтекстноеМеню" id="1230"/>
+													<ExtendedTooltip name="НадписьПроверкаИнвентаризацииВТорговомЗале_УспешноБезОтчетаРасширеннаяПодсказка" id="1264"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаПроверкаИнвентаризацииВТорговомЗале_Предупреждение" id="741">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инвентаризация в торговом зале не проведена</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаПроверкаИнвентаризацииВТорговомЗале_ПредупреждениеРасширеннаяПодсказка" id="1265"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаПроверкаИнвентаризацииВТорговомЗале_Предупреждение" id="746">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПроверкаИнвентаризацииВТорговомЗале_ПредупреждениеКонтекстноеМеню" id="747"/>
+													<ExtendedTooltip name="КартинкаПроверкаИнвентаризацииВТорговомЗале_ПредупреждениеРасширеннаяПодсказка" id="1266"/>
+												</PictureDecoration>
+												<LabelField name="ТекстОшибкиПроверкиИнвентаризацииВТорговомЗале" id="1150">
+													<DataPath>ТекстОшибкиПроверкиИнвентаризацииВТорговомЗале</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<VerticalAlign>Center</VerticalAlign>
+													<Height>2</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+													<ContextMenu name="ТекстОшибкиПроверкиИнвентаризацииВТорговомЗалеКонтекстноеМеню" id="1151"/>
+													<ExtendedTooltip name="ТекстОшибкиПроверкиИнвентаризацииВТорговомЗалеРасширеннаяПодсказка" id="1267"/>
+												</LabelField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+								<Pages name="ПанельНеоформленныеДокументы" id="1190">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Панель неоформленные документы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ПанельНеоформленныеДокументыРасширеннаяПодсказка" id="1268"/>
+									<ChildItems>
+										<Page name="СтраницаНеоформленныеДокументы_НетДокументов" id="1192">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Не оформленных документов не обнаружено</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаНеоформленныеДокументы_НетДокументовРасширеннаяПодсказка" id="1269"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаНеоформленныеДокументы_НетДокументов" id="1194">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаНеоформленныеДокументы_НетДокументовКонтекстноеМеню" id="1195"/>
+													<ExtendedTooltip name="КартинкаНеоформленныеДокументы_НетДокументовРасширеннаяПодсказка" id="1270"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьНеоформленныеДокументы_НетДокументов" id="1197">
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Документов ЕГАИС, требующих оформления, не обнаружено.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьНеоформленныеДокументы_НетДокументовКонтекстноеМеню" id="1198"/>
+													<ExtendedTooltip name="НадписьНеоформленныеДокументы_НетДокументовРасширеннаяПодсказка" id="1271"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаНеоформленныеДокументы_ЕстьДокументы" id="1200">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обнаружены документы, требующие оформления</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаНеоформленныеДокументы_ЕстьДокументыРасширеннаяПодсказка" id="1272"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаНеоформленныеДокументы_ЕстьДокументы" id="1202">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаНеоформленныеДокументы_ЕстьДокументыКонтекстноеМеню" id="1203"/>
+													<ExtendedTooltip name="КартинкаНеоформленныеДокументы_ЕстьДокументыРасширеннаяПодсказка" id="1273"/>
+												</PictureDecoration>
+												<UsualGroup name="ГруппаНеоформленныеДокументы" id="1205">
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа неоформленные документы</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНеоформленныеДокументыРасширеннаяПодсказка" id="1274"/>
+													<ChildItems>
+														<LabelDecoration name="НадписьНеоформленныеДокументы_ЕстьДокументы" id="1207">
+															<Height>2</Height>
+															<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>В информационной базе существуют документы, требующие дальнейшего оформления.
+Необходимо завершить процесс оформления документов:</v8:content>
+																</v8:item>
+															</Title>
+															<VerticalAlign>Center</VerticalAlign>
+															<ContextMenu name="НадписьНеоформленныеДокументы_ЕстьДокументыКонтекстноеМеню" id="1208"/>
+															<ExtendedTooltip name="НадписьНеоформленныеДокументы_ЕстьДокументыРасширеннаяПодсказка" id="1275"/>
+														</LabelDecoration>
+														<LabelField name="ТекстОшибкиНеоформленныеДокументы" id="1210">
+															<DataPath>ТекстОшибкиНеоформленныеДокументы</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ТекстОшибкиНеоформленныеДокументыКонтекстноеМеню" id="1211"/>
+															<ExtendedTooltip name="ТекстОшибкиНеоформленныеДокументыРасширеннаяПодсказка" id="1276"/>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПроверкаОстатковЕГАИС" id="158">
+							<TitleFont ref="sys:DefaultGUIFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверка остатков ЕГАИС</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроверкаОстатковЕГАИСРасширеннаяПодсказка" id="1277"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПроверкаОстатковЕГАИСЗаголовок" id="857">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПроверкаОстатковЕГАИСЗаголовокРасширеннаяПодсказка" id="1278"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация13" id="859">
+											<Width>4</Width>
+											<Height>1</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация13КонтекстноеМеню" id="860"/>
+											<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="1279"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаНадписьПроверкаОстатковЕГАИС" id="862">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>2. Корректность остатков ЕГАИС</v8:content>
+												</v8:item>
+											</Title>
+											<TitleFont ref="sys:DefaultGUIFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ExtendedTooltip name="ГруппаНадписьПроверкаОстатковЕГАИСРасширеннаяПодсказка" id="1280"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьПроверкаОстатковЕГАИС" id="160">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Документы, которые ожидают подтверждения или ещё не загружены из УТМ, могут исказить данные о получаемых остатках. Рекомендуется завершить процесс обмена по всем документам.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьПроверкаОстатковЕГАИСКонтекстноеМеню" id="161"/>
+													<ExtendedTooltip name="НадписьПроверкаОстатковЕГАИСРасширеннаяПодсказка" id="1281"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<Pages name="ПанельНеподтвержденныеДокументы" id="765">
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ПанельНеподтвержденныеДокументыРасширеннаяПодсказка" id="1282"/>
+									<ChildItems>
+										<Page name="СтраницаНеподтвержденныеДокументы_НетДокументов" id="767">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Не подтвержденных документов не обнаружено</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаНеподтвержденныеДокументы_НетДокументовРасширеннаяПодсказка" id="1283"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаНеподтвержденныеДокументы_НетДокументов" id="772">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаНеподтвержденныеДокументы_НетДокументовКонтекстноеМеню" id="773"/>
+													<ExtendedTooltip name="КартинкаНеподтвержденныеДокументы_НетДокументовРасширеннаяПодсказка" id="1284"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьНеподтвержденныеДокументы_НетДокументов" id="769">
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Документов ЕГАИС, ожидающих подтверждения, не обнаружено.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьНеподтвержденныеДокументы_НетДокументовКонтекстноеМеню" id="770"/>
+													<ExtendedTooltip name="НадписьНеподтвержденныеДокументы_НетДокументовРасширеннаяПодсказка" id="1285"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаНеподтвержденныеДокументы_ЕстьДокументы" id="775">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обнаружены документы, ожидающие подтверждения</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаНеподтвержденныеДокументы_ЕстьДокументыРасширеннаяПодсказка" id="1286"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаНеподтвержденныеДокументы_ЕстьДокументы" id="780">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаНеподтвержденныеДокументы_ЕстьДокументыКонтекстноеМеню" id="781"/>
+													<ExtendedTooltip name="КартинкаНеподтвержденныеДокументы_ЕстьДокументыРасширеннаяПодсказка" id="1287"/>
+												</PictureDecoration>
+												<UsualGroup name="ГруппаНеподтвержденныеДокументы" id="786">
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНеподтвержденныеДокументыРасширеннаяПодсказка" id="1288"/>
+													<ChildItems>
+														<LabelDecoration name="НадписьНеподтвержденныеДокументы_ЕстьДокументы" id="777">
+															<Height>2</Height>
+															<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>В информационной базе существуют документы, ожидающие подтверждения или получения ответа из ЕГАИС.
+Необходимо завершить процесс обмена по документам:</v8:content>
+																</v8:item>
+															</Title>
+															<VerticalAlign>Center</VerticalAlign>
+															<ContextMenu name="НадписьНеподтвержденныеДокументы_ЕстьДокументыКонтекстноеМеню" id="778"/>
+															<ExtendedTooltip name="НадписьНеподтвержденныеДокументы_ЕстьДокументыРасширеннаяПодсказка" id="1289"/>
+														</LabelDecoration>
+														<LabelField name="ТекстОшибкиНеподтвержденныеДокументы" id="1153">
+															<DataPath>ТекстОшибкиНеподтвержденныеДокументы</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ТекстОшибкиНеподтвержденныеДокументыКонтекстноеМеню" id="1154"/>
+															<ExtendedTooltip name="ТекстОшибкиНеподтвержденныеДокументыРасширеннаяПодсказка" id="1290"/>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+								<Pages name="ПанельНезагруженныеДокументы" id="791">
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ПанельНезагруженныеДокументыРасширеннаяПодсказка" id="1291"/>
+									<ChildItems>
+										<Page name="СтраницаНезагруженныеДокументы_НетДокументов" id="793">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Не загруженных документов не обнаружено</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаНезагруженныеДокументы_НетДокументовРасширеннаяПодсказка" id="1292"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаНезагруженныеДокументы_НетДокументов" id="798">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаНезагруженныеДокументы_НетДокументовКонтекстноеМеню" id="799"/>
+													<ExtendedTooltip name="КартинкаНезагруженныеДокументы_НетДокументовРасширеннаяПодсказка" id="1293"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьНезагруженныеДокументы_НетДокументов" id="795">
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Все документы загружены.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьНезагруженныеДокументы_НетДокументовКонтекстноеМеню" id="796"/>
+													<ExtendedTooltip name="НадписьНезагруженныеДокументы_НетДокументовРасширеннаяПодсказка" id="1294"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаНезагруженныеДокументы_ЕстьДокументы" id="801">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В УТМ обнаружены не загруженные документы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаНезагруженныеДокументы_ЕстьДокументыРасширеннаяПодсказка" id="1295"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаНезагруженныеДокументы_ЕстьДокументы" id="806">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаНезагруженныеДокументы_ЕстьДокументыКонтекстноеМеню" id="807"/>
+													<ExtendedTooltip name="КартинкаНезагруженныеДокументы_ЕстьДокументыРасширеннаяПодсказка" id="1296"/>
+												</PictureDecoration>
+												<LabelField name="ТекстОшибкиНезагруженныеДокументы_ЕстьДокументы" id="1159">
+													<DataPath>ТекстОшибкиНезагруженныеДокументы</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<VerticalAlign>Center</VerticalAlign>
+													<Height>2</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+													<ContextMenu name="ТекстОшибкиНезагруженныеДокументы_ЕстьДокументыКонтекстноеМеню" id="1160"/>
+													<ExtendedTooltip name="ТекстОшибкиНезагруженныеДокументы_ЕстьДокументыРасширеннаяПодсказка" id="1297"/>
+												</LabelField>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаНезагруженныеДокументы_Ошибка" id="809">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ошибка проверки незагруженных документов</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаНезагруженныеДокументы_ОшибкаРасширеннаяПодсказка" id="1298"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаНезагруженныеДокументы_Ошибка" id="814">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Ошибка32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаНезагруженныеДокументы_ОшибкаКонтекстноеМеню" id="815"/>
+													<ExtendedTooltip name="КартинкаНезагруженныеДокументы_ОшибкаРасширеннаяПодсказка" id="1299"/>
+												</PictureDecoration>
+												<LabelField name="ТекстОшибкиНезагруженныеДокументы_Ошибка" id="1156">
+													<DataPath>ТекстОшибкиНезагруженныеДокументы</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<VerticalAlign>Center</VerticalAlign>
+													<Height>2</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<TextColor>0:b9627855-6773-4a59-b7d3-f9e2e565cd9e</TextColor>
+													<ContextMenu name="ТекстОшибкиНезагруженныеДокументы_ОшибкаКонтекстноеМеню" id="1157"/>
+													<ExtendedTooltip name="ТекстОшибкиНезагруженныеДокументы_ОшибкаРасширеннаяПодсказка" id="1300"/>
+												</LabelField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+								<Pages name="ПанельОстаткиЕГАИС" id="1030">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Панель остатки ЕГАИС</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ПанельОстаткиЕГАИСРасширеннаяПодсказка" id="1301"/>
+									<ChildItems>
+										<Page name="СтраницаОстаткиЕГАИС_ЗапроситьОстатки" id="1125">
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаОстаткиЕГАИС_ЗапроситьОстаткиРасширеннаяПодсказка" id="1302"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаОстаткиЕГАИС_ЗапроситьОстатки" id="1178">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Картинка остатки ЕГАИС запросить остатки</v8:content>
+														</v8:item>
+													</Title>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаОстаткиЕГАИС_ЗапроситьОстаткиКонтекстноеМеню" id="1179"/>
+													<ExtendedTooltip name="КартинкаОстаткиЕГАИС_ЗапроситьОстаткиРасширеннаяПодсказка" id="1303"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьОстаткиЕГАИС_ЗапроситьОстатки" id="1127">
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Для продолжения требуется запросить остатки из ЕГАИС.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьОстаткиЕГАИС_ЗапроситьОстаткиКонтекстноеМеню" id="1128"/>
+													<ExtendedTooltip name="НадписьОстаткиЕГАИС_ЗапроситьОстаткиРасширеннаяПодсказка" id="1304"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаОстаткиЕГАИС_ОжиданиеПолученияОстатков" id="1056">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница остатки ЕГАИС остатки получены</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаОстаткиЕГАИС_ОжиданиеПолученияОстатковРасширеннаяПодсказка" id="1305"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаОстаткиЕГАИС_ПолучениеОстатков" id="1058">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.НезавершившаясяПроверка</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаОстаткиЕГАИС_ПолучениеОстатковКонтекстноеМеню" id="1059"/>
+													<ExtendedTooltip name="КартинкаОстаткиЕГАИС_ПолучениеОстатковРасширеннаяПодсказка" id="1306"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьОстаткиЕГАИС_ПолучениеОстатков" id="1061">
+													<Height>2</Height>
+													<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Получение остатков из ЕГАИС.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьОстаткиЕГАИС_ПолучениеОстатковКонтекстноеМеню" id="1062"/>
+													<ExtendedTooltip name="НадписьОстаткиЕГАИС_ПолучениеОстатковРасширеннаяПодсказка" id="1307"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаОстаткиЕГАИС_ОшибкаПолученияОстатков" id="1064">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ошибка проверки незагруженных документов</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаОстаткиЕГАИС_ОшибкаПолученияОстатковРасширеннаяПодсказка" id="1308"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаОстаткиЕГАИС_ОшибкаПолученияОстатков" id="1066">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Ошибка32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаОстаткиЕГАИС_ОшибкаПолученияОстатковКонтекстноеМеню" id="1067"/>
+													<ExtendedTooltip name="КартинкаОстаткиЕГАИС_ОшибкаПолученияОстатковРасширеннаяПодсказка" id="1309"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьОстаткиЕГАИС_ОшибкаПолученияОстатков" id="1069">
+													<Height>2</Height>
+													<TextColor>0:b9627855-6773-4a59-b7d3-f9e2e565cd9e</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ошибка получения остатков из ЕГАИС.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьОстаткиЕГАИС_ОшибкаПолученияОстатковКонтекстноеМеню" id="1070"/>
+													<ExtendedTooltip name="НадписьОстаткиЕГАИС_ОшибкаПолученияОстатковРасширеннаяПодсказка" id="1310"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаОстаткиЕГАИС_ОстаткиПолучены" id="1048">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница остатки ЕГАИС остатки получены</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтраницаОстаткиЕГАИС_ОстаткиПолученыРасширеннаяПодсказка" id="1311"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаОстаткиЕГАИС_ОстаткиПолучены" id="1050">
+													<Width>4</Width>
+													<Height>2</Height>
+													<Picture>
+														<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаОстаткиЕГАИС_ОстаткиПолученыКонтекстноеМеню" id="1051"/>
+													<ExtendedTooltip name="КартинкаОстаткиЕГАИС_ОстаткиПолученыРасширеннаяПодсказка" id="1312"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьОстаткиЕГАИС_ОстаткиПолучены" id="1053">
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Остатки из ЕГАИС получены.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьОстаткиЕГАИС_ОстаткиПолученыКонтекстноеМеню" id="1054"/>
+													<ExtendedTooltip name="НадписьОстаткиЕГАИС_ОстаткиПолученыРасширеннаяПодсказка" id="1313"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПросмотрОстатков" id="402">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Просмотр остатков</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница просмотр остатков</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПросмотрОстатковРасширеннаяПодсказка" id="1314"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПросмотрОстатков" id="404">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остатки алкогольной продукции (шаг 3 из 5)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа просмотр остатков</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПросмотрОстатковРасширеннаяПодсказка" id="1315"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьСопоставлениеНоменклатуры" id="406">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для корректировки остатков вся алкогольная продукция должна быть сопоставлена с классификатором ЕГАИС.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьСопоставлениеНоменклатурыКонтекстноеМеню" id="407"/>
+									<ExtendedTooltip name="НадписьСопоставлениеНоменклатурыРасширеннаяПодсказка" id="1316"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаКоманднаяПанель" id="1183">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа командная панель</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа командная панель</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="1317"/>
+									<ChildItems>
+										<RadioButtonField name="ВариантОтбораСтрокОстатков" id="1074">
+											<DataPath>ВариантОтбораСтрокОстатков</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Только строки с проблемами</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ошибочные</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Все</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Все</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ВариантОтбораСтрокОстатковКонтекстноеМеню" id="1075"/>
+											<ExtendedTooltip name="ВариантОтбораСтрокОстатковРасширеннаяПодсказка" id="1318"/>
+											<Events>
+												<Event name="OnChange">ВариантОтбораСтрокОстатковПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<CommandBar name="ГруппаКомандаяПанельТаблицыОстатков" id="1185">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа командая панель таблицы остатков</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа командая панель таблицы остатков</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CommandSource>Item.ТаблицаОстатков</CommandSource>
+											<ExtendedTooltip name="ГруппаКомандаяПанельТаблицыОстатковРасширеннаяПодсказка" id="1319"/>
+											<ChildItems>
+												<Button name="СопоставитьКлассификаторы" id="1181">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.СопоставитьКлассификаторы</CommandName>
+													<ExtendedTooltip name="СопоставитьКлассификаторыРасширеннаяПодсказка" id="1320"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+									</ChildItems>
+								</UsualGroup>
+								<Table name="ТаблицаОстатков" id="938">
+									<CommandBarLocation>None</CommandBarLocation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ТаблицаОстатков</DataPath>
+									<RowPictureDataPath>Объект.ТаблицаОстатков.ИндексКартинкиСтрок</RowPictureDataPath>
+									<RowsPicture>
+										<xr:Ref>CommonPicture.ПредупреждениеЕГАИС</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</RowsPicture>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+									</CommandSet>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаОстатковКонтекстноеМеню" id="939"/>
+									<AutoCommandBar name="ТаблицаОстатковКоманднаяПанель" id="940"/>
+									<ExtendedTooltip name="ТаблицаОстатковРасширеннаяПодсказка" id="1321"/>
+									<SearchStringAddition name="ТаблицаОстатковСтрокаПоиска" id="1322">
+										<AdditionSource>
+											<Item>ТаблицаОстатков</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаОстатковСтрокаПоискаКонтекстноеМеню" id="1323"/>
+										<ExtendedTooltip name="ТаблицаОстатковСтрокаПоискаРасширеннаяПодсказка" id="1324"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаОстатковСостояниеПросмотра" id="1325">
+										<AdditionSource>
+											<Item>ТаблицаОстатков</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаОстатковСостояниеПросмотраКонтекстноеМеню" id="1326"/>
+										<ExtendedTooltip name="ТаблицаОстатковСостояниеПросмотраРасширеннаяПодсказка" id="1327"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаОстатковУправлениеПоиском" id="1328">
+										<AdditionSource>
+											<Item>ТаблицаОстатков</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаОстатковУправлениеПоискомКонтекстноеМеню" id="1329"/>
+										<ExtendedTooltip name="ТаблицаОстатковУправлениеПоискомРасширеннаяПодсказка" id="1330"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ТаблицаОстатковПриОкончанииРедактирования</Event>
+										<Event name="BeforeAddRow">ТаблицаОстатковПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ТаблицаОстатковПередУдалением</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ТаблицаОстатковНомерСтроки" id="951">
+											<DataPath>Объект.ТаблицаОстатков.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<ContextMenu name="ТаблицаОстатковНомерСтрокиКонтекстноеМеню" id="952"/>
+											<ExtendedTooltip name="ТаблицаОстатковНомерСтрокиРасширеннаяПодсказка" id="1331"/>
+										</LabelField>
+										<ColumnGroup name="ТаблицаОстатковГруппаПоДаннымИнформационнойБазы" id="1072">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>По данным информационной базы</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Таблица остатков группа по данным информационной базы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ТаблицаОстатковГруппаПоДаннымИнформационнойБазыРасширеннаяПодсказка" id="1332"/>
+											<ChildItems>
+												<InputField name="ТаблицаОстатковНоменклатура" id="954">
+													<DataPath>Объект.ТаблицаОстатков.Номенклатура</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>30</Width>
+													<ContextMenu name="ТаблицаОстатковНоменклатураКонтекстноеМеню" id="955"/>
+													<ExtendedTooltip name="ТаблицаОстатковНоменклатураРасширеннаяПодсказка" id="1333"/>
+													<Events>
+														<Event name="OnChange">ТаблицаОстатковНоменклатураПриИзменении</Event>
+														<Event name="StartChoice">ТаблицаОстатковНоменклатураНачалоВыбора</Event>
+														<Event name="Clearing">ТаблицаОстатковНоменклатураОчистка</Event>
+														<Event name="ChoiceProcessing">ТаблицаОстатковНоменклатураОбработкаВыбора</Event>
+													</Events>
+												</InputField>
+												<InputField name="ТаблицаОстатковХарактеристика" id="957">
+													<DataPath>Объект.ТаблицаОстатков.Характеристика</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ТаблицаОстатковХарактеристикаКонтекстноеМеню" id="958"/>
+													<ExtendedTooltip name="ТаблицаОстатковХарактеристикаРасширеннаяПодсказка" id="1334"/>
+													<Events>
+														<Event name="StartChoice">ТаблицаОстатковХарактеристикаНачалоВыбора</Event>
+														<Event name="Clearing">ТаблицаОстатковХарактеристикаОчистка</Event>
+														<Event name="ChoiceProcessing">ТаблицаОстатковХарактеристикаОбработкаВыбора</Event>
+													</Events>
+												</InputField>
+												<InputField name="ТаблицаОстатковОстатокСклад" id="977">
+													<DataPath>Объект.ТаблицаОстатков.ОстатокСклад</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТаблицаОстатковОстатокСкладКонтекстноеМеню" id="978"/>
+													<ExtendedTooltip name="ТаблицаОстатковОстатокСкладРасширеннаяПодсказка" id="1335"/>
+												</InputField>
+												<InputField name="ТаблицаОстатковОстатокТорговыйЗал" id="980">
+													<DataPath>Объект.ТаблицаОстатков.ОстатокТорговыйЗал</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТаблицаОстатковОстатокТорговыйЗалКонтекстноеМеню" id="981"/>
+													<ExtendedTooltip name="ТаблицаОстатковОстатокТорговыйЗалРасширеннаяПодсказка" id="1336"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ТаблицаОстатковГруппаПоДаннымЕГАИС" id="975">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>По данным ЕГАИС</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Таблица остатков группа по данным ЕГАИС</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ТаблицаОстатковГруппаПоДаннымЕГАИСРасширеннаяПодсказка" id="1337"/>
+											<ChildItems>
+												<InputField name="ТаблицаОстатковАлкогольнаяПродукция" id="966">
+													<DataPath>Объект.ТаблицаОстатков.АлкогольнаяПродукция</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>30</Width>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ТаблицаОстатковАлкогольнаяПродукцияКонтекстноеМеню" id="967"/>
+													<ExtendedTooltip name="ТаблицаОстатковАлкогольнаяПродукцияРасширеннаяПодсказка" id="1338"/>
+													<Events>
+														<Event name="OnChange">ТаблицаОстатковАлкогольнаяПродукцияПриИзменении</Event>
+														<Event name="StartChoice">ТаблицаОстатковАлкогольнаяПродукцияНачалоВыбора</Event>
+														<Event name="Clearing">ТаблицаОстатковАлкогольнаяПродукцияОчистка</Event>
+														<Event name="ChoiceProcessing">ТаблицаОстатковАлкогольнаяПродукцияОбработкаВыбора</Event>
+													</Events>
+												</InputField>
+												<InputField name="ТаблицаОстатковОстатокРегистр1" id="969">
+													<DataPath>Объект.ТаблицаОстатков.ОстатокРегистр1</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
+													<ContextMenu name="ТаблицаОстатковОстатокРегистр1КонтекстноеМеню" id="970"/>
+													<ExtendedTooltip name="ТаблицаОстатковОстатокРегистр1РасширеннаяПодсказка" id="1339"/>
+												</InputField>
+												<InputField name="ТаблицаОстатковОстатокРегистр2" id="972">
+													<DataPath>Объект.ТаблицаОстатков.ОстатокРегистр2</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
+													<ContextMenu name="ТаблицаОстатковОстатокРегистр2КонтекстноеМеню" id="973"/>
+													<ExtendedTooltip name="ТаблицаОстатковОстатокРегистр2РасширеннаяПодсказка" id="1340"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+								<Pages name="ПанельПроверкаОстатков" id="468">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Панель проверка остатков</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ПанельПроверкаОстатковРасширеннаяПодсказка" id="1341"/>
+									<ChildItems>
+										<Page name="СтраницаПроверкаОстатковУспешно" id="470">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница проверка остатков успешно</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаПроверкаОстатковУспешноРасширеннаяПодсказка" id="1342"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьПроверкаОстатковУспешно" id="474">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Нажмите "Далее" для перехода к началу процесса создания корректировочных документов.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Bottom</VerticalAlign>
+													<ContextMenu name="НадписьПроверкаОстатковУспешноКонтекстноеМеню" id="475"/>
+													<ExtendedTooltip name="НадписьПроверкаОстатковУспешноРасширеннаяПодсказка" id="1343"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаПроверкаОстатковОшибка" id="472">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница проверка остатков ошибка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаПроверкаОстатковОшибкаРасширеннаяПодсказка" id="1344"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьПроверкаОстатковОшибка" id="477">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>  Нет данных для создания корректировочных документов.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьПроверкаОстатковОшибкаКонтекстноеМеню" id="478"/>
+													<ExtendedTooltip name="НадписьПроверкаОстатковОшибкаРасширеннаяПодсказка" id="1345"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаПроверкаОстатковПредупреждение" id="991">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница проверка остатков предупреждение</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаПроверкаОстатковПредупреждениеРасширеннаяПодсказка" id="1346"/>
+											<ChildItems>
+												<LabelField name="ТаблицаОстатковТекстОшибки" id="988">
+													<DataPath>Items.ТаблицаОстатков.CurrentData.ТекстОшибки</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ТаблицаОстатковТекстОшибкиКонтекстноеМеню" id="989"/>
+													<ExtendedTooltip name="ТаблицаОстатковТекстОшибкиРасширеннаяПодсказка" id="1347"/>
+												</LabelField>
+												<LabelDecoration name="НадписьПроверкаОстатковПредупреждение" id="993">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Остатки товаров, по которым выданы предупреждения, скорректированы не будут.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьПроверкаОстатковПредупреждениеКонтекстноеМеню" id="994"/>
+													<ExtendedTooltip name="НадписьПроверкаОстатковПредупреждениеРасширеннаяПодсказка" id="1348"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСозданиеДокументов" id="487">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создание документов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница создание документов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаСозданиеДокументовРасширеннаяПодсказка" id="1349"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСозданиеДокументов" id="835">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создание документов корректировки (шаг 4 из 5)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа создание документов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаСозданиеДокументовРасширеннаяПодсказка" id="1350"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьСозданиеДокументов" id="537">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>По данным полей таблицы, выделенных цветом, будут сформированы документы корректировки остатков ЕГАИС.
+
+Остаток в ЕГАИС продукции, продаваемой в розлив, может отличаться от учетного на объем вскрытой тары, т.к. при вскрытии тары в ЕГАИС происходит списание всего объема.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьСозданиеДокументовКонтекстноеМеню" id="538"/>
+									<ExtendedTooltip name="НадписьСозданиеДокументовРасширеннаяПодсказка" id="1351"/>
+								</LabelDecoration>
+								<Table name="ТаблицаКорректировки" id="540">
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ТаблицаКорректировки</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаКорректировкиКонтекстноеМеню" id="541"/>
+									<AutoCommandBar name="ТаблицаКорректировкиКоманднаяПанель" id="542">
+										<ChildItems>
+											<Button name="ТаблицаКорректировкиОбнулитьКоличество" id="983">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОбнулитьКоличество</CommandName>
+												<ExtendedTooltip name="ТаблицаКорректировкиОбнулитьКоличествоРасширеннаяПодсказка" id="1352"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаКорректировкиРасширеннаяПодсказка" id="1353"/>
+									<SearchStringAddition name="ТаблицаКорректировкиСтрокаПоиска" id="1354">
+										<AdditionSource>
+											<Item>ТаблицаКорректировки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаКорректировкиСтрокаПоискаКонтекстноеМеню" id="1355"/>
+										<ExtendedTooltip name="ТаблицаКорректировкиСтрокаПоискаРасширеннаяПодсказка" id="1356"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаКорректировкиСостояниеПросмотра" id="1357">
+										<AdditionSource>
+											<Item>ТаблицаКорректировки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаКорректировкиСостояниеПросмотраКонтекстноеМеню" id="1358"/>
+										<ExtendedTooltip name="ТаблицаКорректировкиСостояниеПросмотраРасширеннаяПодсказка" id="1359"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаКорректировкиУправлениеПоиском" id="1360">
+										<AdditionSource>
+											<Item>ТаблицаКорректировки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаКорректировкиУправлениеПоискомКонтекстноеМеню" id="1361"/>
+										<ExtendedTooltip name="ТаблицаКорректировкиУправлениеПоискомРасширеннаяПодсказка" id="1362"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ТаблицаКорректировкиНомерСтроки" id="553">
+											<DataPath>Объект.ТаблицаКорректировки.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>4</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаКорректировкиНомерСтрокиКонтекстноеМеню" id="554"/>
+											<ExtendedTooltip name="ТаблицаКорректировкиНомерСтрокиРасширеннаяПодсказка" id="1363"/>
+										</LabelField>
+										<ColumnGroup name="ТаблицаКорректировкиГруппаПоДаннымИнформационнойБазы" id="1103">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>По данным информационной базы</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Таблица корректировки группа по данным информационной базы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ТаблицаКорректировкиГруппаПоДаннымИнформационнойБазыРасширеннаяПодсказка" id="1364"/>
+											<ChildItems>
+												<InputField name="ТаблицаКорректировкиНоменклатура" id="601">
+													<DataPath>Объект.ТаблицаКорректировки.Номенклатура</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>50</Width>
+													<ChoiceButton>false</ChoiceButton>
+													<ClearButton>false</ClearButton>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ТаблицаКорректировкиНоменклатураКонтекстноеМеню" id="602"/>
+													<ExtendedTooltip name="ТаблицаКорректировкиНоменклатураРасширеннаяПодсказка" id="1365"/>
+													<Events>
+														<Event name="StartChoice">ТаблицаКорректировкиНоменклатураНачалоВыбора</Event>
+														<Event name="Clearing">ТаблицаКорректировкиНоменклатураОчистка</Event>
+													</Events>
+												</InputField>
+												<InputField name="ТаблицаКорректировкиХарактеристика" id="604">
+													<DataPath>Объект.ТаблицаКорректировки.Характеристика</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ChoiceButton>false</ChoiceButton>
+													<ClearButton>false</ClearButton>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ТаблицаКорректировкиХарактеристикаКонтекстноеМеню" id="605"/>
+													<ExtendedTooltip name="ТаблицаКорректировкиХарактеристикаРасширеннаяПодсказка" id="1366"/>
+													<Events>
+														<Event name="StartChoice">ТаблицаКорректировкиХарактеристикаНачалоВыбора</Event>
+														<Event name="Clearing">ТаблицаКорректировкиХарактеристикаОчистка</Event>
+													</Events>
+												</InputField>
+												<LabelField name="ТаблицаКорректировкиНоменклатураЕдиницаИзмерения" id="694">
+													<DataPath>Объект.ТаблицаКорректировки.ЕдиницаИзмерения</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ед. изм.</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>7</Width>
+													<ContextMenu name="ТаблицаКорректировкиНоменклатураЕдиницаИзмеренияКонтекстноеМеню" id="695"/>
+													<ExtendedTooltip name="ТаблицаКорректировкиНоменклатураЕдиницаИзмеренияРасширеннаяПодсказка" id="1367"/>
+												</LabelField>
+												<InputField name="ТаблицаКорректировкиОстатокСклад" id="559">
+													<DataPath>Объект.ТаблицаКорректировки.ОстатокСклад</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТаблицаКорректировкиОстатокСкладКонтекстноеМеню" id="560"/>
+													<ExtendedTooltip name="ТаблицаКорректировкиОстатокСкладРасширеннаяПодсказка" id="1368"/>
+												</InputField>
+												<InputField name="ТаблицаКорректировкиОстатокТорговыйЗал" id="562">
+													<DataPath>Объект.ТаблицаКорректировки.ОстатокТорговыйЗал</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТаблицаКорректировкиОстатокТорговыйЗалКонтекстноеМеню" id="563"/>
+													<ExtendedTooltip name="ТаблицаКорректировкиОстатокТорговыйЗалРасширеннаяПодсказка" id="1369"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ТаблицаКорректировкиГруппаПоДаннымЕГАИС" id="591">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>По данным ЕГАИС</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Остаток алкогольной продукции по данныи ЕГАИС</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<ExtendedTooltip name="ТаблицаКорректировкиГруппаПоДаннымЕГАИСРасширеннаяПодсказка" id="1370"/>
+											<ChildItems>
+												<InputField name="ТаблицаКорректировкиОстатокРегистр1" id="565">
+													<DataPath>Объект.ТаблицаКорректировки.ОстатокРегистр1</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
+													<ContextMenu name="ТаблицаКорректировкиОстатокРегистр1КонтекстноеМеню" id="566"/>
+													<ExtendedTooltip name="ТаблицаКорректировкиОстатокРегистр1РасширеннаяПодсказка" id="1371"/>
+												</InputField>
+												<InputField name="ТаблицаКорректировкиОстатокРегистр2" id="568">
+													<DataPath>Объект.ТаблицаКорректировки.ОстатокРегистр2</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>12</Width>
+													<ContextMenu name="ТаблицаКорректировкиОстатокРегистр2КонтекстноеМеню" id="569"/>
+													<ExtendedTooltip name="ТаблицаКорректировкиОстатокРегистр2РасширеннаяПодсказка" id="1372"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ТаблицаКорректировкиГруппаПередатьВРегистр2" id="1105">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Передать (вернуть)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Таблица корректировки группа передать в регистр2</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ТаблицаКорректировкиГруппаПередатьВРегистр2РасширеннаяПодсказка" id="1373"/>
+											<ChildItems>
+												<InputField name="ТаблицаКорректировкиПередатьВРегистр2" id="571">
+													<DataPath>Объект.ТаблицаКорректировки.ПередатьВРегистр2</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Регистр №1 -&gt; №2</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<BackColor>web:Beige</BackColor>
+													<ContextMenu name="ТаблицаКорректировкиПередатьВРегистр2КонтекстноеМеню" id="572"/>
+													<ExtendedTooltip name="ТаблицаКорректировкиПередатьВРегистр2РасширеннаяПодсказка" id="1374"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ТаблицаКорректировкиГруппаПоставитьНаБаланс" id="1107">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поставить на баланс (списать)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Таблица корректировки группа поставить на баланс</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ТаблицаКорректировкиГруппаПоставитьНаБалансРасширеннаяПодсказка" id="1375"/>
+											<ChildItems>
+												<InputField name="ТаблицаКорректировкиПоставитьНаБалансВРегистр1" id="583">
+													<DataPath>Объект.ТаблицаКорректировки.ПоставитьНаБалансВРегистр1</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Регистр №1</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<BackColor>web:Beige</BackColor>
+													<ContextMenu name="ТаблицаКорректировкиПоставитьНаБалансВРегистр1КонтекстноеМеню" id="584"/>
+													<ExtendedTooltip name="ТаблицаКорректировкиПоставитьНаБалансВРегистр1РасширеннаяПодсказка" id="1376"/>
+												</InputField>
+												<InputField name="ТаблицаКорректировкиПоставитьНаБалансВРегистр2" id="577">
+													<DataPath>Объект.ТаблицаКорректировки.ПоставитьНаБалансВРегистр2</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Регистр №2</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<BackColor>web:Beige</BackColor>
+													<ContextMenu name="ТаблицаКорректировкиПоставитьНаБалансВРегистр2КонтекстноеМеню" id="578"/>
+													<ExtendedTooltip name="ТаблицаКорректировкиПоставитьНаБалансВРегистр2РасширеннаяПодсказка" id="1377"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+								<LabelDecoration name="НадписьСозданиеДокументовДалее" id="619">
+									<VerticalStretch>true</VerticalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нажмите "Далее" для создания корректировочных документов.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<ContextMenu name="НадписьСозданиеДокументовДалееКонтекстноеМеню" id="620"/>
+									<ExtendedTooltip name="НадписьСозданиеДокументовДалееРасширеннаяПодсказка" id="1378"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОкончание" id="466">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окончание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница окончание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОкончаниеРасширеннаяПодсказка" id="1379"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОкончание" id="631">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Созданные документы (шаг 5 из 5)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа окончание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОкончаниеРасширеннаяПодсказка" id="1380"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьОкончание" id="633">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Формирование документов завершено.
+Для выгрузки документов в ЕГАИС воспользуйтесь командой "Передать данные в ЕГАИС".</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьОкончаниеКонтекстноеМеню" id="634"/>
+									<ExtendedTooltip name="НадписьОкончаниеРасширеннаяПодсказка" id="1381"/>
+								</LabelDecoration>
+								<Table name="СозданныеДокументы" id="636">
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<HeightInTableRows>10</HeightInTableRows>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>СозданныеДокументы</DataPath>
+									<RowPictureDataPath>СозданныеДокументы.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СозданныеДокументыКонтекстноеМеню" id="637"/>
+									<AutoCommandBar name="СозданныеДокументыКоманднаяПанель" id="638"/>
+									<ExtendedTooltip name="СозданныеДокументыРасширеннаяПодсказка" id="1382"/>
+									<SearchStringAddition name="СозданныеДокументыСтрокаПоиска" id="1383">
+										<AdditionSource>
+											<Item>СозданныеДокументы</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СозданныеДокументыСтрокаПоискаКонтекстноеМеню" id="1384"/>
+										<ExtendedTooltip name="СозданныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="1385"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СозданныеДокументыСостояниеПросмотра" id="1386">
+										<AdditionSource>
+											<Item>СозданныеДокументы</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СозданныеДокументыСостояниеПросмотраКонтекстноеМеню" id="1387"/>
+										<ExtendedTooltip name="СозданныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="1388"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СозданныеДокументыУправлениеПоиском" id="1389">
+										<AdditionSource>
+											<Item>СозданныеДокументы</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СозданныеДокументыУправлениеПоискомКонтекстноеМеню" id="1390"/>
+										<ExtendedTooltip name="СозданныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="1391"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">СозданныеДокументыВыбор</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СозданныеДокументыНомер" id="661">
+											<DataPath>~СозданныеДокументы.Номер</DataPath>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="СозданныеДокументыНомерКонтекстноеМеню" id="662"/>
+											<ExtendedTooltip name="СозданныеДокументыНомерРасширеннаяПодсказка" id="1392"/>
+										</LabelField>
+										<LabelField name="СозданныеДокументыДата" id="658">
+											<DataPath>~СозданныеДокументы.Дата</DataPath>
+											<Width>9</Width>
+											<ContextMenu name="СозданныеДокументыДатаКонтекстноеМеню" id="659"/>
+											<ExtendedTooltip name="СозданныеДокументыДатаРасширеннаяПодсказка" id="1393"/>
+										</LabelField>
+										<LabelField name="СозданныеДокументыСтатусОбработки" id="655">
+											<DataPath>~СозданныеДокументы.СтатусОбработки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Статус</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СозданныеДокументыСтатусОбработкиКонтекстноеМеню" id="656"/>
+											<ExtendedTooltip name="СозданныеДокументыСтатусОбработкиРасширеннаяПодсказка" id="1394"/>
+										</LabelField>
+										<LabelField name="СозданныеДокументыВидДокумента" id="652">
+											<DataPath>~СозданныеДокументы.ВидДокумента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Операция</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СозданныеДокументыВидДокументаКонтекстноеМеню" id="653"/>
+											<ExtendedTooltip name="СозданныеДокументыВидДокументаРасширеннаяПодсказка" id="1395"/>
+										</LabelField>
+										<LabelField name="СозданныеДокументыОрганизацияЕГАИС" id="985">
+											<DataPath>~СозданныеДокументы.ОрганизацияЕГАИС</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организация ЕГАИС</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СозданныеДокументыОрганизацияЕГАИСКонтекстноеМеню" id="986"/>
+											<ExtendedTooltip name="СозданныеДокументыОрганизацияЕГАИСРасширеннаяПодсказка" id="1396"/>
+										</LabelField>
+										<LabelField name="СозданныеДокументыСсылка" id="1187">
+											<DataPath>~СозданныеДокументы.Ref</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<ContextMenu name="СозданныеДокументыСсылкаКонтекстноеМеню" id="1188"/>
+											<ExtendedTooltip name="СозданныеДокументыСсылкаРасширеннаяПодсказка" id="1397"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="ПанельНавигации" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель навигации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель навигации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ПанельНавигацииРасширеннаяПодсказка" id="1398"/>
+			<ChildItems>
+				<Page name="СтраницаНавигацииНачало" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации начало</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации начало</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаНавигацииНачалоРасширеннаяПодсказка" id="1399"/>
+					<ChildItems>
+						<CommandBar name="ПраваяПанельНачало" id="21">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель начало</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель начало</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ПраваяПанельНачалоРасширеннаяПодсказка" id="1400"/>
+							<ChildItems>
+								<Button name="ПерейтиВпередНачало" id="25">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиВперед</CommandName>
+									<ExtendedTooltip name="ПерейтиВпередНачалоРасширеннаяПодсказка" id="1401"/>
+								</Button>
+								<Button name="ЗакрытьНачало" id="29">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Close</CommandName>
+									<ExtendedTooltip name="ЗакрытьНачалоРасширеннаяПодсказка" id="1402"/>
+								</Button>
+								<Button name="СправкаНачало" id="31">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СправкаНачалоРасширеннаяПодсказка" id="1403"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНавигацииПроверкаДанных" id="1014">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации проверка данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СтраницаНавигацииПроверкаДанныхРасширеннаяПодсказка" id="1404"/>
+					<ChildItems>
+						<CommandBar name="ЛеваяПанельПроверкаДанных" id="1016">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Левая панель проверка данных</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЛеваяПанельПроверкаДанныхРасширеннаяПодсказка" id="1405"/>
+							<ChildItems>
+								<Button name="ПерейтиНазадПроверкаДанных" id="1018">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиНазад</CommandName>
+									<ExtendedTooltip name="ПерейтиНазадПроверкаДанныхРасширеннаяПодсказка" id="1406"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<CommandBar name="ПраваяПанельПроверкаДанных" id="1020">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель продолжение</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ПраваяПанельПроверкаДанныхРасширеннаяПодсказка" id="1407"/>
+							<ChildItems>
+								<Button name="ПовторитьПроверку" id="1028">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПовторитьПроверку</CommandName>
+									<ExtendedTooltip name="ПовторитьПроверкуРасширеннаяПодсказка" id="1408"/>
+								</Button>
+								<Button name="ПерейтиВпередПроверкаДанных" id="1022">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиВперед</CommandName>
+									<ExtendedTooltip name="ПерейтиВпередПроверкаДанныхРасширеннаяПодсказка" id="1409"/>
+								</Button>
+								<Button name="ЗакрытьПроверкаДанных" id="1024">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Close</CommandName>
+									<ExtendedTooltip name="ЗакрытьПроверкаДанныхРасширеннаяПодсказка" id="1410"/>
+								</Button>
+								<Button name="СправкаПроверкаДанных" id="1026">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СправкаПроверкаДанныхРасширеннаяПодсказка" id="1411"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНавигацииПросмотрОстатков" id="1133">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации просмотр остатков</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СтраницаНавигацииПросмотрОстатковРасширеннаяПодсказка" id="1412"/>
+					<ChildItems>
+						<CommandBar name="ЛеваяПанельПросмотрОстатков" id="1135">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Левая панель просмотр остатков</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЛеваяПанельПросмотрОстатковРасширеннаяПодсказка" id="1413"/>
+							<ChildItems>
+								<Button name="ПерейтиНазадПросмотрОстатков" id="1137">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиНазад</CommandName>
+									<ExtendedTooltip name="ПерейтиНазадПросмотрОстатковРасширеннаяПодсказка" id="1414"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<CommandBar name="ПраваяПанельПросмотрОстатков" id="1139">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель просмотр остатков</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ПраваяПанельПросмотрОстатковРасширеннаяПодсказка" id="1415"/>
+							<ChildItems>
+								<Button name="ТаблицаОстатковОбновитьДанныеТаблицыОстатков" id="1081">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ОбновитьДанныеТаблицыОстатков</CommandName>
+									<ExtendedTooltip name="ТаблицаОстатковОбновитьДанныеТаблицыОстатковРасширеннаяПодсказка" id="1416"/>
+								</Button>
+								<Button name="ПерейтиВпередПросмотрОстатков" id="1141">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиВперед</CommandName>
+									<ExtendedTooltip name="ПерейтиВпередПросмотрОстатковРасширеннаяПодсказка" id="1417"/>
+								</Button>
+								<Button name="ЗакрытьПросмотрОстатков" id="1143">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Close</CommandName>
+									<ExtendedTooltip name="ЗакрытьПросмотрОстатковРасширеннаяПодсказка" id="1418"/>
+								</Button>
+								<Button name="СправкаПросмотрОстатков" id="1145">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СправкаПросмотрОстатковРасширеннаяПодсказка" id="1419"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНавигацииСозданиеДокументов" id="1162">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации создание документов</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СтраницаНавигацииСозданиеДокументовРасширеннаяПодсказка" id="1420"/>
+					<ChildItems>
+						<CommandBar name="ЛеваяПанельСозданиеДокументов" id="1164">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Левая панель создание документов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Левая панель создание документов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ЛеваяПанельСозданиеДокументовРасширеннаяПодсказка" id="1421"/>
+							<ChildItems>
+								<Button name="ПерейтиНазадСозданиеДокументов" id="1166">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиНазад</CommandName>
+									<ExtendedTooltip name="ПерейтиНазадСозданиеДокументовРасширеннаяПодсказка" id="1422"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<CommandBar name="ПраваяПанельСозданиеДокументов" id="1168">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель создание документов</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ПраваяПанельСозданиеДокументовРасширеннаяПодсказка" id="1423"/>
+							<ChildItems>
+								<Button name="ТаблицаКорректировкиЗаполнитьТаблицуКорректировки" id="1112">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаполнитьТаблицуКорректировки</CommandName>
+									<ExtendedTooltip name="ТаблицаКорректировкиЗаполнитьТаблицуКорректировкиРасширеннаяПодсказка" id="1424"/>
+								</Button>
+								<Button name="ПерейтиВпередСозданиеДокументов" id="1172">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиВперед</CommandName>
+									<ExtendedTooltip name="ПерейтиВпередСозданиеДокументовРасширеннаяПодсказка" id="1425"/>
+								</Button>
+								<Button name="ЗакрытьСозданиеДокументов" id="1174">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Close</CommandName>
+									<ExtendedTooltip name="ЗакрытьСозданиеДокументовРасширеннаяПодсказка" id="1426"/>
+								</Button>
+								<Button name="СправкаСозданиеДокументов" id="1176">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СправкаСозданиеДокументовРасширеннаяПодсказка" id="1427"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНавигацииПродолжение" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации продолжение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации продолжение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СтраницаНавигацииПродолжениеРасширеннаяПодсказка" id="1428"/>
+					<ChildItems>
+						<CommandBar name="ЛеваяПанельПродолжение" id="19">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Левая панель продолжение</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Левая панель продолжение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ЛеваяПанельПродолжениеРасширеннаяПодсказка" id="1429"/>
+							<ChildItems>
+								<Button name="ПерейтиНазадПродолжение" id="23">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиНазад</CommandName>
+									<ExtendedTooltip name="ПерейтиНазадПродолжениеРасширеннаяПодсказка" id="1430"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<CommandBar name="ПраваяПанельПродолжение" id="47">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель продолжение</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель продолжение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ПраваяПанельПродолжениеРасширеннаяПодсказка" id="1431"/>
+							<ChildItems>
+								<Button name="ПерейтиВпередПродолжение" id="49">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиВперед</CommandName>
+									<ExtendedTooltip name="ПерейтиВпередПродолжениеРасширеннаяПодсказка" id="1432"/>
+								</Button>
+								<Button name="ЗакрытьПродолжение" id="51">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Close</CommandName>
+									<ExtendedTooltip name="ЗакрытьПродолжениеРасширеннаяПодсказка" id="1433"/>
+								</Button>
+								<Button name="СправкаПродолжение" id="53">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СправкаПродолжениеРасширеннаяПодсказка" id="1434"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНавигацииОжидание" id="321">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации ожидание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СтраницаНавигацииОжиданиеРасширеннаяПодсказка" id="1435"/>
+					<ChildItems>
+						<CommandBar name="ЛеваяПанельОжидание" id="323">
+							<Enabled>false</Enabled>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Левая панель продолжение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ЛеваяПанельОжиданиеРасширеннаяПодсказка" id="1436"/>
+							<ChildItems>
+								<Button name="ПерейтиНазадОжидание" id="325">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиНазад</CommandName>
+									<ExtendedTooltip name="ПерейтиНазадОжиданиеРасширеннаяПодсказка" id="1437"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<CommandBar name="ПраваяПанельОжидание" id="327">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель продолжение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ПраваяПанельОжиданиеРасширеннаяПодсказка" id="1438"/>
+							<ChildItems>
+								<Button name="ПерейтиВпередОжидание" id="329">
+									<Type>CommandBarButton</Type>
+									<Enabled>false</Enabled>
+									<CommandName>Form.Command.ПерейтиВперед</CommandName>
+									<ExtendedTooltip name="ПерейтиВпередОжиданиеРасширеннаяПодсказка" id="1439"/>
+								</Button>
+								<Button name="ЗакрытьОжидание" id="331">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Close</CommandName>
+									<ExtendedTooltip name="ЗакрытьОжиданиеРасширеннаяПодсказка" id="1440"/>
+								</Button>
+								<Button name="СправкаОжидание" id="333">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СправкаОжиданиеРасширеннаяПодсказка" id="1441"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНавигацииВыгрузкаДокументов" id="1083">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации выгрузка документов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СтраницаНавигацииВыгрузкаДокументовРасширеннаяПодсказка" id="1442"/>
+					<ChildItems>
+						<CommandBar name="ЛеваяПанельВыгрузкаДокументов" id="1085">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Левая панель выгрузка документов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Левая панель выгрузка документов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ЛеваяПанельВыгрузкаДокументовРасширеннаяПодсказка" id="1443"/>
+							<ChildItems>
+								<Button name="ПерейтиНазадВыгрузкаДокументов" id="1087">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиНазад</CommandName>
+									<ExtendedTooltip name="ПерейтиНазадВыгрузкаДокументовРасширеннаяПодсказка" id="1444"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<CommandBar name="ПраваяПанельВыгрузкаДокументов" id="1089">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель выгрузка документов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель окончание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ПраваяПанельВыгрузкаДокументовРасширеннаяПодсказка" id="1445"/>
+							<ChildItems>
+								<Button name="ВыгрузитьВЕГАИС" id="1091">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ВыгрузитьВЕГАИС</CommandName>
+									<ExtendedTooltip name="ВыгрузитьВЕГАИСРасширеннаяПодсказка" id="1446"/>
+								</Button>
+								<Button name="ЗакрытьВыгрузкаДокументов" id="1093">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Close</CommandName>
+									<ExtendedTooltip name="ЗакрытьВыгрузкаДокументовРасширеннаяПодсказка" id="1447"/>
+								</Button>
+								<Button name="СправкаВыгрузкаДокументов" id="1095">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СправкаВыгрузкаДокументовРасширеннаяПодсказка" id="1448"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНавигацииОкончание" id="55">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации окончание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигации окончание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СтраницаНавигацииОкончаниеРасширеннаяПодсказка" id="1449"/>
+					<ChildItems>
+						<CommandBar name="ПраваяПанельОкончание" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель окончание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правая панель окончание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ПраваяПанельОкончаниеРасширеннаяПодсказка" id="1450"/>
+							<ChildItems>
+								<Button name="ПерейтиВНачало" id="1097">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПерейтиВНачало</CommandName>
+									<ExtendedTooltip name="ПерейтиВНачалоРасширеннаяПодсказка" id="1451"/>
+								</Button>
+								<Button name="Готово" id="1101">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Готово</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Закрыть</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГотовоРасширеннаяПодсказка" id="1452"/>
+								</Button>
+								<Button name="СправкаОкончание" id="69">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="СправкаОкончаниеРасширеннаяПодсказка" id="1453"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УдалитьПомощникКорректировкиОстатковЕГАИС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.ТаблицаОстатков">
+					<Column name="ЕстьОшибка" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Есть ошибка</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ТекстОшибки" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текст ошибки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИндексКартинкиСтрок" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Индекс картинки строк</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>1</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ХарактеристикиИспользуются" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристики используются</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Сопоставлено" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сопоставлено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ЕдиницаИзмерения" id="6">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Единица измерения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.ТаблицаКорректировки">
+					<Column name="ХарактеристикиИспользуются" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристики используются</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ЕдиницаИзмерения" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Единица измерения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.СозданныеДокументы"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПорядковыйНомерПерехода" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядковый номер перехода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаПереходов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица переходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПорядковыйНомерПерехода" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядковый номер перехода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяОсновнойСтраницы" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя основной страницы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяСтраницыНавигации" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя страницы навигации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяОбработчикаПриОткрытии" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя обработчика при открытии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяОбработчикаПриПереходеДалее" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя обработчика при переходе далее</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяОбработчикаПриПереходеНазад" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя обработчика при переходе назад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДлительнаяОперация" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Длительная операция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИмяОбработчикаДлительнойОперации" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя обработчика длительной операции</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТранспортныйМодуль" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Транспортный модуль</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОпределитьТранспортныйМодуль" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Определить транспортный модуль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОпределитьТипТорговогоОбъекта" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Определить тип торгового объекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыполнитьПредварительнуюПроверкуДанных" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить предварительную проверку данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстОшибкиПолученияОстатковЕГАИС" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст ошибки получения остатков ЕГАИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПодключенОбработчикОтветов" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключен обработчик ответов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторФоновогоЗадания" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор фонового задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗакрытьФормуБезусловно" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму безусловно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СозданныеДокументы" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Созданные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~СозданныеДокументы.Date</Field>
+				<Field>~СозданныеДокументы.Number</Field>
+				<Field>~СозданныеДокументы.Posted</Field>
+				<Field>~СозданныеДокументы.Ref</Field>
+				<Field>~СозданныеДокументы.ВидДокумента</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДокументыЕГАИС.Ссылка,
+	ДокументыЕГАИС.Дата КАК Дата,
+	ДокументыЕГАИС.Номер КАК Номер,
+	ДокументыЕГАИС.ОрганизацияЕГАИС КАК ОрганизацияЕГАИС,
+	ВЫБОР
+		КОГДА ДокументыЕГАИС.Ссылка ССЫЛКА Документ.АктПостановкиНаБалансЕГАИС
+			ТОГДА ДокументыЕГАИС.Ссылка.ВидДокумента
+		КОГДА ДокументыЕГАИС.Ссылка ССЫЛКА Документ.АктСписанияЕГАИС
+			ТОГДА ДокументыЕГАИС.Ссылка.ВидДокумента
+		КОГДА ДокументыЕГАИС.Ссылка ССЫЛКА Документ.ВозвратИзРегистра2ЕГАИС
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.ВидыДокументовЕГАИС.ВозвратИзРегистра2)
+		КОГДА ДокументыЕГАИС.Ссылка ССЫЛКА Документ.ПередачаВРегистр2ЕГАИС
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.ВидыДокументовЕГАИС.ПередачаВРегистр2)
+		ИНАЧЕ НЕОПРЕДЕЛЕНО
+	КОНЕЦ КАК ВидДокумента,
+	ДокументыЕГАИС.Ссылка.СтатусОбработки КАК СтатусОбработки
+ИЗ
+	ЖурналДокументов.ДокументыЕГАИС КАК ДокументыЕГАИС
+ГДЕ
+	ДокументыЕГАИС.Ссылка В(&amp;СписокДокументов)</QueryText>
+				<MainTable>DocumentJournal.ДокументыЕГАИС</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="НеподтвержденныеДокументы" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неподтвержденные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ДокументСсылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ТТНВходящаяЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.ТТНИсходящаяЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.АктПостановкиНаБалансЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.АктСписанияЕГАИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипЗначения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип значения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ТТНВходящаяЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.ТТНИсходящаяЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.АктПостановкиНаБалансЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.АктСписанияЕГАИС</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СозданиеДокументовЗавершено" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создание документов завершено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КорректироватьТекущиеОстатки" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант корректировки остатков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантОтбораСтрокОстатков" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант отбора строк остатков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстОшибкиПроверкиИнвентаризацииНаСкладе" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст ошибки проверки инвентаризации на складе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстОшибкиПроверкиИнвентаризацииВТорговомЗале" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст ошибки проверки инвентаризации в торговом зале</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстОшибкиНеподтвержденныеДокументы" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст ошибки неподтвержденные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстОшибкиНезагруженныеДокументы" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст ошибки незагруженные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстОшибкиНеоформленныеДокументы" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст ошибки неоформленные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НеоформленныеДокументы" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неоформленные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ДокументСсылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ТТНВходящаяЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.ТТНИсходящаяЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.АктПостановкиНаБалансЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.АктСписанияЕГАИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипЗначения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип значения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ТТНВходящаяЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.ТТНИсходящаяЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.АктПостановкиНаБалансЕГАИС</v8:Type>
+						<v8:Type>cfg:DocumentRef.АктСписанияЕГАИС</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПерейтиНазад" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GoBack</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПерейтиНазад</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПерейтиВперед" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти вперед</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GoForward</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПерейтиВперед</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыгрузитьВЕГАИС" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать данные в ЕГАИС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать данные в ЕГАИС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЕГАИС_ИсходящийЗапрос</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыгрузитьВЕГАИС</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОбнулитьКоличество" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обнулить количество</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обнулить количество</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбнулитьКоличество</Action>
+		</Command>
+		<Command name="ПовторитьПроверку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повторить проверку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повторить проверку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПовторитьПроверку</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОбновитьДанныеТаблицыОстатков" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить данные таблицы остатков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьДанныеТаблицыОстатков</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПерейтиВНачало" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В начало</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти в начало</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GoToBegin</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПерейтиВНачало</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Готово" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Готово</Action>
+		</Command>
+		<Command name="ЗаполнитьТаблицуКорректировки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повторить расчет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить таблицу корректировки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьТаблицуКорректировки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СопоставитьКлассификаторы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставить классификаторы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставить классификаторы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СопоставитьКлассификаторы</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>По объему выпуска</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаВидаУчета</dataPath>
+			<field>АналитикаВидаУчета</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаРаспределенияЗатрат</dataPath>
+			<field>АналитикаРаспределенияЗатрат</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПартий</dataPath>
+			<field>АналитикаУчетаПартий</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>База</dataPath>
+			<field>База</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказИсточник</dataPath>
+			<field>ЗаказИсточник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатурнаяГруппаИсточник</dataPath>
+			<field>НоменклатурнаяГруппаИсточник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеИсточник</dataPath>
+			<field>ПодразделениеИсточник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетУчетаИсточник</dataPath>
+			<field>СчетУчетаИсточник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕНВДИсточник</dataPath>
+			<field>ЕНВДИсточник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаЗатрат</dataPath>
+			<field>АналитикаУчетаЗатрат</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатурнаяГруппа</dataPath>
+			<field>НоменклатурнаяГруппа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продукция</dataPath>
+			<field>Продукция</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	АналитикаВидаУчета.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ОтборВидаУчета
+ИЗ
+	РегистрСведений.АналитикаВидаУчета КАК АналитикаВидаУчета
+ГДЕ
+	АналитикаВидаУчета.Организация = &amp;Организация
+	И АналитикаВидаУчета.РазделУчета = ЗНАЧЕНИЕ(Перечисление.РазделыУчета.Выпуск)
+{ГДЕ
+	АналитикаВидаУчета.ПодразделениеОрганизации.* КАК Подразделение}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АналитикаРаспределенияЗатрат.Ссылка
+ПОМЕСТИТЬ ОтборРаспределенияЗатрат
+ИЗ
+	РегистрСведений.АналитикаРаспределенияЗатрат КАК АналитикаРаспределенияЗатрат
+{ГДЕ
+	АналитикаРаспределенияЗатрат.НоменклатурнаяГруппа.*,
+	АналитикаРаспределенияЗатрат.Продукция.*}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	УчетЗатратРеглОбороты.АналитикаВидаУчета КАК АналитикаВидаУчета,
+	УчетЗатратРеглОбороты.АналитикаУчетаПартий КАК АналитикаУчетаПартий,
+	УчетЗатратРеглОбороты.АналитикаРаспределенияЗатрат КАК АналитикаРаспределенияЗатрат,
+	УчетЗатратРеглОбороты.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат,
+	УчетЗатратРеглОбороты.КоличествоПриход КАК База
+ПОМЕСТИТЬ Выпуск
+ИЗ
+	РегистрНакопления.УчетЗатратРегл.Обороты(
+			&amp;ДатаНачала,
+			&amp;ДатаОкончания,
+			,
+			АналитикаВидаУчета В
+					(ВЫБРАТЬ
+						Отбор.Ссылка
+					ИЗ
+						ОтборВидаУчета КАК Отбор)
+				И АналитикаРаспределенияЗатрат В
+					(ВЫБРАТЬ
+						Отбор.Ссылка
+					ИЗ
+						ОтборРаспределенияЗатрат КАК Отбор)) КАК УчетЗатратРеглОбороты
+
+ИНДЕКСИРОВАТЬ ПО
+	АналитикаРаспределенияЗатрат
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РасшифровкаВидаУчета.СчетУчета,
+	РасшифровкаВидаУчета.ПодразделениеОрганизации КАК Подразделение,
+	ВЫБОР
+		КОГДА РасшифровкаВидаУчета.СчетУчета В (&amp;СчетаЕНВД)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕНВД,
+	РасшифровкаРаспределенияЗатрат.НоменклатурнаяГруппа КАК НоменклатурнаяГруппа,
+	РасшифровкаУчетаПартий.Заказ КАК Заказ,
+	Выпуск.АналитикаВидаУчета,
+	Выпуск.АналитикаРаспределенияЗатрат,
+	Выпуск.АналитикаУчетаПартий,
+	Выпуск.АналитикаУчетаЗатрат,
+	Выпуск.База
+ПОМЕСТИТЬ РасшифровкаБазы
+ИЗ
+	Выпуск КАК Выпуск
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаВидаУчета КАК РасшифровкаВидаУчета
+		ПО Выпуск.АналитикаВидаУчета = РасшифровкаВидаУчета.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаРаспределенияЗатрат КАК РасшифровкаРаспределенияЗатрат
+		ПО Выпуск.АналитикаРаспределенияЗатрат = РасшифровкаРаспределенияЗатрат.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаПартий КАК РасшифровкаУчетаПартий
+		ПО Выпуск.АналитикаУчетаПартий = РасшифровкаУчетаПартий.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	НоменклатурнаяГруппа,
+	Заказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	РасшифровкаБазы.НоменклатурнаяГруппа КАК НоменклатурнаяГруппа,
+	РасшифровкаБазы.Заказ КАК Заказ,
+	РасшифровкаБазы.НоменклатурнаяГруппа КАК НоменклатурнаяГруппаИсточник,
+	РасшифровкаБазы.Заказ КАК ЗаказИсточник
+ПОМЕСТИТЬ КудаРаспределятьСПустойАналитики
+ИЗ
+	РасшифровкаБазы КАК РасшифровкаБазы
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	РасшифровкаБазы.НоменклатурнаяГруппа,
+	РасшифровкаБазы.Заказ,
+	ЗНАЧЕНИЕ(Справочник.НоменклатурныеГруппы.ПустаяСсылка),
+	НЕОПРЕДЕЛЕНО
+ИЗ
+	РасшифровкаБазы КАК РасшифровкаБазы
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	РасшифровкаБазы.НоменклатурнаяГруппа,
+	РасшифровкаБазы.Заказ,
+	ЗНАЧЕНИЕ(Справочник.НоменклатурныеГруппы.ПустаяСсылка),
+	РасшифровкаБазы.Заказ
+ИЗ
+	РасшифровкаБазы КАК РасшифровкаБазы
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	РасшифровкаБазы.НоменклатурнаяГруппа,
+	РасшифровкаБазы.Заказ,
+	РасшифровкаБазы.НоменклатурнаяГруппа,
+	НЕОПРЕДЕЛЕНО
+ИЗ
+	РасшифровкаБазы КАК РасшифровкаБазы
+
+ИНДЕКСИРОВАТЬ ПО
+	НоменклатурнаяГруппа,
+	Заказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РасшифровкаБазы.СчетУчета КАК СчетУчетаИсточник,
+	РасшифровкаБазы.ЕНВД КАК ЕНВДИсточник,
+	РасшифровкаБазы.Подразделение КАК ПодразделениеИсточник,
+	КудаРаспределятьСПустойАналитики.НоменклатурнаяГруппаИсточник КАК НоменклатурнаяГруппаИсточник,
+	КудаРаспределятьСПустойАналитики.ЗаказИсточник КАК ЗаказИсточник,
+	РасшифровкаБазы.АналитикаВидаУчета КАК АналитикаВидаУчета,
+	РасшифровкаБазы.АналитикаУчетаПартий КАК АналитикаУчетаПартий,
+	РасшифровкаБазы.АналитикаРаспределенияЗатрат КАК АналитикаРаспределенияЗатрат,
+	РасшифровкаБазы.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат,
+	РасшифровкаБазы.База КАК База
+{ВЫБРАТЬ
+	СчетУчетаИсточник.*,
+	ЕНВДИсточник,
+	ПодразделениеИсточник.*,
+	НоменклатурнаяГруппаИсточник.*,
+	ЗаказИсточник.*,
+	АналитикаВидаУчета.*,
+	АналитикаУчетаПартий.*,
+	АналитикаРаспределенияЗатрат.*,
+	АналитикаУчетаЗатрат.*,
+	База}
+ИЗ
+	РасшифровкаБазы КАК РасшифровкаБазы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ КудаРаспределятьСПустойАналитики КАК КудаРаспределятьСПустойАналитики
+		ПО РасшифровкаБазы.Заказ = КудаРаспределятьСПустойАналитики.Заказ
+			И РасшифровкаБазы.НоменклатурнаяГруппа = КудаРаспределятьСПустойАналитики.НоменклатурнаяГруппа</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<totalField>
+		<dataPath>База</dataPath>
+		<expression>Сумма(База)</expression>
+	</totalField>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетаЕНВД</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счета ЕНВД</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Хозрасчетный.ОсновноеПроизводствоОблагаемоеЕНВД</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Хозрасчетный.ВспомогательныеПроизводстваОблагаемоеЕНВД</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Хозрасчетный.ОбслуживающиеПроизводстваОблагаемоеЕНВД</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СчетУчетаИсточник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕНВДИсточник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПодразделениеИсточник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НоменклатурнаяГруппаИсточник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаказИсточник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АналитикаВидаУчета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АналитикаРаспределенияЗатрат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АналитикаУчетаПартий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АналитикаУчетаЗатрат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>База</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПодразделенияОрганизаций.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">НоменклатурнаяГруппа</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НоменклатурныеГруппы.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Продукция</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.ДиректКостингСпособыСписания.НаСебестоимостьПродаж</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СчетУчетаИсточник</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ЕНВДИсточник</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПодразделениеИсточник</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>НоменклатурнаяГруппаИсточник</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ЗаказИсточник</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>База</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

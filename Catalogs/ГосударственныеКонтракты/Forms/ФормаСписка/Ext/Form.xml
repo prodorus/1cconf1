@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="67"/>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="68"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ГруппаСтраницыПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="СтраницаВыполняются" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполняются</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница выполняются</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВыполняютсяРасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<Table name="СписокВыполняются" id="3">
+							<Representation>List</Representation>
+							<CommandBarLocation>Top</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокВыполняютсяКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="СписокВыполняютсяКоманднаяПанель" id="5">
+								<ChildItems>
+									<Popup name="СписокВыполняетсяСоздатьНаОсновании" id="58">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать на основании</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список выполняется создать на основании</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="СписокВыполняетсяСоздатьНаОснованииРасширеннаяПодсказка" id="70"/>
+										<ChildItems>
+											<Button name="СписокВыполняютсяСправочникКонтрактыСЗаказчикамиСоздатьНаОсновании" id="59">
+												<Type>CommandBarButton</Type>
+												<OnlyInAllActions>true</OnlyInAllActions>
+												<CommandName>Catalog.КонтрактыСЗаказчиками.StandardCommand.CreateBasedOn</CommandName>
+												<DataPath>Items.СписокВыполняются.CurrentData.Ref</DataPath>
+												<ExtendedTooltip name="СписокВыполняютсяСправочникКонтрактыСЗаказчикамиСоздатьНаОснованииРасширеннаяПодсказка" id="71"/>
+											</Button>
+											<Button name="СписокВыполняютсяСправочникКонтрактыИсполнителейСоздатьНаОсновании" id="60">
+												<Type>CommandBarButton</Type>
+												<CommandName>Catalog.КонтрактыИсполнителей.StandardCommand.CreateBasedOn</CommandName>
+												<DataPath>Items.СписокВыполняются.CurrentData.Ref</DataPath>
+												<ExtendedTooltip name="СписокВыполняютсяСправочникКонтрактыИсполнителейСоздатьНаОснованииРасширеннаяПодсказка" id="72"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Button name="КнопкаСтруктураПодчиненностиВыполняются" id="61">
+										<Type>CommandBarButton</Type>
+										<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
+										<DataPath>Items.СписокВыполняются.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="КнопкаСтруктураПодчиненностиВыполняютсяРасширеннаяПодсказка" id="73"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокВыполняютсяРасширеннаяПодсказка" id="74"/>
+							<SearchStringAddition name="СписокВыполняютсяСтрокаПоиска" id="75">
+								<AdditionSource>
+									<Item>СписокВыполняются</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВыполняютсяСтрокаПоискаКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="СписокВыполняютсяСтрокаПоискаРасширеннаяПодсказка" id="77"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокВыполняютсяСостояниеПросмотра" id="78">
+								<AdditionSource>
+									<Item>СписокВыполняются</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВыполняютсяСостояниеПросмотраКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="СписокВыполняютсяСостояниеПросмотраРасширеннаяПодсказка" id="80"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокВыполняютсяУправлениеПоиском" id="81">
+								<AdditionSource>
+									<Item>СписокВыполняются</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВыполняютсяУправлениеПоискомКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="СписокВыполняютсяУправлениеПоискомРасширеннаяПодсказка" id="83"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НаименованиеВыполняются" id="16">
+									<DataPath>Список.Description</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<ContextMenu name="НаименованиеВыполняютсяКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="НаименованиеВыполняютсяРасширеннаяПодсказка" id="84"/>
+								</LabelField>
+								<LabelField name="КодВыполняются" id="19">
+									<DataPath>Список.Code</DataPath>
+									<ContextMenu name="КодВыполняютсяКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="КодВыполняютсяРасширеннаяПодсказка" id="85"/>
+								</LabelField>
+								<LabelField name="ГоловнойИсполнительВыполняются" id="22">
+									<DataPath>Список.ГоловнойИсполнитель</DataPath>
+									<ContextMenu name="ГоловнойИсполнительВыполняютсяКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ГоловнойИсполнительВыполняютсяРасширеннаяПодсказка" id="86"/>
+								</LabelField>
+								<LabelField name="УполномоченныйБанкВыполняются" id="25">
+									<DataPath>Список.УполномоченныйБанк</DataPath>
+									<ContextMenu name="УполномоченныйБанкВыполняютсяКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="УполномоченныйБанкВыполняютсяРасширеннаяПодсказка" id="87"/>
+								</LabelField>
+								<InputField name="СсылкаВыполняются" id="63">
+									<DataPath>Список.Ref</DataPath>
+									<ContextMenu name="СсылкаВыполняютсяКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="СсылкаВыполняютсяРасширеннаяПодсказка" id="88"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗавершены" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершены</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница завершены</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЗавершеныРасширеннаяПодсказка" id="89"/>
+					<ChildItems>
+						<Table name="СписокЗавершены" id="34">
+							<Representation>List</Representation>
+							<CommandBarLocation>Top</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Create</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокЗавершеныКонтекстноеМеню" id="35"/>
+							<AutoCommandBar name="СписокЗавершеныКоманднаяПанель" id="36">
+								<ChildItems>
+									<Button name="КнопкаСтруктураПодчиненностиЗавершены" id="62">
+										<Type>CommandBarButton</Type>
+										<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
+										<DataPath>Items.СписокЗавершены.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="КнопкаСтруктураПодчиненностиЗавершеныРасширеннаяПодсказка" id="90"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокЗавершеныРасширеннаяПодсказка" id="91"/>
+							<SearchStringAddition name="СписокЗавершеныСтрокаПоиска" id="92">
+								<AdditionSource>
+									<Item>СписокЗавершены</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗавершеныСтрокаПоискаКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="СписокЗавершеныСтрокаПоискаРасширеннаяПодсказка" id="94"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокЗавершеныСостояниеПросмотра" id="95">
+								<AdditionSource>
+									<Item>СписокЗавершены</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗавершеныСостояниеПросмотраКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="СписокЗавершеныСостояниеПросмотраРасширеннаяПодсказка" id="97"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокЗавершеныУправлениеПоиском" id="98">
+								<AdditionSource>
+									<Item>СписокЗавершены</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗавершеныУправлениеПоискомКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="СписокЗавершеныУправлениеПоискомРасширеннаяПодсказка" id="100"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НаименованиеЗавершены" id="47">
+									<DataPath>Список.Description</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<ContextMenu name="НаименованиеЗавершеныКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="НаименованиеЗавершеныРасширеннаяПодсказка" id="101"/>
+								</LabelField>
+								<LabelField name="КодЗавершены" id="50">
+									<DataPath>Список.Code</DataPath>
+									<ContextMenu name="КодЗавершеныКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="КодЗавершеныРасширеннаяПодсказка" id="102"/>
+								</LabelField>
+								<LabelField name="ГоловнойИсполнительЗавершены" id="53">
+									<DataPath>Список.ГоловнойИсполнитель</DataPath>
+									<ContextMenu name="ГоловнойИсполнительЗавершеныКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ГоловнойИсполнительЗавершеныРасширеннаяПодсказка" id="103"/>
+								</LabelField>
+								<LabelField name="УполномоченныйБанкЗавершены" id="56">
+									<DataPath>Список.УполномоченныйБанк</DataPath>
+									<ContextMenu name="УполномоченныйБанкЗавершеныКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="УполномоченныйБанкЗавершеныРасширеннаяПодсказка" id="104"/>
+								</LabelField>
+								<InputField name="СсылкаЗавершены" id="65">
+									<DataPath>Список.Ref</DataPath>
+									<ContextMenu name="СсылкаЗавершеныКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="СсылкаЗавершеныРасширеннаяПодсказка" id="105"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ГосударственныеКонтракты</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">ГоловнойИсполнитель</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:userSettingID>ebbbb5ca-852a-4d82-8cc5-7ada5faf63d9</dcsset:userSettingID>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">УполномоченныйБанк</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:userSettingID>cb5f207c-ba84-4dc0-b242-a9267f0a9b12</dcsset:userSettingID>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

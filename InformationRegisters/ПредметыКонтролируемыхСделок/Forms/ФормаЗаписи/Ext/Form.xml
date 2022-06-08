@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ПредметСделки" id="1">
+			<DataPath>Запись.ПредметСделки</DataPath>
+			<ContextMenu name="ПредметСделкиКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПредметСделкиРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<CheckBoxField name="ЯвляетсяТоваромМировойБиржевойТорговли" id="3">
+			<DataPath>Запись.ЯвляетсяТоваромМировойБиржевойТорговли</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЯвляетсяТоваромМировойБиржевойТорговлиКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ЯвляетсяТоваромМировойБиржевойТорговлиРасширеннаяПодсказка" id="25"/>
+		</CheckBoxField>
+		<CheckBoxField name="ОблагаетсяНДПИПоПроцентнойСтавке" id="5">
+			<DataPath>Запись.ОблагаетсяНДПИПоПроцентнойСтавке</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОблагаетсяНДПИПоПроцентнойСтавкеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОблагаетсяНДПИПоПроцентнойСтавкеРасширеннаяПодсказка" id="26"/>
+		</CheckBoxField>
+		<InputField name="КодПоТНВЭД" id="7">
+			<DataPath>Запись.КодПоТНВЭД</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="КодПоТНВЭДКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КодПоТНВЭДРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="КодПоОКП" id="9">
+			<DataPath>Запись.КодПоОКП</DataPath>
+			<Width>12</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="КодПоОКПКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="КодПоОКПРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<InputField name="КодПоОКПД2" id="22">
+			<DataPath>Запись.КодПоОКПД2</DataPath>
+			<Width>12</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="КодПоОКПД2КонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="КодПоОКПД2РасширеннаяПодсказка" id="29"/>
+		</InputField>
+		<InputField name="КодПоОквэд" id="11">
+			<DataPath>Запись.КодПоОКВЭД</DataPath>
+			<Width>12</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="КодПоОквэдКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="КодПоОквэдРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="КодПоОКВЭД2" id="19">
+			<DataPath>Запись.КодПоОКВЭД2</DataPath>
+			<Width>12</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="КодПоОКВЭД2КонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="КодПоОКВЭД2РасширеннаяПодсказка" id="31"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПредметыКонтролируемыхСделок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="51"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="52">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="54"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="55">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="57"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="58">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="60"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Организация" id="4">
+					<DataPath>Список.Организация</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="61"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="8">
+					<DataPath>Список.Контрагент</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="62"/>
+				</LabelField>
+				<LabelField name="Период" id="20">
+					<DataPath>Список.Period</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="ТипВзаимозависимости" id="10">
+					<DataPath>Список.ТипВзаимозависимости</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Width>40</Width>
+					<ContextMenu name="ТипВзаимозависимостиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ТипВзаимозависимостиРасширеннаяПодсказка" id="64"/>
+				</LabelField>
+				<CheckBoxField name="ЯвляетсяПлательщикомНалогаНаПрибыль" id="12">
+					<DataPath>Список.ЯвляетсяПлательщикомНалогаНаПрибыль</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прибыль</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЯвляетсяПлательщикомНалогаНаПрибыльКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ЯвляетсяПлательщикомНалогаНаПрибыльРасширеннаяПодсказка" id="65"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЯвляетсяПлательщикомНДПИ" id="14">
+					<DataPath>Список.ЯвляетсяПлательщикомНДПИ</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДПИ</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЯвляетсяПлательщикомНДПИКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ЯвляетсяПлательщикомНДПИРасширеннаяПодсказка" id="66"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЯвляетсяПлательщикомЕСХН" id="16">
+					<DataPath>Список.ЯвляетсяПлательщикомЕСХН</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЕСХН</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЯвляетсяПлательщикомЕСХНКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ЯвляетсяПлательщикомЕСХНРасширеннаяПодсказка" id="67"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЯвляетсяПлательщикомЕНВД" id="22">
+					<DataPath>Список.ЯвляетсяПлательщикомЕНВД</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЕНВД</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЯвляетсяПлательщикомЕНВДКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ЯвляетсяПлательщикомЕНВДРасширеннаяПодсказка" id="68"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЗарегистрированВОЭЗ" id="18">
+					<DataPath>Список.ЗарегистрированВОЭЗ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ОЭЗ</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗарегистрированВОЭЗКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ЗарегистрированВОЭЗРасширеннаяПодсказка" id="69"/>
+				</CheckBoxField>
+				<InputField name="ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта" id="43">
+					<DataPath>Список.ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Региональный инвест.проект</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроектаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроектаРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<InputField name="ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль" id="46">
+					<DataPath>Список.ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инвест.вычет</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПрименяетИнвестиционныйВычетПоНалогуНаПрибыльКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ПрименяетИнвестиционныйВычетПоНалогуНаПрибыльРасширеннаяПодсказка" id="71"/>
+				</InputField>
+				<InputField name="ОсвобожденОтУплатыНДС" id="49">
+					<DataPath>Список.ОсвобожденОтУплатыНДС</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Льготы по НДС</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОсвобожденОтУплатыНДСКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ОсвобожденОтУплатыНДСРасширеннаяПодсказка" id="72"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ВзаимозависимыеЛица</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Период</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

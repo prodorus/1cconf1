@@ -1,0 +1,1141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтборы" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отборы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отборы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборыРасширеннаяПодсказка" id="171"/>
+			<ChildItems>
+				<InputField name="ПланироватьСДаты" id="153">
+					<DataPath>Объект.ПланироватьСДаты</DataPath>
+					<ContextMenu name="ПланироватьСДатыКонтекстноеМеню" id="154"/>
+					<ExtendedTooltip name="ПланироватьСДатыРасширеннаяПодсказка" id="172"/>
+					<Events>
+						<Event name="OnChange">ПланироватьСДатыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДнейПланирования" id="80">
+					<DataPath>Объект.ДнейПланирования</DataPath>
+					<SpinButton>true</SpinButton>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<ContextMenu name="ДнейПланированияКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ДнейПланированияРасширеннаяПодсказка" id="173"/>
+					<Events>
+						<Event name="OnChange">ДнейПланированияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="Заявка" id="169">
+					<DataPath>РаспределяемаяЗаявка</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределяемая заявка</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<Width>30</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="ЗаявкаКонтекстноеМеню" id="170"/>
+					<ExtendedTooltip name="ЗаявкаРасширеннаяПодсказка" id="174"/>
+				</LabelField>
+				<InputField name="Организация" id="77">
+					<DataPath>Организация</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="175"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОсновноеПоле" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основное поле</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основное поле</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновноеПолеРасширеннаяПодсказка" id="176"/>
+			<ChildItems>
+				<Table name="ЗаявкиКРаспределению" id="11">
+					<Representation>Tree</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ЗаявкиКРаспределению</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ЗаявкиКРаспределениюКонтекстноеМеню" id="12"/>
+					<AutoCommandBar name="ЗаявкиКРаспределениюКоманднаяПанель" id="13">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Popup name="ЗаявкиКРаспределениюГруппаРаспределение" id="141">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Распределить по счетам</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Заявки к распределению группа распределение</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ЗаявкиКРаспределениюГруппаРаспределениеРасширеннаяПодсказка" id="177"/>
+								<ChildItems>
+									<Button name="ЗаявкиКРаспределениюРаспределитьТекущуюЗаявку" id="143">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.РаспределитьВыделенныеСтроки</CommandName>
+										<ExtendedTooltip name="ЗаявкиКРаспределениюРаспределитьТекущуюЗаявкуРасширеннаяПодсказка" id="178"/>
+									</Button>
+									<Button name="ЗаявкиКРаспределениюРаспределитьЗаявки" id="62">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.РаспределитьВсеЗаявки</CommandName>
+										<ExtendedTooltip name="ЗаявкиКРаспределениюРаспределитьЗаявкиРасширеннаяПодсказка" id="179"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<Button name="ЗаявкиКРаспределениюЗапланировать" id="159">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Запланировать</CommandName>
+								<ExtendedTooltip name="ЗаявкиКРаспределениюЗапланироватьРасширеннаяПодсказка" id="180"/>
+							</Button>
+							<Popup name="ЗаявкиКРаспределениюГруппа" id="66">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Платежи</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Заявки к распределению группа</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ЗаявкиКРаспределениюГруппаРасширеннаяПодсказка" id="181"/>
+								<ChildItems>
+									<Button name="ЗаявкиКРаспределениюСформироватьПлатежныеПоручения" id="68">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>false</OnlyInAllActions>
+										<CommandName>Form.Command.СформироватьПлатежныеПоручения</CommandName>
+										<ExtendedTooltip name="ЗаявкиКРаспределениюСформироватьПлатежныеПорученияРасширеннаяПодсказка" id="182"/>
+									</Button>
+									<Button name="ЗаявкиКРаспределениюВыгрузитьПлатежныеПоручения" id="70">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>false</OnlyInAllActions>
+										<CommandName>Form.Command.ВыгрузитьПлатежныеПоручения</CommandName>
+										<ExtendedTooltip name="ЗаявкиКРаспределениюВыгрузитьПлатежныеПорученияРасширеннаяПодсказка" id="183"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<Button name="ЗаявкиКРаспределениюНастройкаСписка" id="89">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ЗаявкиКРаспределению.StandardCommand.ListSettings</CommandName>
+								<ExtendedTooltip name="ЗаявкиКРаспределениюНастройкаСпискаРасширеннаяПодсказка" id="184"/>
+							</Button>
+							<Button name="ЗаявкиКРаспределениюСохранитьНастройкиДинамическогоСписка" id="91">
+								<Type>CommandBarButton</Type>
+								<CommandName>11:95b4bc12-2ece-4d7a-b3e2-6f9293620a06</CommandName>
+								<ExtendedTooltip name="ЗаявкиКРаспределениюСохранитьНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="185"/>
+							</Button>
+							<Button name="ЗаявкиКРаспределениюЗагрузитьНастройкиДинамическогоСписка" id="93">
+								<Type>CommandBarButton</Type>
+								<CommandName>11:182a793b-22a5-4625-b316-6a5be7f88078</CommandName>
+								<ExtendedTooltip name="ЗаявкиКРаспределениюЗагрузитьНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="186"/>
+							</Button>
+							<Button name="ЗаявкиКРаспределениюОбновить" id="167">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ЗаявкиКРаспределению.StandardCommand.Refresh</CommandName>
+								<ExtendedTooltip name="ЗаявкиКРаспределениюОбновитьРасширеннаяПодсказка" id="187"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ЗаявкиКРаспределениюРасширеннаяПодсказка" id="188"/>
+					<SearchStringAddition name="ЗаявкиКРаспределениюСтрокаПоиска" id="189">
+						<AdditionSource>
+							<Item>ЗаявкиКРаспределению</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЗаявкиКРаспределениюСтрокаПоискаКонтекстноеМеню" id="190"/>
+						<ExtendedTooltip name="ЗаявкиКРаспределениюСтрокаПоискаРасширеннаяПодсказка" id="191"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЗаявкиКРаспределениюСостояниеПросмотра" id="192">
+						<AdditionSource>
+							<Item>ЗаявкиКРаспределению</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЗаявкиКРаспределениюСостояниеПросмотраКонтекстноеМеню" id="193"/>
+						<ExtendedTooltip name="ЗаявкиКРаспределениюСостояниеПросмотраРасширеннаяПодсказка" id="194"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЗаявкиКРаспределениюУправлениеПоиском" id="195">
+						<AdditionSource>
+							<Item>ЗаявкиКРаспределению</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ЗаявкиКРаспределениюУправлениеПоискомКонтекстноеМеню" id="196"/>
+						<ExtendedTooltip name="ЗаявкиКРаспределениюУправлениеПоискомРасширеннаяПодсказка" id="197"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">ЗаявкиКРаспределениюПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ЗаявкиКРаспределениюЗаявкаНаРасходованиеСредствНомер" id="83">
+							<DataPath>ЗаявкиКРаспределению.Заявка.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>8</Width>
+							<ContextMenu name="ЗаявкиКРаспределениюЗаявкаНаРасходованиеСредствНомерКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ЗаявкиКРаспределениюЗаявкаНаРасходованиеСредствНомерРасширеннаяПодсказка" id="198"/>
+						</InputField>
+						<InputField name="ЗаявкиКРаспределениюКонтрагент" id="165">
+							<DataPath>ЗаявкиКРаспределению.Контрагент</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получатель</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗаявкиКРаспределениюКонтрагентКонтекстноеМеню" id="166"/>
+							<ExtendedTooltip name="ЗаявкиКРаспределениюКонтрагентРасширеннаяПодсказка" id="199"/>
+						</InputField>
+						<InputField name="ЗаявкиКРаспределениюЗаявкаНаРасходованиеСредствКрайнийСрокПлатежа" id="86">
+							<DataPath>ЗаявкиКРаспределению.Срок</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>8</Width>
+							<ContextMenu name="ЗаявкиКРаспределениюЗаявкаНаРасходованиеСредствКрайнийСрокПлатежаКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ЗаявкиКРаспределениюЗаявкаНаРасходованиеСредствКрайнийСрокПлатежаРасширеннаяПодсказка" id="200"/>
+						</InputField>
+						<InputField name="ЗаявкиКРаспределениюСумма" id="27">
+							<DataPath>ЗаявкиКРаспределению.Сумма</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<ContextMenu name="ЗаявкиКРаспределениюСуммаКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ЗаявкиКРаспределениюСуммаРасширеннаяПодсказка" id="201"/>
+						</InputField>
+						<InputField name="ЗаявкиКРаспределениюОсталосьРаспределить" id="72">
+							<DataPath>ЗаявкиКРаспределению.ОсталосьРаспределить</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остаток к расп.</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<ContextMenu name="ЗаявкиКРаспределениюОсталосьРаспределитьКонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="ЗаявкиКРаспределениюОсталосьРаспределитьРасширеннаяПодсказка" id="202"/>
+						</InputField>
+						<InputField name="ЗаявкиКРаспределениюНазначениеПлатежа" id="30">
+							<DataPath>ЗаявкиКРаспределению.Заявка.НазначениеПлатежа</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЗаявкиКРаспределениюНазначениеПлатежаКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ЗаявкиКРаспределениюНазначениеПлатежаРасширеннаяПодсказка" id="203"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаПлатежи" id="101">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа платежи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа платежи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПлатежиРасширеннаяПодсказка" id="204"/>
+					<ChildItems>
+						<Table name="ОстаткиПоСчетам" id="33">
+							<Representation>Tree</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ОстаткиПоСчетам</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ОстаткиПоСчетамКонтекстноеМеню" id="34"/>
+							<AutoCommandBar name="ОстаткиПоСчетамКоманднаяПанель" id="35">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ОстаткиПоСчетамОчиститьДанныеРаспределения" id="161">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОчиститьДанныеПланирования</CommandName>
+										<ExtendedTooltip name="ОстаткиПоСчетамОчиститьДанныеРаспределенияРасширеннаяПодсказка" id="205"/>
+									</Button>
+									<Popup name="РезультатыРаспределенияФильтр" id="125">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Фильтр</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Результаты распределения фильтр</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="РезультатыРаспределенияФильтрРасширеннаяПодсказка" id="206"/>
+										<ChildItems>
+											<Button name="РезультатыРаспределенияТолькоПодходящиеПоСтатье" id="127">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ТолькоПодходящиеПоСтатье</CommandName>
+												<ExtendedTooltip name="РезультатыРаспределенияТолькоПодходящиеПоСтатьеРасширеннаяПодсказка" id="207"/>
+											</Button>
+											<Button name="РезультатыРаспределенияВсеСКоторыхМожноПлатить" id="131">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ВсеСКоторыхМожноПлатить</CommandName>
+												<ExtendedTooltip name="РезультатыРаспределенияВсеСКоторыхМожноПлатитьРасширеннаяПодсказка" id="208"/>
+											</Button>
+											<Button name="РезультатыРаспределенияВсеСчета" id="129">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ВсеСчета</CommandName>
+												<ExtendedTooltip name="РезультатыРаспределенияВсеСчетаРасширеннаяПодсказка" id="209"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Button name="РезультатыРаспределенияПереместитьВверх" id="133">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПереместитьВверх</CommandName>
+										<ExtendedTooltip name="РезультатыРаспределенияПереместитьВверхРасширеннаяПодсказка" id="210"/>
+									</Button>
+									<Button name="РезультатыРаспределенияПереместитьВниз" id="135">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПереместитьВниз</CommandName>
+										<ExtendedTooltip name="РезультатыРаспределенияПереместитьВнизРасширеннаяПодсказка" id="211"/>
+									</Button>
+									<Button name="РезультатыРаспределенияОбновить" id="139">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Обновить</CommandName>
+										<ExtendedTooltip name="РезультатыРаспределенияОбновитьРасширеннаяПодсказка" id="212"/>
+									</Button>
+									<Button name="РезультатыРаспределенияИзменитьФорму" id="145">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="РезультатыРаспределенияИзменитьФормуРасширеннаяПодсказка" id="213"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОстаткиПоСчетамРасширеннаяПодсказка" id="214"/>
+							<SearchStringAddition name="ОстаткиПоСчетамСтрокаПоиска" id="215">
+								<AdditionSource>
+									<Item>ОстаткиПоСчетам</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОстаткиПоСчетамСтрокаПоискаКонтекстноеМеню" id="216"/>
+								<ExtendedTooltip name="ОстаткиПоСчетамСтрокаПоискаРасширеннаяПодсказка" id="217"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОстаткиПоСчетамСостояниеПросмотра" id="218">
+								<AdditionSource>
+									<Item>ОстаткиПоСчетам</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОстаткиПоСчетамСостояниеПросмотраКонтекстноеМеню" id="219"/>
+								<ExtendedTooltip name="ОстаткиПоСчетамСостояниеПросмотраРасширеннаяПодсказка" id="220"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОстаткиПоСчетамУправлениеПоиском" id="221">
+								<AdditionSource>
+									<Item>ОстаткиПоСчетам</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОстаткиПоСчетамУправлениеПоискомКонтекстноеМеню" id="222"/>
+								<ExtendedTooltip name="ОстаткиПоСчетамУправлениеПоискомРасширеннаяПодсказка" id="223"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="DragCheck">ОстаткиПоСчетамПроверкаПеретаскивания</Event>
+								<Event name="Selection">ОстаткиПоСчетамВыбор</Event>
+								<Event name="Drag">ОстаткиПоСчетамПеретаскивание</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="РезультатыРаспределенияСчетЛимит" id="46">
+									<DataPath>ОстаткиПоСчетам.СчетКонтракт</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыРаспределенияСчетЛимитКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="РезультатыРаспределенияСчетЛимитРасширеннаяПодсказка" id="224"/>
+								</InputField>
+								<InputField name="РезультатыРаспределенияОстатокНаСчете" id="49">
+									<DataPath>ОстаткиПоСчетам.ОстатокНаСчете</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<MarkNegatives>true</MarkNegatives>
+									<ContextMenu name="РезультатыРаспределенияОстатокНаСчетеКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="РезультатыРаспределенияОстатокНаСчетеРасширеннаяПодсказка" id="225"/>
+								</InputField>
+								<InputField name="РезультатыРаспределенияДоступноеПоступление" id="98">
+									<DataPath>ОстаткиПоСчетам.ДоступныеПоступления</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доступ.поступл.</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<MarkNegatives>true</MarkNegatives>
+									<ContextMenu name="РезультатыРаспределенияДоступноеПоступлениеКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="РезультатыРаспределенияДоступноеПоступлениеРасширеннаяПодсказка" id="226"/>
+								</InputField>
+								<InputField name="РезультатыРаспределенияОстатокПоСтатье" id="52">
+									<DataPath>ОстаткиПоСчетам.ОстатокПоСтатье</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<MarkNegatives>true</MarkNegatives>
+									<ContextMenu name="РезультатыРаспределенияОстатокПоСтатьеКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="РезультатыРаспределенияОстатокПоСтатьеРасширеннаяПодсказка" id="227"/>
+								</InputField>
+								<InputField name="ОстаткиПоСчетамПроцентОтнесения" id="150">
+									<DataPath>ОстаткиПоСчетам.ПроцентОтнесения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>%</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>5</Width>
+									<MaxValue xsi:type="xs:decimal">100</MaxValue>
+									<ContextMenu name="ОстаткиПоСчетамПроцентОтнесенияКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ОстаткиПоСчетамПроцентОтнесенияРасширеннаяПодсказка" id="228"/>
+									<Events>
+										<Event name="OnChange">ОстаткиПоСчетамПроцентОтнесенияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ОстаткиПоСчетамВЗаявке" id="147">
+									<DataPath>ОстаткиПоСчетам.ВЗаявке</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма заявки</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<MarkNegatives>true</MarkNegatives>
+									<ContextMenu name="ОстаткиПоСчетамВЗаявкеКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="ОстаткиПоСчетамВЗаявкеРасширеннаяПодсказка" id="229"/>
+									<Events>
+										<Event name="OnChange">ОстаткиПоСчетамВЗаявкеПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДекорации" id="168">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДекорацииРасширеннаяПодсказка" id="230"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияПодписьОплата" id="163">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;выполняется расчет графика оплаты&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПодписьОплатаКонтекстноеМеню" id="164"/>
+					<ExtendedTooltip name="ДекорацияПодписьОплатаРасширеннаяПодсказка" id="231"/>
+					<Events>
+						<Event name="Click">ДекорацияПодписьНажатие</Event>
+						<Event name="URLProcessing">ДекорацияПодписьОплатаОбработкаНавигационнойСсылки</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РаспределениеЗаявокПоСчетам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ОстаткиПоСчетам" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки по счетам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СчетКонтракт" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет, контракт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОстатокНаСчете" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План.остаток</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОстатокПоСтатье" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ост. по статье</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВЗаявке" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В заявке</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПроцентОтнесения" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>% отн.</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДоступныеПоступления" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступные поступления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Счет" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.БанковскиеСчета</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Контракт" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контракт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КонтрактыСЗаказчиками</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПодходящийСчет" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подходящий счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПодходящийЛимит" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подходящий лимит</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗаявкиКРаспределению" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявки к распределению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ЗаявкиКРаспределению.Заявка</Field>
+				<Field>ЗаявкиКРаспределению.СтатьяКалькуляции</Field>
+				<Field>ЗаявкиКРаспределению.Сумма</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Документ.Ссылка КАК Заявка,
+	Документ.ДатаРасхода КАК Срок,
+	Документ.СтатьяКалькуляции,
+	ЗаявкиНаРасходованиеДенежныхСредствОстатки.СуммаОстаток КАК Сумма,
+	ЗаявкиНаРасходованиеДенежныхСредствОстатки.СуммаОстаток - ЕСТЬNULL(Распределено.Сумма, 0) КАК ОсталосьРаспределить,
+	Документ.Контрагент
+ИЗ
+	Документ.ЗаявкаНаРасходованиеСредств КАК Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗаявкиНаРасходованиеСредств.Остатки КАК ЗаявкиНаРасходованиеДенежныхСредствОстатки
+		ПО Документ.Ссылка = ЗаявкиНаРасходованиеДенежныхСредствОстатки.ЗаявкаНаРасходование
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ЗаявкиНаРасходованиеДенежныхСредствОстатки.ЗаявкаНаРасходование КАК ЗаявкаНаРасходованиеДенежныхСредств,
+			СУММА(ЗаявкаНаРасходованиеДенежныхСредствИсточникиФинансирования.СуммаПлатежа) КАК Сумма
+		ИЗ
+			РегистрНакопления.ЗаявкиНаРасходованиеСредств.Остатки КАК ЗаявкиНаРасходованиеДенежныхСредствОстатки
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ЗаявкаНаРасходованиеСредств.РазмещениеЗаявки КАК ЗаявкаНаРасходованиеДенежныхСредствИсточникиФинансирования
+				ПО ЗаявкиНаРасходованиеДенежныхСредствОстатки.ЗаявкаНаРасходование = ЗаявкаНаРасходованиеДенежныхСредствИсточникиФинансирования.Ссылка
+		
+		СГРУППИРОВАТЬ ПО
+			ЗаявкиНаРасходованиеДенежныхСредствОстатки.ЗаявкаНаРасходование) КАК Распределено
+		ПО Документ.Ссылка = Распределено.ЗаявкаНаРасходованиеДенежныхСредств
+ГДЕ
+	НЕ ЗаявкиНаРасходованиеДенежныхСредствОстатки.ЗаявкаНаРасходование ЕСТЬ NULL 
+	И Документ.ПлатежПоФЗ275</QueryText>
+				<MainTable>Document.ЗаявкаНаРасходованиеСредств</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Срок</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ОсталосьРаспределить</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ОсталосьРаспределить</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ОсталосьРаспределить</dcsset:left>
+									<dcsset:comparisonType>Filled</dcsset:comparisonType>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:OrangeRed</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Организация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<Save>
+				<Field>Организация</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ГрафикПлатежейПоСчету" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График платежей по счету</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Легенда" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Легенда</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="АдресДанныхВХранилище" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес данных в хранилище</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимФильтра" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим фильтра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресРезультатаРаспределения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес результата распределения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="кДекорации" id="6">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСсылки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес ссылки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РаспределяемаяЗаявка" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределяемая заявка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЗаявкаНаРасходованиеСредств</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтруктураДанныхРаспределяемойЗаявки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура данных распределяемой заявки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГрафикПлатежейПоСчету</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ГрафикПлатежейПоСчету.Легенда</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#F2F2F2</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОстаткиПоСчетам</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ОстаткиПоСчетам.ПодходящийСчет</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">0:fe63db47-3ece-4518-b6a2-0b6499f60a61</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="РаспределитьВсеЗаявки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить все заявки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить все заявки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаспределитьЗаявки</Action>
+		</Command>
+		<Command name="ТолькоПодходящиеПоСтатье" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только подходящие по статье калькуляции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только подходящие по статье</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТолькоПодходящиеПоСтатье</Action>
+		</Command>
+		<Command name="СформироватьПлатежныеПоручения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать платежные поручения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать платежные поручения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьПлатежныеПоручения</Action>
+		</Command>
+		<Command name="ВыгрузитьПлатежныеПоручения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить платежные поручения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить платежные поручения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьПлатежныеПоручения</Action>
+		</Command>
+		<Command name="ВсеСКоторыхМожноПлатить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все, с которых можно платить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все с которых можно платить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВсеСКоторыхМожноПлатить</Action>
+		</Command>
+		<Command name="ВсеСчета" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все счета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все счета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВсеСчета</Action>
+		</Command>
+		<Command name="ПереместитьВверх" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВверх</Action>
+		</Command>
+		<Command name="ПереместитьВниз" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВниз</Action>
+		</Command>
+		<Command name="Обновить" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+		</Command>
+		<Command name="РаспределитьВыделенныеСтроки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить выделенные строки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить выделенные строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаспределитьТекущуюЗаявку</Action>
+		</Command>
+		<Command name="Запланировать" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплатить со счета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запланировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Запланировать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОчиститьДанныеПланирования" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить данные планирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить данные планирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьДанныеПланирования</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

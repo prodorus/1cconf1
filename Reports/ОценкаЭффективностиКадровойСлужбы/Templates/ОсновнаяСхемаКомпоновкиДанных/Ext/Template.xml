@@ -1,0 +1,2308 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>Данные</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Год</dataPath>
+			<field>Год</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='yyyy "г."'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='dd MMMM yyyy'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Квартал</dataPath>
+			<field>Квартал</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Квартал</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='q "квартал" гггг "г."'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Месяц</dataPath>
+			<field>Месяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='MMMM yyyy'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Неделя</dataPath>
+			<field>Неделя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неделя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОбученныхСотрудников</dataPath>
+			<field>КоличествоОбученныхСотрудников</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество обученных сотрудников</v8:content>
+				</v8:item>
+			</title>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПроведенныхОбучений</dataPath>
+			<field>КоличествоПроведенныхОбучений</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество проведенных обучений</v8:content>
+				</v8:item>
+			</title>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОбсуживаемыхПредприятий</dataPath>
+			<field>КоличествоОбсуживаемыхПредприятий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество обслуживаемых предприятий</v8:content>
+				</v8:item>
+			</title>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОбслуживаемыхСотрудников</dataPath>
+			<field>КоличествоОбслуживаемыхСотрудников</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество обслуживаемых сотрудников</v8:content>
+				</v8:item>
+			</title>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должность</dataPath>
+			<field>Должность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+			</title>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</title>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолВоПринятыхСотрудников</dataPath>
+			<field>КолВоПринятыхСотрудников</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол во принятых сотрудников</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПрошлиИспытательныйСрок</dataPath>
+			<field>ПрошлиИспытательныйСрок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прошли испытательный срок</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вакансия</dataPath>
+			<field>Вакансия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вакансия</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заявка</dataPath>
+			<field>Заявка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кандидат</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СредняяПродолжительностьЗакрытияВакансий</dataPath>
+			<field>СредняяПродолжительностьВКалендарныхДнях</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя продолжительность закрытия вакансий (в календарных днях)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СредняяПродолжительностьЗакрытияВакансийВКалендДнях</dataPath>
+			<field>СредняяПродолжительностьРабочихДнях</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя продолжительность закрытия вакансий (в рабочих днях)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВакансияОтветственный</dataPath>
+			<field>ВакансияОтветственный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вакансия ответственный</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>КоэффициентНабораПерсоналаПривлечениеИОтборПерсонала</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Год</dataPath>
+				<field>Год</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Год</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>Дата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Квартал</dataPath>
+				<field>Квартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Квартал</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Месяц</dataPath>
+				<field>Месяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Неделя</dataPath>
+				<field>Неделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Неделя</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ответственный</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансия</dataPath>
+				<field>Вакансия</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вакансия</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Заявка</dataPath>
+				<field>Заявка</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заявка</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Должность</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подразделение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИнформационнаяБаза</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Вакансии.Ответственный КАК Ответственный,
+	Даты.Дата КАК Дата,
+	Даты.Месяц КАК Месяц,
+	Даты.Квартал КАК Квартал,
+	Даты.Год КАК Год,
+	Даты.Неделя КАК Неделя,
+	Вакансии.Ссылка КАК Вакансия,
+	Заявки.Заявка КАК Заявка,
+	ВЫБОР
+		КОГДА &amp;РежимОтчета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА ВЫБОР
+					КОГДА Вакансии.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+						ТОГДА СоответствиеПодразделенийКПодразделенийОрганизаций.Подразделение
+					ИНАЧЕ Вакансии.Подразделение
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА Вакансии.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+					ТОГДА Вакансии.Подразделение
+				ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+			КОНЕЦ
+	КОНЕЦ КАК Подразделение,
+	Вакансии.Должность КАК Должность
+{ВЫБРАТЬ
+	Ответственный,
+	Дата,
+	Месяц,
+	Квартал,
+	Год,
+	Неделя,
+	Вакансия.*,
+	Заявка.*,
+	Подразделение.*,
+	Должность.*}
+ИЗ
+	(ВЫБРАТЬ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ) КАК Месяц,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ) КАК Квартал,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД) КАК Год,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ) КАК Неделя
+	ИЗ
+		РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+	ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	{ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ)) КАК Месяц,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ)) КАК Квартал,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД)) КАК Год,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ)) КАК Неделя}) КАК Даты
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Вакансии.ДатаОткрытия КАК ДатаОткрытия,
+			ВЫБОР
+				КОГДА Вакансии.ДатаЗакрытия = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					ТОГДА &amp;КонецПериода
+				ИНАЧЕ Вакансии.ДатаЗакрытия
+			КОНЕЦ КАК ДатаЗакрытия,
+			Вакансии.Ссылка КАК Ссылка,
+			Вакансии.Ответственный КАК Ответственный,
+			Вакансии.Подразделение КАК Подразделение,
+			Вакансии.Должность КАК Должность
+		ИЗ
+			Справочник.Вакансии КАК Вакансии
+		ГДЕ
+			Вакансии.ДатаОткрытия &lt;= &amp;КонецПериода
+			И (Вакансии.ДатаЗакрытия &gt;= &amp;НачалоПериода
+					ИЛИ Вакансии.ДатаЗакрытия = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0))) КАК Вакансии
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СоответствиеПодразделенийИПодразделенийОрганизаций КАК СоответствиеПодразделенийКПодразделенийОрганизаций
+			ПО Вакансии.Подразделение = СоответствиеПодразделенийКПодразделенийОрганизаций.ПодразделениеОрганизации
+		ПО Даты.Дата &lt;= Вакансии.ДатаЗакрытия
+			И Даты.Дата &gt;= Вакансии.ДатаОткрытия
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ЗаявкиКандидатов.Ответственный КАК Ответственный,
+			ЗаявкиКандидатов.ДатаОткрытия КАК Дата,
+			ЗаявкиКандидатов.Ссылка КАК Заявка,
+			МИНИМУМ(ВЫБОР
+					КОГДА ЕСТЬNULL(ТекущаяРаботаПоЗаявкамКандидатов.Период, ДАТАВРЕМЯ(1, 1, 1)) &gt;= ЕСТЬNULL(СостояниеРаботниковНаИспытательномСроке.Период, ДАТАВРЕМЯ(1, 1, 1))
+							И ЕСТЬNULL(ТекущаяРаботаПоЗаявкамКандидатов.Период, ДАТАВРЕМЯ(1, 1, 1)) &gt;= ЕСТЬNULL(ПерепискаВстречиОпросы.Дата, ДАТАВРЕМЯ(1, 1, 1))
+						ТОГДА ТекущаяРаботаПоЗаявкамКандидатов.Период
+					КОГДА ЕСТЬNULL(СостояниеРаботниковНаИспытательномСроке.Период, ДАТАВРЕМЯ(1, 1, 1)) &gt;= ЕСТЬNULL(ТекущаяРаботаПоЗаявкамКандидатов.Период, ДАТАВРЕМЯ(1, 1, 1))
+							И ЕСТЬNULL(СостояниеРаботниковНаИспытательномСроке.Период, ДАТАВРЕМЯ(1, 1, 1)) &gt;= ЕСТЬNULL(ПерепискаВстречиОпросы.Дата, ДАТАВРЕМЯ(1, 1, 1))
+						ТОГДА СостояниеРаботниковНаИспытательномСроке.Период
+					КОГДА ЕСТЬNULL(ПерепискаВстречиОпросы.Дата, ДАТАВРЕМЯ(1, 1, 1)) &gt;= ЕСТЬNULL(ТекущаяРаботаПоЗаявкамКандидатов.Период, ДАТАВРЕМЯ(1, 1, 1))
+							И ЕСТЬNULL(ПерепискаВстречиОпросы.Дата, ДАТАВРЕМЯ(1, 1, 1)) &gt;= ЕСТЬNULL(СостояниеРаботниковНаИспытательномСроке.Период, ДАТАВРЕМЯ(1, 1, 1))
+						ТОГДА ПерепискаВстречиОпросы.Дата
+					ИНАЧЕ ДАТАВРЕМЯ(1, 1, 1)
+				КОНЕЦ) КАК Период
+		ИЗ
+			Справочник.ЗаявкиКандидатов КАК ЗаявкиКандидатов
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ТекущаяРаботаПоЗаявкамКандидатов КАК ТекущаяРаботаПоЗаявкамКандидатов
+				ПО ЗаявкиКандидатов.Ссылка = ТекущаяРаботаПоЗаявкамКандидатов.ЗаявкаКандидата
+				ЛЕВОЕ СОЕДИНЕНИЕ ЖурналДокументов.ПерепискаВстречиОпросы КАК ПерепискаВстречиОпросы
+				ПО ЗаявкиКандидатов.Ссылка = ПерепискаВстречиОпросы.ЗаявкаКандидата
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостояниеРаботниковНаИспытательномСроке КАК СостояниеРаботниковНаИспытательномСроке
+				ПО ЗаявкиКандидатов.ФизЛицо = СостояниеРаботниковНаИспытательномСроке.Физлицо
+					И (СостояниеРаботниковНаИспытательномСроке.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияРаботникаНаИспытательномСроке.ПринятНАработу))
+		
+		СГРУППИРОВАТЬ ПО
+			ЗаявкиКандидатов.ДатаОткрытия,
+			ЗаявкиКандидатов.Ответственный,
+			ЗаявкиКандидатов.Ссылка) КАК Заявки
+		ПО Даты.Дата &gt;= Заявки.Дата
+			И (Вакансии.Ссылка = Заявки.Заявка.Вакансия)
+			И Даты.Дата &lt;= Заявки.Период
+{ГДЕ
+	Заявки.Ответственный,
+	Даты.Дата,
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	Вакансии.Ссылка.* КАК Вакансия,
+	Заявки.Заявка.*,
+	(ВЫБОР
+			КОГДА &amp;РежимОтчета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+				ТОГДА ВЫБОР
+						КОГДА Вакансии.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+							ТОГДА СоответствиеПодразделенийКПодразделенийОрганизаций.Подразделение
+						ИНАЧЕ Вакансии.Подразделение
+					КОНЕЦ
+			ИНАЧЕ ВЫБОР
+					КОГДА Вакансии.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+						ТОГДА Вакансии.Подразделение
+					ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+				КОНЕЦ
+		КОНЕЦ).* КАК Подразделение,
+	Вакансии.Должность.*}</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>КачествоОтбораПерсоналаПривлечениеИОтборПерсонала</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Год</dataPath>
+				<field>Год</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Год</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>Дата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Квартал</dataPath>
+				<field>Квартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Квартал</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Месяц</dataPath>
+				<field>Месяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Неделя</dataPath>
+				<field>Неделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Неделя</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КолВоПринятыхСотрудников</dataPath>
+				<field>КолВоПринятыхСотрудников</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Кол во принятых сотрудников</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПрошлиИспытательныйСрок</dataPath>
+				<field>ПрошлиИспытательныйСрок</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Прошли испытательный срок</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ответственный</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Должность</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подразделение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИнформационнаяБаза</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Даты.Дата КАК Дата,
+	Даты.Месяц КАК Месяц,
+	Даты.Квартал КАК Квартал,
+	Даты.Год КАК Год,
+	Даты.Неделя КАК Неделя,
+	ПринятыеСотрудники.КолВоПринятыхСотрудников КАК КолВоПринятыхСотрудников,
+	ПрошедшиеИспытательныйСрок.ПрошлиИспытательныйСрок КАК ПрошлиИспытательныйСрок,
+	ПринятыеСотрудники.Ответственный КАК Ответственный,
+	ВЫБОР
+		КОГДА &amp;РежимОтчета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА ВЫБОР
+					КОГДА ПринятыеСотрудники.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+						ТОГДА СоответствиеПодразделенийКПодразделениямОрганизаций.Подразделение
+					ИНАЧЕ ПринятыеСотрудники.Подразделение
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА ПринятыеСотрудники.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+					ТОГДА ПринятыеСотрудники.Подразделение
+				ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+			КОНЕЦ
+	КОНЕЦ КАК Подразделение,
+	ПринятыеСотрудники.Должность КАК Должность
+{ВЫБРАТЬ
+	Дата,
+	Месяц,
+	Квартал,
+	Год,
+	Неделя,
+	КолВоПринятыхСотрудников.*,
+	ПрошлиИспытательныйСрок.*,
+	Ответственный.*,
+	Подразделение.*,
+	Должность.*}
+ИЗ
+	(ВЫБРАТЬ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ) КАК Месяц,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ) КАК Квартал,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД) КАК Год,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ) КАК Неделя
+	ИЗ
+		РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+	ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	{ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ)) КАК Месяц,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ)) КАК Квартал,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД)) КАК Год,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ)) КАК Неделя}) КАК Даты
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			СостояниеРаботниковНаИспытательномСроке.Период КАК Дата,
+			ЗаявкиКандидатов.ФизЛицо КАК КолВоПринятыхСотрудников,
+			ЗаявкиКандидатов.Ответственный КАК Ответственный,
+			ЗаявкиКандидатов.Подразделение КАК Подразделение,
+			ЗаявкиКандидатов.Должность КАК Должность
+		ИЗ
+			РегистрСведений.СостояниеРаботниковНаИспытательномСроке КАК СостояниеРаботниковНаИспытательномСроке
+				ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ЗаявкиКандидатов КАК ЗаявкиКандидатов
+				ПО СостояниеРаботниковНаИспытательномСроке.Физлицо = ЗаявкиКандидатов.ФизЛицо
+		ГДЕ
+			СостояниеРаботниковНаИспытательномСроке.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		
+		СГРУППИРОВАТЬ ПО
+			СостояниеРаботниковНаИспытательномСроке.Период,
+			ЗаявкиКандидатов.Ответственный,
+			ЗаявкиКандидатов.ФизЛицо,
+			ЗаявкиКандидатов.Подразделение,
+			ЗаявкиКандидатов.Должность) КАК ПринятыеСотрудники
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СоответствиеПодразделенийИПодразделенийОрганизаций КАК СоответствиеПодразделенийКПодразделениямОрганизаций
+			ПО ПринятыеСотрудники.Подразделение = СоответствиеПодразделенийКПодразделениямОрганизаций.ПодразделениеОрганизации
+		ПО Даты.Дата = ПринятыеСотрудники.Дата
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			СостояниеРаботниковНаИспытательномСроке.Период КАК Дата,
+			ЗаявкиКандидатов.ФизЛицо КАК ПрошлиИспытательныйСрок,
+			ЗаявкиКандидатов.Ответственный КАК Ответственный
+		ИЗ
+			РегистрСведений.СостояниеРаботниковНаИспытательномСроке КАК СостояниеРаботниковНаИспытательномСроке
+				ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ЗаявкиКандидатов КАК ЗаявкиКандидатов
+				ПО СостояниеРаботниковНаИспытательномСроке.Физлицо = ЗаявкиКандидатов.ФизЛицо
+		ГДЕ
+			СостояниеРаботниковНаИспытательномСроке.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+			И СостояниеРаботниковНаИспытательномСроке.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияРаботникаНаИспытательномСроке.ПринятНаРаботу)
+		
+		СГРУППИРОВАТЬ ПО
+			СостояниеРаботниковНаИспытательномСроке.Период,
+			ЗаявкиКандидатов.Ответственный,
+			ЗаявкиКандидатов.ФизЛицо) КАК ПрошедшиеИспытательныйСрок
+		ПО Даты.Дата = ПрошедшиеИспытательныйСрок.Дата
+{ГДЕ
+	Даты.Дата,
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	ПринятыеСотрудники.КолВоПринятыхСотрудников.*,
+	ПрошедшиеИспытательныйСрок.ПрошлиИспытательныйСрок.*,
+	ПринятыеСотрудники.Ответственный.* КАК Ответственный,
+	(ВЫБОР
+		КОГДА &amp;РежимОтчета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА ВЫБОР
+					КОГДА ПринятыеСотрудники.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+						ТОГДА СоответствиеПодразделенийКПодразделениямОрганизаций.Подразделение
+					ИНАЧЕ ПринятыеСотрудники.Подразделение
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА ПринятыеСотрудники.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+					ТОГДА ПринятыеСотрудники.Подразделение
+				ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+			КОНЕЦ
+	КОНЕЦ).* КАК Подразделение,
+	ПринятыеСотрудники.Должность.*}</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>СредняяПродолжительностьЗакрытияВакансийПерсоналаПодбораОдногоСотрудника</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Год</dataPath>
+				<field>Год</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Год</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>Дата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Квартал</dataPath>
+				<field>Квартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Квартал</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Месяц</dataPath>
+				<field>Месяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Неделя</dataPath>
+				<field>Неделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Неделя</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СредняяПродолжительностьВКалендарныхДнях</dataPath>
+				<field>СредняяПродолжительностьВКалендарныхДнях</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя продолжительность в календарных днях</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СредняяПродолжительностьРабочихДнях</dataPath>
+				<field>СредняяПродолжительностьРабочихДнях</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя продолжительность рабочих днях</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Должность</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подразделение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ответственный</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВакансияОтветственный</dataPath>
+				<field>ВакансияОтветственный</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вакансия ответственный</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИнформационнаяБаза</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Даты.Месяц КАК Месяц,
+	Даты.Квартал КАК Квартал,
+	Даты.Год КАК Год,
+	Даты.Неделя КАК Неделя,
+	Даты.Дата КАК Дата,
+	ЕСТЬNULL(ИтогоПоОтветсвенным.СредняяПродолжительностьВКалендарныхДнях, 0) КАК СредняяПродолжительностьВКалендарныхДнях,
+	ЕСТЬNULL(ИтогоПоОтветсвенным.СредняяПродолжительностьРабочихДнях, 0) КАК СредняяПродолжительностьРабочихДнях,
+	ВЫБОР
+		КОГДА &amp;РежимОтчета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА ВЫБОР
+					КОГДА ИтогоПоОтветсвенным.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+						ТОГДА СоответствиеПодразделенийКПодразделенийОрганизаций.Подразделение
+					ИНАЧЕ ИтогоПоОтветсвенным.Подразделение
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА ИтогоПоОтветсвенным.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+					ТОГДА ИтогоПоОтветсвенным.Подразделение
+				ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+			КОНЕЦ
+	КОНЕЦ КАК Подразделение,
+	ИтогоПоОтветсвенным.Должность КАК Должность,
+	ИтогоПоОтветсвенным.Вакансия КАК ВакансияОтветственный,
+	ИтогоПоОтветсвенным.Ответственный КАК Ответственный
+{ВЫБРАТЬ
+	Дата,
+	Месяц,
+	Квартал,
+	Год,
+	Неделя,
+	СредняяПродолжительностьВКалендарныхДнях КАК СредняяПродолжительностьВКалендарныхДнях,
+	СредняяПродолжительностьРабочихДнях КАК СредняяПродолжительностьРабочихДнях,
+	Подразделение.*,
+	Должность.*,
+	Ответственный.*,
+	ВакансияОтветственный.*}
+ИЗ
+	(ВЫБРАТЬ РАЗЛИЧНЫЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ) КАК Месяц,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД) КАК Год,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ) КАК Квартал,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ) КАК Неделя,
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК ДатаКалендаря
+	ИЗ
+		РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+	ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	{ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ)) КАК Месяц,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ)) КАК Квартал,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД)) КАК Год,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ)) КАК Неделя}) КАК Даты
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВЫБОР
+				КОГДА ВакансииСРабочимиДнями.Вакансия.ДатаЗакрытия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					ТОГДА РАЗНОСТЬДАТ(ВЫБОР
+								КОГДА ВакансииСРабочимиДнями.Вакансия.ДатаОткрытия &lt; &amp;НачалоПериода
+									ТОГДА &amp;НачалоПериода
+								ИНАЧЕ ВакансииСРабочимиДнями.Вакансия.ДатаОткрытия
+							КОНЕЦ, ВЫБОР
+								КОГДА ВакансииСРабочимиДнями.Вакансия.ДатаЗакрытия &gt; &amp;КонецПериода
+									ТОГДА &amp;КонецПериода
+								ИНАЧЕ ВакансииСРабочимиДнями.Вакансия.ДатаЗакрытия
+							КОНЕЦ, ДЕНЬ) + 1
+				ИНАЧЕ 0
+			КОНЕЦ КАК СредняяПродолжительностьВКалендарныхДнях,
+			СУММА(Даты.КоличествоРабочихДней) КАК СредняяПродолжительностьРабочихДнях,
+			ВакансииСРабочимиДнями.Вакансия.Ответственный КАК Ответственный,
+			ВакансииСРабочимиДнями.Вакансия КАК Вакансия,
+			ВакансииСРабочимиДнями.Подразделение КАК Подразделение,
+			ВакансииСРабочимиДнями.Должность КАК Должность,
+			ВакансииСРабочимиДнями.Вакансия.ДатаЗакрытия КАК Дата
+		ИЗ
+			(ВЫБРАТЬ
+				Вакансии.Ссылка КАК Вакансия,
+				СУММА(РабочиеДни.КоличествоРабочихДней) КАК КоличествоРабочихДней,
+				Вакансии.Подразделение КАК Подразделение,
+				Вакансии.Должность КАК Должность
+			ИЗ
+				Справочник.Вакансии КАК Вакансии
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+						РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+						ВЫБОР
+							КОГДА РегламентированныйПроизводственныйКалендарь.ВидДня = ЗНАЧЕНИЕ(Перечисление.ВидыДнейПроизводственногоКалендаря.Рабочий)
+									ИЛИ РегламентированныйПроизводственныйКалендарь.ВидДня = ЗНАЧЕНИЕ(Перечисление.ВидыДнейПроизводственногоКалендаря.Предпраздничный)
+								ТОГДА 1
+							ИНАЧЕ 0
+						КОНЕЦ КАК КоличествоРабочихДней
+					ИЗ
+						РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+					ГДЕ
+						РегламентированныйПроизводственныйКалендарь.ДатаКалендаря МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+					{ГДЕ
+						РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+						(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ)) КАК Месяц,
+						(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ)) КАК Квартал,
+						(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД)) КАК Год,
+						(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ)) КАК Неделя}) КАК РабочиеДни
+					ПО (РабочиеДни.Дата МЕЖДУ Вакансии.ДатаОткрытия И Вакансии.ДатаЗакрытия)
+			ГДЕ
+				Вакансии.ДатаОткрытия &lt;= &amp;КонецПериода
+				И Вакансии.ДатаЗакрытия &gt;= &amp;НачалоПериода
+				И Вакансии.Закрыта
+			
+			СГРУППИРОВАТЬ ПО
+				Вакансии.Ссылка,
+				Вакансии.Подразделение,
+				Вакансии.Должность) КАК ВакансииСРабочимиДнями
+				ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+					РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+					РегламентированныйПроизводственныйКалендарь.Пятидневка КАК Пятидневка,
+					ВЫБОР
+						КОГДА РегламентированныйПроизводственныйКалендарь.ВидДня = ЗНАЧЕНИЕ(Перечисление.ВидыДнейПроизводственногоКалендаря.Рабочий)
+								ИЛИ РегламентированныйПроизводственныйКалендарь.ВидДня = ЗНАЧЕНИЕ(Перечисление.ВидыДнейПроизводственногоКалендаря.Предпраздничный)
+							ТОГДА 1
+						ИНАЧЕ 0
+					КОНЕЦ КАК КоличествоРабочихДней
+				ИЗ
+					РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+				{ГДЕ
+					РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+					(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ)) КАК Месяц,
+					(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ)) КАК Квартал,
+					(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД)) КАК Год,
+					(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ)) КАК Неделя}) КАК Даты
+				ПО ВакансииСРабочимиДнями.Вакансия.ДатаОткрытия &lt;= Даты.Дата
+					И ВакансииСРабочимиДнями.Вакансия.ДатаЗакрытия &gt;= Даты.Дата
+		
+		СГРУППИРОВАТЬ ПО
+			ВЫБОР
+				КОГДА ВакансииСРабочимиДнями.Вакансия.ДатаЗакрытия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					ТОГДА РАЗНОСТЬДАТ(ВЫБОР
+								КОГДА ВакансииСРабочимиДнями.Вакансия.ДатаОткрытия &lt; &amp;НачалоПериода
+									ТОГДА &amp;НачалоПериода
+								ИНАЧЕ ВакансииСРабочимиДнями.Вакансия.ДатаОткрытия
+							КОНЕЦ, ВЫБОР
+								КОГДА ВакансииСРабочимиДнями.Вакансия.ДатаЗакрытия &gt; &amp;КонецПериода
+									ТОГДА &amp;КонецПериода
+								ИНАЧЕ ВакансииСРабочимиДнями.Вакансия.ДатаЗакрытия
+							КОНЕЦ, ДЕНЬ) + 1
+				ИНАЧЕ 0
+			КОНЕЦ,
+			ВакансииСРабочимиДнями.Вакансия.Ответственный,
+			ВакансииСРабочимиДнями.Вакансия,
+			ВакансииСРабочимиДнями.Подразделение,
+			ВакансииСРабочимиДнями.Должность,
+			ВакансииСРабочимиДнями.Вакансия.ДатаЗакрытия) КАК ИтогоПоОтветсвенным
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СоответствиеПодразделенийИПодразделенийОрганизаций КАК СоответствиеПодразделенийКПодразделенийОрганизаций
+			ПО ИтогоПоОтветсвенным.Подразделение = СоответствиеПодразделенийКПодразделенийОрганизаций.ПодразделениеОрганизации
+		ПО Даты.ДатаКалендаря = ИтогоПоОтветсвенным.Дата
+{ГДЕ
+	ИтогоПоОтветсвенным.Должность.*,
+	ИтогоПоОтветсвенным.Ответственный.*,
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	Даты.Дата,
+	(ЕСТЬNULL(ИтогоПоОтветсвенным.СредняяПродолжительностьВКалендарныхДнях, 0)) КАК СредняяПродолжительностьВКалендарныхДнях,
+	(ЕСТЬNULL(ИтогоПоОтветсвенным.СредняяПродолжительностьРабочихДнях, 0)) КАК СредняяПродолжительностьРабочихДнях,
+	(ВЫБОР
+		КОГДА &amp;РежимОтчета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА ВЫБОР
+					КОГДА ИтогоПоОтветсвенным.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+						ТОГДА СоответствиеПодразделенийКПодразделенийОрганизаций.Подразделение
+					ИНАЧЕ ИтогоПоОтветсвенным.Подразделение
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА ИтогоПоОтветсвенным.Подразделение ССЫЛКА Справочник.ПодразделенияОрганизаций
+					ТОГДА ИтогоПоОтветсвенным.Подразделение
+				ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+			КОНЕЦ
+	КОНЕЦ).* КАК Подразделение}</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>КоличествоОбученныхСотрудниковОбучение</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Год</dataPath>
+				<field>Год</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Год</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>Дата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Квартал</dataPath>
+				<field>Квартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Квартал</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоОбученныхСотрудников</dataPath>
+				<field>КоличествоОбученныхСотрудников</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество обученных сотрудников</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Месяц</dataPath>
+				<field>Месяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Неделя</dataPath>
+				<field>Неделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Неделя</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ответственный</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Должность</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подразделение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИнформационнаяБаза</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	КОЛИЧЕСТВО(ПройденныеУчебныеКурсы.Физлицо) КАК КоличествоОбученныхСотрудников,
+	Даты.Дата КАК Дата,
+	Даты.Месяц КАК Месяц,
+	Даты.Квартал КАК Квартал,
+	Даты.Год КАК Год,
+	Даты.Неделя КАК Неделя,
+	ПройденныеУчебныеКурсы.Регистратор.Ответственный КАК Ответственный,
+	ВЫБОР
+		КОГДА &amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА РаботникиОрганизации.Подразделение
+		ИНАЧЕ Работники.Подразделение
+	КОНЕЦ КАК Подразделение,
+	ВЫБОР
+		КОГДА &amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА РаботникиОрганизации.Должность
+		ИНАЧЕ Работники.Должность
+	КОНЕЦ КАК Должность
+{ВЫБРАТЬ
+	КоличествоОбученныхСотрудников.*,
+	Дата,
+	Месяц,
+	Квартал,
+	Год,
+	Неделя,
+	Ответственный.*,
+	Подразделение.*,
+	Должность.*}
+ИЗ
+	(ВЫБРАТЬ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ) КАК Месяц,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ) КАК Квартал,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД) КАК Год,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ) КАК Неделя
+	ИЗ
+		РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+	ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	{ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ)) КАК Месяц,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ)) КАК Квартал,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД)) КАК Год,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ)) КАК Неделя}) КАК Даты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПройденныеУчебныеКурсы КАК ПройденныеУчебныеКурсы
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				СписокСотрудников.Сотрудник КАК Сотрудник,
+				СписокСотрудников.Физлицо КАК Физлицо,
+				СписокСотрудников.Период КАК Период
+			ИЗ
+				(ВЫБРАТЬ
+					МАКСИМУМ(РаботникиОрганизаций.Сотрудник) КАК Сотрудник,
+					РаботникиОрганизаций.Сотрудник.Физлицо КАК Физлицо,
+					1 КАК Приоритет,
+					ПериодыРаботников.Период КАК Период
+				ИЗ
+					(ВЫБРАТЬ
+						ПройденныеУчебныеКурсы.Период КАК Период,
+						МАКСИМУМ(РаботникиОрганизаций.Период) КАК ПериодРаботниковОрганизации,
+						ПройденныеУчебныеКурсы.Физлицо КАК ФизЛицо,
+						РаботникиОрганизаций.Сотрудник КАК Сотрудник
+					ИЗ
+						РегистрСведений.ПройденныеУчебныеКурсы КАК ПройденныеУчебныеКурсы
+							ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+							ПО ПройденныеУчебныеКурсы.Физлицо = РаботникиОрганизаций.Сотрудник.Физлицо
+								И ПройденныеУчебныеКурсы.Период &gt;= РаботникиОрганизаций.Период
+					ГДЕ
+						РаботникиОрганизаций.Сотрудник.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровСФизЛицами.ТрудовойДоговор)
+						И РаботникиОрганизаций.Сотрудник.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.ОсновноеМестоРаботы)
+						И ПройденныеУчебныеКурсы.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+					
+					СГРУППИРОВАТЬ ПО
+						ПройденныеУчебныеКурсы.Период,
+						ПройденныеУчебныеКурсы.Физлицо,
+						РаботникиОрганизаций.Сотрудник) КАК ПериодыРаботников
+						ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+						ПО ПериодыРаботников.ПериодРаботниковОрганизации = РаботникиОрганизаций.Период
+							И ПериодыРаботников.Сотрудник = РаботникиОрганизаций.Сотрудник
+				
+				СГРУППИРОВАТЬ ПО
+					РаботникиОрганизаций.Сотрудник.Физлицо,
+					ПериодыРаботников.Период
+				
+				ОБЪЕДИНИТЬ
+				
+				ВЫБРАТЬ
+					МАКСИМУМ(РаботникиОрганизаций.Сотрудник),
+					РаботникиОрганизаций.Сотрудник.Физлицо,
+					2,
+					ПериодыРаботников.Период
+				ИЗ
+					(ВЫБРАТЬ
+						ПройденныеУчебныеКурсы.Период КАК Период,
+						МАКСИМУМ(РаботникиОрганизаций.Период) КАК ПериодРаботниковОрганизации,
+						ПройденныеУчебныеКурсы.Физлицо КАК ФизЛицо,
+						РаботникиОрганизаций.Сотрудник КАК Сотрудник
+					ИЗ
+						РегистрСведений.ПройденныеУчебныеКурсы КАК ПройденныеУчебныеКурсы
+							ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+							ПО ПройденныеУчебныеКурсы.Физлицо = РаботникиОрганизаций.Сотрудник.Физлицо
+								И ПройденныеУчебныеКурсы.Период &gt;= РаботникиОрганизаций.Период
+					ГДЕ
+						РаботникиОрганизаций.ПричинаИзмененияСостояния &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПричиныИзмененияСостояния.Увольнение)
+						И РаботникиОрганизаций.Сотрудник.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровСФизЛицами.ТрудовойДоговор)
+						И РаботникиОрганизаций.Сотрудник.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.Совместительство)
+						И ПройденныеУчебныеКурсы.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+					
+					СГРУППИРОВАТЬ ПО
+						ПройденныеУчебныеКурсы.Период,
+						ПройденныеУчебныеКурсы.Физлицо,
+						РаботникиОрганизаций.Сотрудник) КАК ПериодыРаботников
+						ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+						ПО ПериодыРаботников.ПериодРаботниковОрганизации = РаботникиОрганизаций.Период
+							И ПериодыРаботников.Сотрудник = РаботникиОрганизаций.Сотрудник
+				
+				СГРУППИРОВАТЬ ПО
+					РаботникиОрганизаций.Сотрудник.Физлицо,
+					ПериодыРаботников.Период
+				
+				ОБЪЕДИНИТЬ
+				
+				ВЫБРАТЬ
+					МАКСИМУМ(СотрудникиДУ.Ссылка),
+					СотрудникиДУ.Физлицо,
+					3,
+					ПериодыРаботников.Период
+				ИЗ
+					(ВЫБРАТЬ
+						ПройденныеУчебныеКурсы.Период КАК Период,
+						ПройденныеУчебныеКурсы.Физлицо КАК ФизЛицо
+					ИЗ
+						РегистрСведений.ПройденныеУчебныеКурсы КАК ПройденныеУчебныеКурсы
+					ГДЕ
+						ПройденныеУчебныеКурсы.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+					
+					СГРУППИРОВАТЬ ПО
+						ПройденныеУчебныеКурсы.Период,
+						ПройденныеУчебныеКурсы.Физлицо) КАК ПериодыРаботников
+						ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.СотрудникиОрганизаций КАК СотрудникиДУ
+						ПО ПериодыРаботников.ФизЛицо = СотрудникиДУ.Физлицо
+				ГДЕ
+					(СотрудникиДУ.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровСФизЛицами.ДоговорУправленческий)
+							ИЛИ СотрудникиДУ.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровСФизЛицами.ТрудовойДоговор))
+				
+				СГРУППИРОВАТЬ ПО
+					СотрудникиДУ.Физлицо,
+					ПериодыРаботников.Период) КАК СписокСотрудников
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+						СписокФизическихЛиц.Физлицо КАК Физлицо,
+						МИНИМУМ(СписокФизическихЛиц.Приоритет) КАК Приоритет,
+						СписокФизическихЛиц.Период КАК Период
+					ИЗ
+						(ВЫБРАТЬ
+							РаботникиОрганизаций.Сотрудник.Физлицо КАК Физлицо,
+							1 КАК Приоритет,
+							ПериодыРаботников.Период КАК Период
+						ИЗ
+							(ВЫБРАТЬ
+								ПройденныеУчебныеКурсы.Период КАК Период,
+								МАКСИМУМ(РаботникиОрганизаций.Период) КАК ПериодРаботниковОрганизации,
+								ПройденныеУчебныеКурсы.Физлицо КАК ФизЛицо,
+								РаботникиОрганизаций.Сотрудник КАК Сотрудник
+							ИЗ
+								РегистрСведений.ПройденныеУчебныеКурсы КАК ПройденныеУчебныеКурсы
+									ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+									ПО ПройденныеУчебныеКурсы.Физлицо = РаботникиОрганизаций.Сотрудник.Физлицо
+										И ПройденныеУчебныеКурсы.Период &gt;= РаботникиОрганизаций.Период
+							ГДЕ
+								РаботникиОрганизаций.Сотрудник.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровСФизЛицами.ТрудовойДоговор)
+								И РаботникиОрганизаций.Сотрудник.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.ОсновноеМестоРаботы)
+								И ПройденныеУчебныеКурсы.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+							
+							СГРУППИРОВАТЬ ПО
+								ПройденныеУчебныеКурсы.Период,
+								ПройденныеУчебныеКурсы.Физлицо,
+								РаботникиОрганизаций.Сотрудник) КАК ПериодыРаботников
+								ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+								ПО ПериодыРаботников.ПериодРаботниковОрганизации = РаботникиОрганизаций.Период
+									И ПериодыРаботников.Сотрудник = РаботникиОрганизаций.Сотрудник
+						
+						СГРУППИРОВАТЬ ПО
+							РаботникиОрганизаций.Сотрудник.Физлицо,
+							ПериодыРаботников.Период
+						
+						ОБЪЕДИНИТЬ
+						
+						ВЫБРАТЬ
+							РаботникиОрганизаций.Сотрудник.Физлицо,
+							2,
+							ПериодыРаботников.Период
+						ИЗ
+							(ВЫБРАТЬ
+								ПройденныеУчебныеКурсы.Период КАК Период,
+								МАКСИМУМ(РаботникиОрганизаций.Период) КАК ПериодРаботниковОрганизации,
+								ПройденныеУчебныеКурсы.Физлицо КАК ФизЛицо,
+								РаботникиОрганизаций.Сотрудник КАК Сотрудник
+							ИЗ
+								РегистрСведений.ПройденныеУчебныеКурсы КАК ПройденныеУчебныеКурсы
+									ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+									ПО ПройденныеУчебныеКурсы.Физлицо = РаботникиОрганизаций.Сотрудник.Физлицо
+										И ПройденныеУчебныеКурсы.Период &gt;= РаботникиОрганизаций.Период
+							ГДЕ
+								РаботникиОрганизаций.ПричинаИзмененияСостояния &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПричиныИзмененияСостояния.Увольнение)
+								И РаботникиОрганизаций.Сотрудник.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровСФизЛицами.ТрудовойДоговор)
+								И РаботникиОрганизаций.Сотрудник.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.Совместительство)
+								И ПройденныеУчебныеКурсы.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+							
+							СГРУППИРОВАТЬ ПО
+								ПройденныеУчебныеКурсы.Период,
+								ПройденныеУчебныеКурсы.Физлицо,
+								РаботникиОрганизаций.Сотрудник) КАК ПериодыРаботников
+								ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+								ПО ПериодыРаботников.ПериодРаботниковОрганизации = РаботникиОрганизаций.Период
+									И ПериодыРаботников.Сотрудник = РаботникиОрганизаций.Сотрудник
+						ГДЕ
+							РаботникиОрганизаций.ПричинаИзмененияСостояния &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПричиныИзмененияСостояния.Увольнение)
+							И РаботникиОрганизаций.Сотрудник.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровСФизЛицами.ТрудовойДоговор)
+							И РаботникиОрганизаций.Сотрудник.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.Совместительство)
+						
+						СГРУППИРОВАТЬ ПО
+							РаботникиОрганизаций.Сотрудник.Физлицо,
+							ПериодыРаботников.Период
+						
+						ОБЪЕДИНИТЬ
+						
+						ВЫБРАТЬ
+							СотрудникиДУ.Физлицо,
+							3,
+							ПериодыРаботников.Период
+						ИЗ
+							Справочник.СотрудникиОрганизаций КАК СотрудникиДУ
+								ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+									ПройденныеУчебныеКурсы.Период КАК Период,
+									ПройденныеУчебныеКурсы.Физлицо КАК ФизЛицо
+								ИЗ
+									РегистрСведений.ПройденныеУчебныеКурсы КАК ПройденныеУчебныеКурсы
+								ГДЕ
+									ПройденныеУчебныеКурсы.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+								
+								СГРУППИРОВАТЬ ПО
+									ПройденныеУчебныеКурсы.Период,
+									ПройденныеУчебныеКурсы.Физлицо) КАК ПериодыРаботников
+								ПО СотрудникиДУ.Физлицо = ПериодыРаботников.ФизЛицо
+						ГДЕ
+							(СотрудникиДУ.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровСФизЛицами.ДоговорУправленческий)
+									ИЛИ СотрудникиДУ.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровСФизЛицами.ТрудовойДоговор))
+						
+						СГРУППИРОВАТЬ ПО
+							СотрудникиДУ.Физлицо,
+							ПериодыРаботников.Период) КАК СписокФизическихЛиц
+					
+					СГРУППИРОВАТЬ ПО
+						СписокФизическихЛиц.Физлицо,
+						СписокФизическихЛиц.Период) КАК СписокФизическихЛиц
+					ПО СписокСотрудников.Приоритет = СписокФизическихЛиц.Приоритет
+						И СписокСотрудников.Физлицо = СписокФизическихЛиц.Физлицо
+						И СписокСотрудников.Период = СписокФизическихЛиц.Период) КАК Сотрудники
+				ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+					ПоследниеДаты.Сотрудник КАК Сотрудник,
+					ПоследниеДаты.Период КАК Период,
+					ВЫБОР
+						КОГДА РаботникиОрганизаций.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+								И РаботникиОрганизаций.ПериодЗавершения &lt; ПоследниеДаты.Период
+							ТОГДА РаботникиОрганизаций.ПодразделениеОрганизацииЗавершения
+						ИНАЧЕ РаботникиОрганизаций.ПодразделениеОрганизации
+					КОНЕЦ КАК Подразделение,
+					ВЫБОР
+						КОГДА РаботникиОрганизаций.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+								И РаботникиОрганизаций.ПериодЗавершения &lt; ПоследниеДаты.Период
+							ТОГДА РаботникиОрганизаций.ДолжностьЗавершения
+						ИНАЧЕ РаботникиОрганизаций.Должность
+					КОНЕЦ КАК Должность
+				ИЗ
+					(ВЫБРАТЬ
+						ПройденныеУчебныеКурсы.Период КАК Период,
+						РаботникиОрганизаций.Сотрудник КАК Сотрудник,
+						МАКСИМУМ(РаботникиОрганизаций.Период) КАК ПериодРаботника
+					ИЗ
+						РегистрСведений.ПройденныеУчебныеКурсы КАК ПройденныеУчебныеКурсы
+							ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+							ПО ПройденныеУчебныеКурсы.Период &gt;= РаботникиОрганизаций.Период
+								И ПройденныеУчебныеКурсы.Физлицо &gt;= РаботникиОрганизаций.Сотрудник.Физлицо
+					
+					СГРУППИРОВАТЬ ПО
+						ПройденныеУчебныеКурсы.Период,
+						РаботникиОрганизаций.Сотрудник) КАК ПоследниеДаты
+						ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+						ПО ПоследниеДаты.ПериодРаботника = РаботникиОрганизаций.Период
+							И ПоследниеДаты.Сотрудник = РаботникиОрганизаций.Сотрудник) КАК РаботникиОрганизации
+				ПО Сотрудники.Сотрудник = РаботникиОрганизации.Сотрудник
+					И Сотрудники.Период = РаботникиОрганизации.Период
+			ПО ПройденныеУчебныеКурсы.Физлицо = Сотрудники.Физлицо
+				И ПройденныеУчебныеКурсы.Период = Сотрудники.Период
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				ПоследниеДатыДвижения.Период КАК Период,
+				ПоследниеДатыДвижения.Физлицо КАК Физлицо,
+				Работники.Подразделение КАК Подразделение,
+				Работники.Должность КАК Должность
+			ИЗ
+				(ВЫБРАТЬ
+					ПройденныеУчебныеКурсы.Период КАК Период,
+					ПройденныеУчебныеКурсы.Физлицо КАК Физлицо,
+					МАКСИМУМ(Работники.Период) КАК ПериодРаботника
+				ИЗ
+					РегистрСведений.ПройденныеУчебныеКурсы КАК ПройденныеУчебныеКурсы
+						ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.Работники КАК Работники
+						ПО ПройденныеУчебныеКурсы.Физлицо = Работники.ФизЛицо
+							И ПройденныеУчебныеКурсы.Период &gt;= Работники.Период
+				ГДЕ
+					ПройденныеУчебныеКурсы.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+				
+				СГРУППИРОВАТЬ ПО
+					ПройденныеУчебныеКурсы.Период,
+					ПройденныеУчебныеКурсы.Физлицо) КАК ПоследниеДатыДвижения
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.Работники КАК Работники
+					ПО ПоследниеДатыДвижения.ПериодРаботника = Работники.Период
+						И ПоследниеДатыДвижения.Физлицо = Работники.ФизЛицо) КАК Работники
+			ПО ПройденныеУчебныеКурсы.Физлицо = Работники.Физлицо
+				И ПройденныеУчебныеКурсы.Период = Работники.Период
+		ПО Даты.Дата = ПройденныеУчебныеКурсы.Период
+{ГДЕ
+	ПройденныеУчебныеКурсы.Физлицо.* КАК КоличествоОбученныхСотрудников,
+	Даты.Дата,
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	ПройденныеУчебныеКурсы.Регистратор.Ответственный.* КАК Ответственный,
+	(ВЫБОР
+			КОГДА &amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+				ТОГДА РаботникиОрганизации.Подразделение
+			ИНАЧЕ Работники.Подразделение
+		КОНЕЦ).* КАК Подразделение,
+	(ВЫБОР
+			КОГДА &amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+				ТОГДА РаботникиОрганизации.Должность
+			ИНАЧЕ Работники.Должность
+		КОНЕЦ).* КАК Должность}
+
+СГРУППИРОВАТЬ ПО
+	Даты.Дата,
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	ПройденныеУчебныеКурсы.Регистратор.Ответственный,
+	ВЫБОР
+		КОГДА &amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА РаботникиОрганизации.Подразделение
+		ИНАЧЕ Работники.Подразделение
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА &amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА РаботникиОрганизации.Должность
+		ИНАЧЕ Работники.Должность
+	КОНЕЦ</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>КоличествоПроведенныхОбученийСотрудниковОбучение</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Год</dataPath>
+				<field>Год</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Год</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>Дата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Квартал</dataPath>
+				<field>Квартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Квартал</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Месяц</dataPath>
+				<field>Месяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Неделя</dataPath>
+				<field>Неделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Неделя</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ответственный</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоПроведенныхОбучений</dataPath>
+				<field>КоличествоПроведенныхОбучений</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество проведенных обучений</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Должность</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подразделение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИнформационнаяБаза</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Даты.Дата КАК Дата,
+	Даты.Месяц КАК Месяц,
+	Даты.Квартал КАК Квартал,
+	Даты.Год КАК Год,
+	Даты.Неделя КАК Неделя,
+	ПройденныеУчебныеКурсы.Регистратор.Ответственный КАК Ответственный,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПройденныеУчебныеКурсы.Регистратор) КАК КоличествоПроведенныхОбучений,
+	ВЫБОР
+		КОГДА &amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.Подразделения.ПустаяСсылка)
+	КОНЕЦ КАК Подразделение,
+	ЗНАЧЕНИЕ(Справочник.ДолжностиОрганизаций.ПустаяСсылка) КАК Должность
+{ВЫБРАТЬ
+	Дата,
+	Месяц,
+	Квартал,
+	Год,
+	Неделя,
+	Ответственный.*,
+	КоличествоПроведенныхОбучений.*,
+	Подразделение.*,
+	Должность.*}
+ИЗ
+	(ВЫБРАТЬ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ) КАК Месяц,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ) КАК Квартал,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД) КАК Год,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ) КАК Неделя
+	ИЗ
+		РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+	ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	{ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ)) КАК Месяц,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ)) КАК Квартал,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД)) КАК Год,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ)) КАК Неделя}) КАК Даты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПройденныеУчебныеКурсы КАК ПройденныеУчебныеКурсы
+		ПО (Даты.Дата = НАЧАЛОПЕРИОДА(ПройденныеУчебныеКурсы.Период, ДЕНЬ))
+{ГДЕ
+	Даты.Дата,
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	ПройденныеУчебныеКурсы.Регистратор.Ответственный.* КАК Ответственный,
+	ПройденныеУчебныеКурсы.Регистратор.* КАК КоличествоПроведенныхОбучений,
+	(ВЫБОР
+			КОГДА &amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+				ТОГДА ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+			ИНАЧЕ ЗНАЧЕНИЕ(Справочник.Подразделения.ПустаяСсылка)
+		КОНЕЦ).* КАК Подразделение,
+	(ЗНАЧЕНИЕ(Справочник.ДолжностиОрганизаций.ПустаяСсылка)).* КАК Должность}
+
+СГРУППИРОВАТЬ ПО
+	Даты.Дата,
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	ПройденныеУчебныеКурсы.Регистратор.Ответственный</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>КоличествоОбслуживаемыхЮридическихЛиц</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Год</dataPath>
+				<field>Год</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Год</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>Дата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Квартал</dataPath>
+				<field>Квартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Квартал</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Месяц</dataPath>
+				<field>Месяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Неделя</dataPath>
+				<field>Неделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Неделя</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ответственный</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоОбсуживаемыхПредприятий</dataPath>
+				<field>КоличествоОбсуживаемыхПредприятий</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество обсуживаемых предприятий</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Должность</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подразделение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИнформационнаяБаза</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РаботникиОрганизаций.ОбособленноеПодразделение КАК КоличествоОбсуживаемыхПредприятий,
+	Даты.Дата КАК Дата,
+	Даты.Месяц КАК Месяц,
+	Даты.Квартал КАК Квартал,
+	Даты.Год КАК Год,
+	Даты.Неделя КАК Неделя,
+	"Ответственный не доступен" КАК Ответственный,
+	ВЫБОР
+		КОГДА &amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.Подразделения.ПустаяСсылка)
+	КОНЕЦ КАК Подразделение,
+	ЗНАЧЕНИЕ(Справочник.ДолжностиОрганизаций.ПустаяСсылка) КАК Должность
+{ВЫБРАТЬ
+	Дата,
+	Месяц,
+	Квартал,
+	Год,
+	Неделя,
+	Ответственный.* КАК Ответственный,
+	КоличествоОбсуживаемыхПредприятий.* КАК КоличествоОбсуживаемыхПредприятий,
+	Подразделение.*,
+	Должность.*}
+ИЗ
+	(ВЫБРАТЬ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ) КАК Месяц,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ) КАК Квартал,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД) КАК Год,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ) КАК Неделя
+	ИЗ
+		РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+	ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	{ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ)) КАК Месяц,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ)) КАК Квартал,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД)) КАК Год,
+		(НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ)) КАК Неделя}) КАК Даты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+		ПО Даты.Дата = РаботникиОрганизаций.Период
+{ГДЕ
+	Даты.Дата,
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	"ОтветственныйОрганизацииОтбор" КАК Ответственный,
+	РаботникиОрганизаций.ОбособленноеПодразделение.* КАК КоличествоОбсуживаемыхПредприятий,
+	(ВЫБОР
+			КОГДА &amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+				ТОГДА ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+			ИНАЧЕ ЗНАЧЕНИЕ(Справочник.Подразделения.ПустаяСсылка)
+		КОНЕЦ).* КАК Подразделение,
+	(ЗНАЧЕНИЕ(Справочник.ДолжностиОрганизаций.ПустаяСсылка)).* КАК Должность}
+
+СГРУППИРОВАТЬ ПО
+	Даты.Дата,
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	РаботникиОрганизаций.ОбособленноеПодразделение,
+	"Ответственный не доступен"</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>КоличествоОбслуживаемыхCотрудников</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Год</dataPath>
+				<field>Год</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Год</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Квартал</dataPath>
+				<field>Квартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Квартал</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Месяц</dataPath>
+				<field>Месяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Неделя</dataPath>
+				<field>Неделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Неделя</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>Дата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоОбслуживаемыхСотрудников</dataPath>
+				<field>КоличествоОбслуживаемыхСотрудников</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество обслуживаемых сотрудников</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ответственный</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Должность</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подразделение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИнформационнаяБаза</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	Даты.Месяц КАК Месяц,
+	Даты.Квартал КАК Квартал,
+	Даты.Год КАК Год,
+	Даты.Неделя КАК Неделя,
+	"Ответственный не доступен" КАК Ответственный,
+	Работники.ФизЛицо КАК КоличествоОбслуживаемыхСотрудников,
+	Даты.Дата КАК Дата,
+	Работники.Подразделение КАК Подразделение,
+	Работники.Должность КАК Должность
+{ВЫБРАТЬ
+	Месяц,
+	Квартал,
+	Год,
+	Неделя,
+	Дата,
+	Ответственный.*,
+	КоличествоОбслуживаемыхСотрудников.*,
+	Подразделение.*,
+	Должность.*}
+ИЗ
+	(ВЫБРАТЬ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ) КАК Месяц,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ) КАК Квартал,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД) КАК Год,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ) КАК Неделя
+	ИЗ
+		РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+	ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода) КАК Даты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Работники КАК Работники
+		ПО Даты.Дата = Работники.Период
+ГДЕ
+	&amp;РежимОтчета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+{ГДЕ
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	"ОтветственныйОтбор" КАК Ответственный,
+	Работники.ФизЛицо.* КАК КоличествоОбслуживаемыхСотрудников,
+	Работники.Подразделение.* КАК Подразделение,
+	Работники.Должность.* КАК Должность}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	"Ответственный организации не доступен",
+	РаботникиОрганизаций.Сотрудник.Физлицо,
+	Даты.Дата,
+	РаботникиОрганизаций.ПодразделениеОрганизации,
+	РаботникиОрганизаций.Должность
+ИЗ
+	(ВЫБРАТЬ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря КАК Дата,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ) КАК Месяц,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ) КАК Квартал,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, ГОД) КАК Год,
+		НАЧАЛОПЕРИОДА(РегламентированныйПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ) КАК Неделя
+	ИЗ
+		РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК РегламентированныйПроизводственныйКалендарь
+	ГДЕ
+		РегламентированныйПроизводственныйКалендарь.ДатаКалендаря МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода) КАК Даты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+		ПО Даты.Дата = РаботникиОрганизаций.Период
+ГДЕ
+	&amp;РежимОтчета = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+{ГДЕ
+	Даты.Месяц,
+	Даты.Квартал,
+	Даты.Год,
+	Даты.Неделя,
+	"ОтветственныйОрганизацииОтбор" КАК Ответственный,
+	РаботникиОрганизаций.Сотрудник.Физлицо.* КАК КоличествоОбслуживаемыхСотрудников,
+	Даты.Дата,
+	РаботникиОрганизаций.ПодразделениеОрганизации.* КАК Подразделение,
+	РаботникиОрганизаций.Должность.* КАК Должность}</query>
+			<autoFillFields>false</autoFillFields>
+		</item>
+	</dataSet>
+	<calculatedField>
+		<dataPath>КоэффициентНабораПерсонала</dataPath>
+		<expression>1</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коэффициент набора персонала</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КачествоОтбора</dataPath>
+		<expression>ВЫБОР КОГДА КолВоПринятыхСотрудников  &lt;&gt; 0 ТОГДА ПрошлиИспытательныйСрок / КолВоПринятыхСотрудников ИНАЧЕ 0 КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коэффициент качества отбора</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>15</v8:Digits>
+				<v8:FractionDigits>2</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<totalField>
+		<dataPath>КоэффициентНабораПерсонала</dataPath>
+		<expression>ВЫБОР КОГДА Количество(Различные Вакансия) &lt;&gt; 0 ТОГДА Количество(Различные Заявка) / Количество(Различные Вакансия) ИНАЧЕ 0 КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КачествоОтбора</dataPath>
+		<expression>ВЫБОР КОГДА Количество(Различные  КолВоПринятыхСотрудников) &lt;&gt; 0 ТОГДА Количество(Различные  ПрошлиИспытательныйСрок) / Количество(Различные КолВоПринятыхСотрудников) ИНАЧЕ 0 КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОбученныхСотрудников</dataPath>
+		<expression>Сумма(КоличествоОбученныхСотрудников)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПроведенныхОбучений</dataPath>
+		<expression>Сумма(КоличествоПроведенныхОбучений)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОбсуживаемыхПредприятий</dataPath>
+		<expression>Количество(Различные КоличествоОбсуживаемыхПредприятий)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОбслуживаемыхСотрудников</dataPath>
+		<expression>Количество(Различные КоличествоОбслуживаемыхСотрудников)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Заявка</dataPath>
+		<expression>Количество(Различные Заявка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Вакансия</dataPath>
+		<expression>Количество(Различные Вакансия)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СредняяПродолжительностьЗакрытияВакансий</dataPath>
+		<expression>ВЫБОР КОГДА Количество(Различные ВакансияОтветственный) &lt;&gt; 0 ТОГДА Сумма(СредняяПродолжительностьЗакрытияВакансий)/Количество(Различные ВакансияОтветственный) ИНАЧЕ 0 КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СредняяПродолжительностьЗакрытияВакансийВКалендДнях</dataPath>
+		<expression>ВЫБОР КОГДА Количество(Различные ВакансияОтветственный) &lt;&gt; 0 ТОГДА Сумма(СредняяПродолжительностьЗакрытияВакансийВКалендДнях)/Количество(Различные ВакансияОтветственный) ИНАЧЕ 0 КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВакансияОтветственный</dataPath>
+		<expression>Количество(Различные ВакансияОтветственный)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДнейВПериоде</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дней в периоде</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>3</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+		<expression>РАЗНОСТЬДАТ(&amp;НачалоПериода, &amp;КонецПериода, "ДЕНЬ")+1</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>РежимОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Режим отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыОрганизационнойСтруктурыПредприятия</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КачествоОтбора</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоОбслуживаемыхСотрудников</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоОбсуживаемыхПредприятий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоОбученныхСотрудников</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПроведенныхОбучений</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоэффициентНабораПерсонала</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СредняяПродолжительностьЗакрытияВакансий</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item>
+					<dcscor:parameter>РежимОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Месяц</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

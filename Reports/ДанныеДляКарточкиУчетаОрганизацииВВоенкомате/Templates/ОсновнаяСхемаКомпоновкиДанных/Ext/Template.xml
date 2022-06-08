@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДанныеОрганизации</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоВЗапасе</dataPath>
+			<field>ВсегоВЗапасе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего в запасе</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоВЗапасеЗабронировано</dataPath>
+			<field>ВсегоВЗапасеЗабронировано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего в запасе забронировано</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоРаботающих</dataPath>
+			<field>ВсегоРаботающих</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего работающих</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НегодныхВМирноеВремя</dataPath>
+			<field>НегодныхВМирноеВремя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Негодных в мирное время</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НезабронированноБезМобпредписаний</dataPath>
+			<field>НезабронированноБезМобпредписаний</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Незабронированно без мобпредписаний</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НезабронированноСМобпредписанием</dataPath>
+			<field>НезабронированноСМобпредписанием</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Незабронированно с мобпредписанием</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОфицеровВЗапасе</dataPath>
+			<field>ОфицеровВЗапасе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Офицеров в запасе</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОфицеровЗабронировано</dataPath>
+			<field>ОфицеровЗабронировано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Офицеров забронировано</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПрапорщиковВЗапасе</dataPath>
+			<field>ПрапорщиковВЗапасе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прапорщиков в запасе</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Призывников</dataPath>
+			<field>Призывников</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Призывников</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СолдатВЗапасе</dataPath>
+			<field>СолдатВЗапасе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Солдат в запасе</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолжностьРуководителя</dataPath>
+			<field>ДолжностьРуководителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность руководителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Руководитель</dataPath>
+			<field>Руководитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Руководитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФИОРуководителя</dataPath>
+			<field>ФИОРуководителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИОРуководителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФамилияИОРуководителя</dataPath>
+			<field>ФамилияИОРуководителя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоВЗапасеНезабронировано</dataPath>
+			<field>ВсегоВЗапасеНезабронировано</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоВЗапасеСМобпредписанием</dataPath>
+			<field>ВсегоВЗапасеСМобпредписанием</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	РаботникиОрганизацииСрезПоследних.Сотрудник.Физлицо КАК ФизЛицо,
+	ВЫБОР
+		КОГДА РаботникиОрганизацииСрезПоследних.ПериодЗавершения &lt;= &amp;Период
+				И РаботникиОрганизацииСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА РаботникиОрганизацииСрезПоследних.ОбособленноеПодразделениеЗавершения
+		ИНАЧЕ РаботникиОрганизацииСрезПоследних.ОбособленноеПодразделение
+	КОНЕЦ КАК Организация
+ПОМЕСТИТЬ ВТРаботники
+ИЗ
+	РегистрСведений.РаботникиОрганизаций.СрезПоследних(
+			&amp;Период,
+			Сотрудник.ВидЗанятости &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.ВнутреннееСовместительство)
+				И Сотрудник.ВидЗанятости &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.Совместительство)) КАК РаботникиОрганизацииСрезПоследних
+ГДЕ
+	ВЫБОР
+			КОГДА РаботникиОрганизацииСрезПоследних.ПериодЗавершения &lt;= &amp;Период
+					И РаботникиОрганизацииСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				ТОГДА РаботникиОрганизацииСрезПоследних.ПричинаИзмененияСостоянияЗавершения
+			ИНАЧЕ РаботникиОрганизацииСрезПоследних.ПричинаИзмененияСостояния
+		КОНЕЦ &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПричиныИзмененияСостояния.Увольнение)
+{ГДЕ
+	РаботникиОрганизацииСрезПоследних.Сотрудник.Физлицо.* КАК Физлицо}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОтветственныеЛицаОрганизацийСрезПоследних.ФизическоеЛицо,
+	ОтветственныеЛицаОрганизацийСрезПоследних.Должность,
+	ОтветственныеЛицаОрганизацийСрезПоследних.СтруктурнаяЕдиница,
+	ОтветственныеЛицаОрганизацийСрезПоследних.ФизическоеЛицо.Комментарий
+ПОМЕСТИТЬ ВТРуководитель
+ИЗ
+	РегистрСведений.ОтветственныеЛицаОрганизаций.СрезПоследних(
+			&amp;Период,
+			СтруктурнаяЕдиница В
+					(ВЫБРАТЬ
+						РаботникиОрганизации.Организация КАК Организация
+					ИЗ
+						ВТРаботники КАК РаботникиОрганизации)
+				И ОтветственноеЛицо = ЗНАЧЕНИЕ(Перечисление.ОтветственныеЛицаОрганизаций.Руководитель)) КАК ОтветственныеЛицаОрганизацийСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВЫБОР
+		КОГДА РаботникиОрганизации.ФизЛицо ЕСТЬ НЕ NULL 
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВсегоРаботающих,
+	ВЫБОР
+		КОГДА ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+				И (ВУ.Звание.ОбщевойсковоеЗвание В (&amp;Офицеры)
+					ИЛИ ВУ.Звание.ОбщевойсковоеЗвание В (&amp;Прапорщики)
+					ИЛИ ВУ.Звание.ОбщевойсковоеЗвание В (&amp;Солдаты))
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВсегоВЗапасе,
+	ВЫБОР
+		КОГДА ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+				И ВУ.Звание.ОбщевойсковоеЗвание В (&amp;Офицеры)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ОфицеровВЗапасе,
+	ВЫБОР
+		КОГДА ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+				И ВУ.Звание.ОбщевойсковоеЗвание В (&amp;Прапорщики)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПрапорщиковВЗапасе,
+	ВЫБОР
+		КОГДА ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+				И ВУ.Звание.ОбщевойсковоеЗвание В (&amp;Солдаты)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК СолдатВЗапасе,
+	ВЫБОР
+		КОГДА ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+				И ВУ.Годность = ЗНАЧЕНИЕ(Перечисление.ГодностьКВоеннойСлужбе.ОграниченноГоден)
+				И (ВУ.Звание.ОбщевойсковоеЗвание В (&amp;Солдаты)
+					ИЛИ ВУ.Звание.ОбщевойсковоеЗвание В (&amp;Прапорщики))
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК НегодныхВМирноеВремя,
+	ВЫБОР
+		КОГДА ВУ.ЗабронированОрганизацией = РаботникиОрганизации.Организация
+				И ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВсегоВЗапасеЗабронировано,
+	ВЫБОР
+		КОГДА ВУ.ЗабронированОрганизацией = РаботникиОрганизации.Организация
+				И ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+				И ВУ.Звание.ОбщевойсковоеЗвание В (&amp;Офицеры)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ОфицеровЗабронировано,
+	ВЫБОР
+		КОГДА НЕ ВУ.ЗабронированОрганизацией = РаботникиОрганизации.Организация
+				И ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВсегоВЗапасеНезабронировано,
+	ВЫБОР
+		КОГДА НЕ ВУ.ЗабронированОрганизацией = РаботникиОрганизации.Организация
+				И ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+				И НЕ ВУ.НаличиеМобпредписания
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК НезабронированноБезМобпредписаний,
+	ВЫБОР
+		КОГДА НЕ ВУ.ЗабронированОрганизацией = РаботникиОрганизации.Организация
+				И ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+				И ВУ.НаличиеМобпредписания
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК НезабронированноСМобпредписанием,
+	ВЫБОР
+		КОГДА ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Военнообязанный)
+				И ВУ.НаличиеМобпредписания
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВсегоВЗапасеСМобпредписанием,
+	ВЫБОР
+		КОГДА ВУ.ОтношениеКВоинскойОбязанности = ЗНАЧЕНИЕ(Перечисление.ОтношениеКВоинскойОбязанности.Призывник)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Призывников,
+	Организации.Ссылка КАК Организация,
+	РаботникиОрганизации.ФизЛицо КАК ФизЛицо,
+	ЕСТЬNULL(ФИО.Фамилия + " " + ФИО.Имя + " " + ФИО.Отчество, ОтветственныеЛицаОрганизацийСрезПоследних.ФизическоеЛицо.Наименование) + ЕСТЬNULL(", " + ОтветственныеЛицаОрганизацийСрезПоследних.Должность.Наименование, "") КАК ФИОРуководителя,
+	ЕСТЬNULL(ВЫБОР
+			КОГДА ПОДСТРОКА(ФИО.Имя, 1, 1) &lt;&gt; ""
+				ТОГДА ПОДСТРОКА(ФИО.Имя, 1, 1) + "." + " "
+			ИНАЧЕ ""
+		КОНЕЦ + ВЫБОР
+			КОГДА ПОДСТРОКА(ФИО.Отчество, 1, 1) &lt;&gt; ""
+				ТОГДА ПОДСТРОКА(ФИО.Отчество, 1, 1) + "." + " "
+			ИНАЧЕ ""
+		КОНЕЦ + ФИО.Фамилия, ОтветственныеЛицаОрганизацийСрезПоследних.ФизическоеЛицо.Наименование) КАК ФамилияИОРуководителя,
+	ОтветственныеЛицаОрганизацийСрезПоследних.ФизическоеЛицо КАК Руководитель,
+	ОтветственныеЛицаОрганизацийСрезПоследних.Должность.Наименование КАК ДолжностьРуководителя
+{ВЫБРАТЬ
+	ВсегоРаботающих,
+	ВсегоВЗапасе,
+	ОфицеровВЗапасе,
+	ПрапорщиковВЗапасе,
+	СолдатВЗапасе,
+	НегодныхВМирноеВремя,
+	ВсегоВЗапасеЗабронировано,
+	ОфицеровЗабронировано,
+	ВсегоВЗапасеНезабронировано,
+	НезабронированноБезМобпредписаний,
+	НезабронированноСМобпредписанием,
+	ВсегоВЗапасеСМобпредписанием,
+	Призывников,
+	Организация.*,
+	ФизЛицо.*,
+	ДолжностьРуководителя,
+	ФИОРуководителя,
+	ФамилияИОРуководителя,
+	Руководитель.*}
+ИЗ
+	Справочник.Организации КАК Организации
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТРаботники КАК РаботникиОрганизации
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ВоинскийУчет.СрезПоследних(
+					&amp;Период,
+					Физлицо В
+						(ВЫБРАТЬ
+							РаботникиОрганизации.ФизЛицо КАК ФизЛицо
+						ИЗ
+							ВТРаботники КАК РаботникиОрганизации)) КАК ВУ
+			ПО РаботникиОрганизации.ФизЛицо = ВУ.Физлицо
+		ПО Организации.Ссылка = РаботникиОрганизации.Организация
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТРуководитель КАК ОтветственныеЛицаОрганизацийСрезПоследних
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизЛиц.СрезПоследних(
+					&amp;Период,
+					Физлицо В
+						(ВЫБРАТЬ
+							РаботникиОрганизации.ФизическоеЛицо КАК ФизЛицо
+						ИЗ
+							ВТРуководитель КАК РаботникиОрганизации)) КАК ФИО
+			ПО ОтветственныеЛицаОрганизацийСрезПоследних.ФизическоеЛицо = ФИО.ФизЛицо
+		ПО Организации.Ссылка = ОтветственныеЛицаОрганизацийСрезПоследних.СтруктурнаяЕдиница
+{ГДЕ
+	Организации.Ссылка.* КАК Организация,
+	РаботникиОрганизации.ФизЛицо.*}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<totalField>
+		<dataPath>ВсегоВЗапасе</dataPath>
+		<expression>Сумма(ВсегоВЗапасе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВсегоВЗапасеЗабронировано</dataPath>
+		<expression>Сумма(ВсегоВЗапасеЗабронировано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВсегоРаботающих</dataPath>
+		<expression>Сумма(ВсегоРаботающих)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НегодныхВМирноеВремя</dataPath>
+		<expression>Сумма(НегодныхВМирноеВремя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НезабронированноБезМобпредписаний</dataPath>
+		<expression>Сумма(НезабронированноБезМобпредписаний)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НезабронированноСМобпредписанием</dataPath>
+		<expression>Сумма(НезабронированноСМобпредписанием)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОфицеровВЗапасе</dataPath>
+		<expression>Сумма(ОфицеровВЗапасе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОфицеровЗабронировано</dataPath>
+		<expression>Сумма(ОфицеровЗабронировано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПрапорщиковВЗапасе</dataPath>
+		<expression>Сумма(ПрапорщиковВЗапасе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Призывников</dataPath>
+		<expression>Сумма(Призывников)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СолдатВЗапасе</dataPath>
+		<expression>Сумма(СолдатВЗапасе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДолжностьРуководителя</dataPath>
+		<expression>Максимум(ДолжностьРуководителя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Руководитель</dataPath>
+		<expression>Максимум(Руководитель)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФИОРуководителя</dataPath>
+		<expression>Максимум(ФИОРуководителя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФамилияИОРуководителя</dataPath>
+		<expression>Максимум(ФамилияИОРуководителя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВсегоВЗапасеНезабронировано</dataPath>
+		<expression>Сумма(ВсегоВЗапасеНезабронировано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВсегоВЗапасеСМобпредписанием</dataPath>
+		<expression>Сумма(ВсегоВЗапасеСМобпредписанием)</expression>
+	</totalField>
+	<parameter>
+		<name>Офицеры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Офицеры</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗваниеГражданскогоВоинскогоУчета</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ЗваниеГражданскогоВоинскогоУчета.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Прапорщики</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Прапорщики</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗваниеГражданскогоВоинскогоУчета</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ЗваниеГражданскогоВоинскогоУчета.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Солдаты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Солдаты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗваниеГражданскогоВоинскогоУчета</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ЗваниеГражданскогоВоинскогоУчета.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные для карточки учета организации в военкомате</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

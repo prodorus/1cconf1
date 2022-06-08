@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаВыполнить" id="21">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Выполнить</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьРасширеннаяПодсказка" id="40"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="23">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="41"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<CheckBoxField name="ИспользоватьДоступныеПоступления" id="14">
+			<DataPath>Объект.ИспользоватьДоступныеПоступления</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В случае нехватки текущих остатков денежных средств использовать планируемые поступления денежных средств</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<TitleHeight>2</TitleHeight>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьДоступныеПоступленияКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ИспользоватьДоступныеПоступленияРасширеннаяПодсказка" id="42"/>
+		</CheckBoxField>
+		<CheckBoxField name="РазрешитьВыходитьЗаЛимитыПоСтатьеКалькуляции" id="28">
+			<DataPath>Объект.РазрешитьПревышатьЛимитыПоСтатьеКалькуляции</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РазрешитьВыходитьЗаЛимитыПоСтатьеКалькуляцииКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="РазрешитьВыходитьЗаЛимитыПоСтатьеКалькуляцииРасширеннаяПодсказка" id="43"/>
+		</CheckBoxField>
+		<CheckBoxField name="РазрешитьИспользоватьСобственныеСредства" id="31">
+			<DataPath>Объект.РазрешитьИспользоватьСобственныеСредства</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РазрешитьИспользоватьСобственныеСредстваКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="РазрешитьИспользоватьСобственныеСредстваРасширеннаяПодсказка" id="44"/>
+		</CheckBoxField>
+		<InputField name="МинимальнаяСуммаПлатежа" id="34">
+			<DataPath>Объект.МинимальнаяСуммаПлатежа</DataPath>
+			<ContextMenu name="МинимальнаяСуммаПлатежаКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="МинимальнаяСуммаПлатежаРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<PictureDecoration name="ДекорацияОтступ" id="36">
+			<Height>1</Height>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="46"/>
+		</PictureDecoration>
+		<CheckBoxField name="ОчищатьПредыдущиеДанныеРаспределения" id="25">
+			<DataPath>Объект.ОчищатьПредыдущиеДанныеРаспределения</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОчищатьПредыдущиеДанныеРаспределенияКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ОчищатьПредыдущиеДанныеРаспределенияРасширеннаяПодсказка" id="47"/>
+		</CheckBoxField>
+		<CheckBoxField name="ПоказатьКомментарииКРаспределению" id="38">
+			<DataPath>Объект.ПоказатьКомментарииКРаспределению</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПоказатьКомментарииКРаспределениюКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="ПоказатьКомментарииКРаспределениюРасширеннаяПодсказка" id="48"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РаспределениеЗаявокПоСчетам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>1/0:5273f6a9-88ca-4be4-bfd1-bf2365a74caa</Field>
+				<Field>1/0:b3e78d08-c880-4f60-8eed-8a572207c5bb</Field>
+				<Field>Объект.ИспользоватьДоступныеПоступления</Field>
+				<Field>Объект.МинимальнаяСуммаПлатежа</Field>
+				<Field>Объект.РазрешитьИспользоватьСобственныеСредства</Field>
+				<Field>Объект.РазрешитьПревышатьЛимитыПоСтатьеКалькуляции</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьРаспределение</Action>
+		</Command>
+	</Commands>
+</Form>

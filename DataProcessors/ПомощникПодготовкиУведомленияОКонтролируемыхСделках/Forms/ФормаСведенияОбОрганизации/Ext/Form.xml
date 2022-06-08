@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Сведения об организации</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="ПолеОрганизация" id="40">
+			<DataPath>Объект.Организация</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ContextMenu name="ПолеОрганизацияКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ПолеОрганизацияРасширеннаяПодсказка" id="63"/>
+		</LabelField>
+		<UsualGroup name="ГруппаСведенияОбОрганизации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения об организации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сведения об организации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСведенияОбОрганизацииРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<Table name="СведенияОбОрганизации" id="10">
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>СведенияОбОрганизации</DataPath>
+					<RowPictureDataPath>СведенияОбОрганизации.DefaultPicture</RowPictureDataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="СведенияОбОрганизацииКонтекстноеМеню" id="11"/>
+					<AutoCommandBar name="СведенияОбОрганизацииКоманднаяПанель" id="12"/>
+					<ExtendedTooltip name="СведенияОбОрганизацииРасширеннаяПодсказка" id="65"/>
+					<SearchStringAddition name="СведенияОбОрганизацииСтрокаПоиска" id="66">
+						<AdditionSource>
+							<Item>СведенияОбОрганизации</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СведенияОбОрганизацииСтрокаПоискаКонтекстноеМеню" id="67"/>
+						<ExtendedTooltip name="СведенияОбОрганизацииСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СведенияОбОрганизацииСостояниеПросмотра" id="69">
+						<AdditionSource>
+							<Item>СведенияОбОрганизации</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СведенияОбОрганизацииСостояниеПросмотраКонтекстноеМеню" id="70"/>
+						<ExtendedTooltip name="СведенияОбОрганизацииСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СведенияОбОрганизацииУправлениеПоиском" id="72">
+						<AdditionSource>
+							<Item>СведенияОбОрганизации</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СведенияОбОрганизацииУправлениеПоискомКонтекстноеМеню" id="73"/>
+						<ExtendedTooltip name="СведенияОбОрганизацииУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ВзаимозависимыеЛицаПериод" id="38">
+							<DataPath>СведенияОбОрганизации.Period</DataPath>
+							<Width>10</Width>
+							<ContextMenu name="ВзаимозависимыеЛицаПериодКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ВзаимозависимыеЛицаПериодРасширеннаяПодсказка" id="75"/>
+						</LabelField>
+						<LabelField name="ВзаимозависимыеЛицаТипВзаимозависимости" id="19">
+							<DataPath>~СведенияОбОрганизации.ТипВзаимозависимости</DataPath>
+							<ContextMenu name="ВзаимозависимыеЛицаТипВзаимозависимостиКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ВзаимозависимыеЛицаТипВзаимозависимостиРасширеннаяПодсказка" id="76"/>
+						</LabelField>
+						<CheckBoxField name="ВзаимозависимыеЛицаЯвляетсяПлательщикомНалогаНаПрибыль" id="21">
+							<DataPath>~СведенияОбОрганизации.ЯвляетсяПлательщикомНалогаНаПрибыль</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прибыль</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВзаимозависимыеЛицаЯвляетсяПлательщикомНалогаНаПрибыльКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ВзаимозависимыеЛицаЯвляетсяПлательщикомНалогаНаПрибыльРасширеннаяПодсказка" id="77"/>
+						</CheckBoxField>
+						<CheckBoxField name="ВзаимозависимыеЛицаЯвляетсяПлательщикомНДПИ" id="23">
+							<DataPath>СведенияОбОрганизации.ЯвляетсяПлательщикомНДПИ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НДПИ</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВзаимозависимыеЛицаЯвляетсяПлательщикомНДПИКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ВзаимозависимыеЛицаЯвляетсяПлательщикомНДПИРасширеннаяПодсказка" id="78"/>
+						</CheckBoxField>
+						<CheckBoxField name="ВзаимозависимыеЛицаЯвляетсяКонтрагентомНаСпецрежимах" id="25">
+							<DataPath>~СведенияОбОрганизации.ЯвляетсяКонтрагентомНаСпецрежимах</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Спецрежим</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВзаимозависимыеЛицаЯвляетсяКонтрагентомНаСпецрежимахКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ВзаимозависимыеЛицаЯвляетсяКонтрагентомНаСпецрежимахРасширеннаяПодсказка" id="79"/>
+						</CheckBoxField>
+						<CheckBoxField name="ВзаимозависимыеЛицаЗарегистрированВОЭЗ" id="27">
+							<DataPath>СведенияОбОрганизации.ЗарегистрированВОЭЗ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ОЭЗ</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВзаимозависимыеЛицаЗарегистрированВОЭЗКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ВзаимозависимыеЛицаЗарегистрированВОЭЗРасширеннаяПодсказка" id="80"/>
+						</CheckBoxField>
+						<InputField name="СведенияОбОрганизацииПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта" id="61">
+							<DataPath>СведенияОбОрганизации.ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Региональный инвест.проект</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СведенияОбОрганизацииПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроектаКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="СведенияОбОрганизацииПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроектаРасширеннаяПодсказка" id="81"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<LabelDecoration name="ДекорацияСведенияОбОрганизации" id="36">
+					<TextColor>0:4cf793cf-87d8-460a-b7dc-198493035595</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Укажите сведения об организации для формирования уведомления о контролируемых сделках</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияСведенияОбОрганизацииКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ДекорацияСведенияОбОрганизацииРасширеннаяПодсказка" id="82"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникПодготовкиУведомленияОКонтролируемыхСделках</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СведенияОбОрганизации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения об организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.СведенияОбОрганизацииДляКонтролируемыхСделок</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ТипВзаимозависимости</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ЯвляетсяПлательщикомНДПИ</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ЯвляетсяПлательщикомНалогаНаПрибыль</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ЯвляетсяКонтрагентомНаСпецрежимах</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ОтчетныйГод</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Организация</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

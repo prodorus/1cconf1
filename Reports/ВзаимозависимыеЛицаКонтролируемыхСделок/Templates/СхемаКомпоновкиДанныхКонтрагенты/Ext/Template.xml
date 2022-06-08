@@ -1,0 +1,998 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДанныеКонтрагентов</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗарегистрированВОЭЗ</dataPath>
+			<field>ЗарегистрированВОЭЗ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрирован в ОЭЗ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипВзаимозависимости</dataPath>
+			<field>ТипВзаимозависимости</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЯвляетсяПлательщикомЕНВД</dataPath>
+			<field>ЯвляетсяПлательщикомЕНВД</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЕНВД</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЯвляетсяПлательщикомЕСХН</dataPath>
+			<field>ЯвляетсяПлательщикомЕСХН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЕСХН</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЯвляетсяПлательщикомНалогаНаПрибыль</dataPath>
+			<field>ЯвляетсяПлательщикомНалогаНаПрибыль</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налог на прибыль</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЯвляетсяПлательщикомНДПИ</dataPath>
+			<field>ЯвляетсяПлательщикомНДПИ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДПИ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВзаимозависимыеЛица</dataPath>
+			<field>ВзаимозависимыеЛица</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачалоПериода</dataPath>
+			<field>НачалоПериода</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<presentationExpression>ВЫБОР КОГДА НачалоПериода &lt; &amp;НачалоПериода Тогда &amp;НачалоПериода ИНАЧЕ НачалоПериода КОНЕЦ</presentationExpression>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НевзаимозависимыйПосредник</dataPath>
+			<field>НевзаимозависимыйПосредник</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОкончаниеПериода</dataPath>
+			<field>ОкончаниеПериода</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаБезНДСВРублях</dataPath>
+			<field>СуммаБезНДСВРублях</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтранаРегистрации</dataPath>
+			<field>СтранаРегистрации</field>
+			<presentationExpression>СтранаРегистрацииПредставление + ВЫБОР КОГДА ЗарегистрированВОфшоре ТОГДА " (офшор)" ИНАЧЕ "" КОНЕЦ</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизическоеЛицо</dataPath>
+			<field>ФизическоеЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодВидаДеятельностиФизическогоЛица</dataPath>
+			<field>КодВидаДеятельностиФизическогоЛица</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодНалогоплательщикаВСтранеРегистрации</dataPath>
+			<field>КодНалогоплательщикаВСтранеРегистрации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код налогоплательщика</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РегистрационныйНомерВСтранеРегистрации</dataPath>
+			<field>РегистрационныйНомерВСтранеРегистрации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рег. номер</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗарегистрированВОфшоре</dataPath>
+			<field>ЗарегистрированВОфшоре</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтранаРегистрацииПредставление</dataPath>
+			<field>СтранаРегистрацииПредставление</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрагентЮридическоеФизическоеЛицо</dataPath>
+			<field>КонтрагентЮридическоеФизическоеЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент юридическое физическое лицо</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль</dataPath>
+			<field>ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта</dataPath>
+			<field>ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсвобожденОтУплатыНДС</dataPath>
+			<field>ОсвобожденОтУплатыНДС</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	КонтролируемыеСделкиОрганизаций.Организация КАК Организация,
+	КонтролируемыеСделкиОрганизаций.Контрагент КАК Контрагент,
+	СУММА(КонтролируемыеСделкиОрганизаций.СуммаБезНДСВРублях) КАК СуммаБезНДСВРублях,
+	КонтролируемыеСделкиОрганизаций.Период КАК Период
+ПОМЕСТИТЬ КонтрагентыКонтролируемыхСделок
+ИЗ
+	РегистрНакопления.КонтролируемыеСделкиОрганизаций КАК КонтролируемыеСделкиОрганизаций
+ГДЕ
+	КонтролируемыеСделкиОрганизаций.Уведомление = &amp;Уведомление
+
+СГРУППИРОВАТЬ ПО
+	КонтролируемыеСделкиОрганизаций.Контрагент,
+	КонтролируемыеСделкиОрганизаций.Организация,
+	КонтролируемыеСделкиОрганизаций.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВзаимозависимыеЛица.Период КАК НачалоПериода,
+	ВзаимозависимыеЛица.Организация КАК Организация,
+	ВзаимозависимыеЛица.Контрагент КАК Контрагент,
+	ВзаимозависимыеЛица.ТипВзаимозависимости КАК ТипВзаимозависимости,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомНалогаНаПрибыль КАК ЯвляетсяПлательщикомНалогаНаПрибыль,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомНДПИ КАК ЯвляетсяПлательщикомНДПИ,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомЕСХН КАК ЯвляетсяПлательщикомЕСХН,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомЕНВД КАК ЯвляетсяПлательщикомЕНВД,
+	ВзаимозависимыеЛица.ЗарегистрированВОЭЗ КАК ЗарегистрированВОЭЗ,
+	ВзаимозависимыеЛица.ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта КАК ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта,
+	ВзаимозависимыеЛица.ОсвобожденОтУплатыНДС КАК ОсвобожденОтУплатыНДС,
+	ВзаимозависимыеЛица.ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль КАК ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль
+ПОМЕСТИТЬ ВзаимозависимыеЛица
+ИЗ
+	РегистрСведений.ВзаимозависимыеЛица КАК ВзаимозависимыеЛица
+ГДЕ
+	ВзаимозависимыеЛица.Период &lt;= &amp;ОкончаниеПериода
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	Контрагент,
+	НачалоПериода
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВзаимозависимыеЛица.Организация КАК Организация,
+	ВзаимозависимыеЛица.НачалоПериода КАК НачалоПериода,
+	КОНЕЦПЕРИОДА(ДОБАВИТЬКДАТЕ(МИНИМУМ(ЕСТЬNULL(ВзаимозависимыеЛица1.НачалоПериода, &amp;ОкончаниеПериода)), СЕКУНДА, -1), ДЕНЬ) КАК ОкончаниеПериода,
+	ВзаимозависимыеЛица.Контрагент КАК Контрагент,
+	ВзаимозависимыеЛица.ТипВзаимозависимости КАК ТипВзаимозависимости,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомНалогаНаПрибыль КАК ЯвляетсяПлательщикомНалогаНаПрибыль,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомНДПИ КАК ЯвляетсяПлательщикомНДПИ,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомЕСХН КАК ЯвляетсяПлательщикомЕСХН,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомЕНВД КАК ЯвляетсяПлательщикомЕНВД,
+	ВзаимозависимыеЛица.ЗарегистрированВОЭЗ КАК ЗарегистрированВОЭЗ,
+	ВзаимозависимыеЛица.ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта КАК ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта,
+	ВзаимозависимыеЛица.ОсвобожденОтУплатыНДС КАК ОсвобожденОтУплатыНДС,
+	ВзаимозависимыеЛица.ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль КАК ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль
+ПОМЕСТИТЬ ВзаимозависимыеЛицаПоПериодамВсе
+ИЗ
+	ВзаимозависимыеЛица КАК ВзаимозависимыеЛица
+		ЛЕВОЕ СОЕДИНЕНИЕ ВзаимозависимыеЛица КАК ВзаимозависимыеЛица1
+		ПО ВзаимозависимыеЛица.Организация = ВзаимозависимыеЛица1.Организация
+			И ВзаимозависимыеЛица.Контрагент = ВзаимозависимыеЛица1.Контрагент
+			И ВзаимозависимыеЛица.НачалоПериода &lt; ВзаимозависимыеЛица1.НачалоПериода
+
+СГРУППИРОВАТЬ ПО
+	ВзаимозависимыеЛица.Организация,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомНалогаНаПрибыль,
+	ВзаимозависимыеЛица.ТипВзаимозависимости,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомНДПИ,
+	ВзаимозависимыеЛица.ЗарегистрированВОЭЗ,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомЕСХН,
+	ВзаимозависимыеЛица.ЯвляетсяПлательщикомЕНВД,
+	ВзаимозависимыеЛица.НачалоПериода,
+	ВзаимозависимыеЛица.Контрагент,
+	ВзаимозависимыеЛица.ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта,
+	ВзаимозависимыеЛица.ОсвобожденОтУплатыНДС,
+	ВзаимозависимыеЛица.ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация,
+	Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВзаимозависимыеЛицаПоПериодамВсе.НачалоПериода КАК НачалоПериода,
+	ВзаимозависимыеЛицаПоПериодамВсе.ОкончаниеПериода КАК ОкончаниеПериода,
+	ВзаимозависимыеЛицаПоПериодамВсе.ТипВзаимозависимости КАК ТипВзаимозависимости,
+	ВЫБОР
+		КОГДА ВзаимозависимыеЛицаПоПериодамВсе.ТипВзаимозависимости &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыВзаимозависимости.НеВзаимозависимы)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ВзаимозависимыеЛица,
+	ВЫБОР
+		КОГДА ВзаимозависимыеЛицаПоПериодамВсе.ТипВзаимозависимости = ЗНАЧЕНИЕ(Перечисление.ТипыВзаимозависимости.НеВзаимозависимыйПосредник)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НевзаимозависимыйПосредник,
+	ВзаимозависимыеЛицаПоПериодамВсе.ЯвляетсяПлательщикомНалогаНаПрибыль КАК ЯвляетсяПлательщикомНалогаНаПрибыль,
+	ВзаимозависимыеЛицаПоПериодамВсе.ЯвляетсяПлательщикомНДПИ КАК ЯвляетсяПлательщикомНДПИ,
+	ВзаимозависимыеЛицаПоПериодамВсе.ЯвляетсяПлательщикомЕСХН КАК ЯвляетсяПлательщикомЕСХН,
+	ВзаимозависимыеЛицаПоПериодамВсе.ЯвляетсяПлательщикомЕНВД КАК ЯвляетсяПлательщикомЕНВД,
+	ВзаимозависимыеЛицаПоПериодамВсе.ЗарегистрированВОЭЗ КАК ЗарегистрированВОЭЗ,
+	ВзаимозависимыеЛицаПоПериодамВсе.ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта КАК ПрименяетЛьготыУчастникаРегиональногоИнвестиционногоПроекта,
+	ВзаимозависимыеЛицаПоПериодамВсе.ОсвобожденОтУплатыНДС КАК ОсвобожденОтУплатыНДС,
+	ВзаимозависимыеЛицаПоПериодамВсе.ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль КАК ПрименяетИнвестиционныйВычетПоНалогуНаПрибыль,
+	КонтрагентыКонтролируемыхСделок.Контрагент КАК Контрагент,
+	КонтрагентыКонтролируемыхСделок.СуммаБезНДСВРублях КАК СуммаБезНДСВРублях,
+	ЕСТЬNULL(УчастникиКонтролируемыхСделок.СтранаРегистрации, ЗНАЧЕНИЕ(Справочник.КлассификаторСтранМира.ПустаяСсылка)) КАК СтранаРегистрации,
+	ЕСТЬNULL(УчастникиКонтролируемыхСделок.ФизическоеЛицо, ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)) КАК ФизическоеЛицо,
+	УчастникиКонтролируемыхСделок.Контрагент.ЮрФизЛицо КАК КонтрагентЮридическоеФизическоеЛицо,
+	УчастникиКонтролируемыхСделок.КодВидаДеятельностиФизическогоЛица КАК КодВидаДеятельностиФизическогоЛица,
+	УчастникиКонтролируемыхСделок.КодНалогоплательщикаВСтранеРегистрации,
+	УчастникиКонтролируемыхСделок.РегистрационныйНомерВСтранеРегистрации,
+	ЕСТЬNULL(УчастникиКонтролируемыхСделок.СтранаРегистрации.Наименование, "") КАК СтранаРегистрацииПредставление,
+	ЕСТЬNULL(УчастникиКонтролируемыхСделок.ЗарегистрированВСтранеСЛьготнымНалогообложением, ЛОЖЬ) КАК ЗарегистрированВОфшоре
+ИЗ
+	КонтрагентыКонтролируемыхСделок КАК КонтрагентыКонтролируемыхСделок
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+		ПО КонтрагентыКонтролируемыхСделок.Контрагент = Контрагенты.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК ГоловныеКонтрагенты
+		ПО (Контрагенты.ГоловнойКонтрагент = ГоловныеКонтрагенты.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.УчастникиКонтролируемыхСделок КАК УчастникиКонтролируемыхСделок
+		ПО (ГоловныеКонтрагенты.Ссылка = УчастникиКонтролируемыхСделок.Контрагент)
+		ЛЕВОЕ СОЕДИНЕНИЕ ВзаимозависимыеЛицаПоПериодамВсе КАК ВзаимозависимыеЛицаПоПериодамВсе
+		ПО КонтрагентыКонтролируемыхСделок.Организация = ВзаимозависимыеЛицаПоПериодамВсе.Организация
+			И (ГоловныеКонтрагенты.Ссылка = ВзаимозависимыеЛицаПоПериодамВсе.Контрагент)
+			И (КонтрагентыКонтролируемыхСделок.Период МЕЖДУ ВзаимозависимыеЛицаПоПериодамВсе.НачалоПериода И ВзаимозависимыеЛицаПоПериодамВсе.ОкончаниеПериода)
+ГДЕ
+	ВзаимозависимыеЛицаПоПериодамВсе.ТипВзаимозависимости &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыВзаимозависимости.НеВзаимозависимы)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>СуммаБезНДСВРублях</dataPath>
+		<expression>Сумма(СуммаБезНДСВРублях)</expression>
+	</totalField>
+	<parameter>
+		<name>Уведомление</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Уведомление</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.УведомлениеОКонтролируемыхСделках</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОкончаниеПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Окончание периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ВзаимозависимыеЛицаКонтролируемыхСделок</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Взаимозависимые лица контролируемых сделок</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаБезНДСВРублях</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отбор</v8:content>
+					</v8:item>
+				</dcsset:userSettingPresentation>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Уведомление</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:Field"/>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					<dcsset:userSettingID>580cf482-0339-40ca-9516-f60b217d7fc9</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОкончаниеПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					<dcsset:userSettingID>da65ca60-d37f-4374-bd16-64ba414eebfc</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конец  периода</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					<dcsset:userSettingID>971f7b11-60e5-4c86-999b-8c9bfda14510</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТипВзаимозависимости</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТипВзаимозависимости</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Необходимо заполнить&gt;</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип взаимозависимости не заполнено, красным</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>5e0c6282-2539-4f08-8d40-d8e413323299</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип взаимозависимости не заполнено, красным</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СтранаРегистрации</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтранаРегистрации</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Необходимо заполнить&gt;</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страна регистрации не заполнено, красным</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>96374482-81e1-48eb-bb95-18f34b1b71c9</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страна регистрации не заполнено, красным</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КодВидаДеятельностиФизическогоЛица</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КодВидаДеятельностиФизическогоЛица</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Контрагент.ЮрФизЛицо</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЮрФизЛицо.ФизЛицо</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Необходимо заполнить&gt;</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код вида деятельности не заполнено, красным</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>aa53a3f3-1898-4454-ada4-cec56fc3c70d</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код вида деятельности не заполнено, красным</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КодНалогоплательщикаВСтранеРегистрации</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КодНалогоплательщикаВСтранеРегистрации</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтранаРегистрации</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КлассификаторСтранМира.Россия</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Контрагент.ЮрФизЛицо</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЮрФизЛицо.ЮрЛицо</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Необходимо заполнить&gt;</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код налогоплательщика не заполнено, красным</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>12a1ce2e-6ef3-47df-968e-7cf7957f7e90</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код налогоплательщика не заполнено, красным</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>РегистрационныйНомерВСтранеРегистрации</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">РегистрационныйНомерВСтранеРегистрации</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтранаРегистрации</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КлассификаторСтранМира.Россия</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Контрагент.ЮрФизЛицо</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЮрФизЛицо.ЮрЛицо</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Необходимо заполнить&gt;</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрационный номер не заполнено, красным</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>452d45b0-2ed1-4b84-8592-1b73051f0ab7</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрационный номер не заполнено, красным</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">Together</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>СтранаРегистрации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>КодНалогоплательщикаВСтранеРегистрации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>РегистрационныйНомерВСтранеРегистрации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтранаРегистрации</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>НачалоПериода</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ОкончаниеПериода</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЯвляетсяПлательщикомЕНВД</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЯвляетсяПлательщикомЕСХН</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЗарегистрированВОЭЗ</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЯвляетсяПлательщикомНалогаНаПрибыль</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЯвляетсяПлательщикомНДПИ</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>НевзаимозависимыйПосредник</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ТипВзаимозависимости</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Период зависимости</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>НачалоПериода</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ОкончаниеПериода</dcsset:field>
+								</dcsset:item>
+								<dcsset:placement>Auto</dcsset:placement>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СуммаБезНДСВРублях</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ТипВзаимозависимости</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+									<dcsset:lwsTitle>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Налоговый режим:</v8:content>
+										</v8:item>
+									</dcsset:lwsTitle>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>ЯвляетсяПлательщикомЕНВД</dcsset:field>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>ЯвляетсяПлательщикомЕСХН</dcsset:field>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>ЯвляетсяПлательщикомНДПИ</dcsset:field>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>ЯвляетсяПлательщикомНалогаНаПрибыль</dcsset:field>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>ЗарегистрированВОЭЗ</dcsset:field>
+									</dcsset:item>
+									<dcsset:placement>Auto</dcsset:placement>
+								</dcsset:item>
+								<dcsset:placement>Vertically</dcsset:placement>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:conditionalAppearance>
+							<dcsset:item>
+								<dcsset:selection>
+									<dcsset:item>
+										<dcsset:field>ЯвляетсяПлательщикомЕНВД</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>ЯвляетсяПлательщикомЕСХН</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>ЗарегистрированВОфшоре</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>ЗарегистрированВОЭЗ</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>ЯвляетсяПлательщикомНалогаНаПрибыль</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>ЯвляетсяПлательщикомНДПИ</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>НевзаимозависимыйПосредник</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+								<dcsset:filter/>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:use>false</dcscor:use>
+										<dcscor:parameter>Шрифт</dcscor:parameter>
+										<dcscor:value xsi:type="v8ui:Font" kind="AutoFont"/>
+									</dcscor:item>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+										<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+									</dcscor:item>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>Формат</dcscor:parameter>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>БЛ=; БИ=Да</v8:content>
+											</v8:item>
+										</dcscor:value>
+									</dcscor:item>
+								</dcsset:appearance>
+							</dcsset:item>
+						</dcsset:conditionalAppearance>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

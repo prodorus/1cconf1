@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Контрагент" id="3">
+			<DataPath>Запись.Контрагент</DataPath>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="137"/>
+			<Events>
+				<Event name="OnChange">КонтрагентПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="СтранаРегистрации" id="5">
+			<DataPath>Запись.СтранаРегистрации</DataPath>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="СтранаРегистрацииКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="СтранаРегистрацииРасширеннаяПодсказка" id="138"/>
+			<Events>
+				<Event name="OnChange">СтранаРегистрацииПриИзменении</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="ЗарегистрированВСтранеСЛьготнымНалогообложением" id="7">
+			<DataPath>Запись.ЗарегистрированВСтранеСЛьготнымНалогообложением</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗарегистрированВСтранеСЛьготнымНалогообложениемКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ЗарегистрированВСтранеСЛьготнымНалогообложениемРасширеннаяПодсказка" id="139"/>
+		</CheckBoxField>
+		<Pages name="ГруппаСтраницы" id="105">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="140"/>
+			<ChildItems>
+				<Page name="ГруппаФизЛицо" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа физ лицо</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа физ лицо</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаФизЛицоРасширеннаяПодсказка" id="141"/>
+					<ChildItems>
+						<InputField name="ФизическоеЛицо" id="112">
+							<DataPath>Запись.ФизическоеЛицо</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="142"/>
+						</InputField>
+						<InputField name="КодВидаДеятельностиФизическогоЛица" id="63">
+							<DataPath>Запись.КодВидаДеятельностиФизическогоЛица</DataPath>
+							<Width>28</Width>
+							<ListChoiceMode>true</ListChoiceMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="КодВидаДеятельностиФизическогоЛицаКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="КодВидаДеятельностиФизическогоЛицаРасширеннаяПодсказка" id="143"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЮрЛицоРФ" id="35">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа юр лицо РФ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаЮрЛицоРФРасширеннаяПодсказка" id="144"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="110">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="145"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЮрЛицоНеРФ" id="134">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа юр лицо не РФ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЮрЛицоНеРФРасширеннаяПодсказка" id="146"/>
+					<ChildItems>
+						<InputField name="РегистрационныйНомерВСтранеРегистрации" id="106">
+							<DataPath>Запись.РегистрационныйНомерВСтранеРегистрации</DataPath>
+							<ContextMenu name="РегистрационныйНомерВСтранеРегистрацииКонтекстноеМеню" id="107"/>
+							<ExtendedTooltip name="РегистрационныйНомерВСтранеРегистрацииРасширеннаяПодсказка" id="147"/>
+						</InputField>
+						<InputField name="КодНалогоплательщикаВСтранеРегистрации" id="108">
+							<DataPath>Запись.КодНалогоплательщикаВСтранеРегистрации</DataPath>
+							<ContextMenu name="КодНалогоплательщикаВСтранеРегистрацииКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="КодНалогоплательщикаВСтранеРегистрацииРасширеннаяПодсказка" id="148"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаНаименование" id="136">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование для раздела 2</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="149"/>
+			<ChildItems>
+				<InputField name="НаименованиеВРусскойТранскрипции" id="128">
+					<DataPath>Запись.НаименованиеВРусскойТранскрипции</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В русской транскрипции</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаименованиеВРусскойТранскрипцииКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="НаименованиеВРусскойТранскрипцииРасширеннаяПодсказка" id="150"/>
+				</InputField>
+				<InputField name="НаименованиеВЛатинскойТранскрипции" id="131">
+					<DataPath>Запись.НаименованиеВЛатинскойТранскрипции</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В латинской транскрипции</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаименованиеВЛатинскойТранскрипцииКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="НаименованиеВЛатинскойТранскрипцииРасширеннаяПодсказка" id="151"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УчастникиКонтролируемыхСделок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЮрЛицо" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Юр лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокОфшоров" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список офшоров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СтранаРегистрации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страна регистрации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КлассификаторСтранМира</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИностранныйКонтрагент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Иностранный контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизическоеЛицо" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физическое лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

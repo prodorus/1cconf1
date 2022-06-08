@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Иностранные контрагенты отчетного года</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="КонтрагентыОтчетногоГода" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>КонтрагентыОтчетногоГода</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КонтрагентыОтчетногоГодаКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="КонтрагентыОтчетногоГодаКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="КонтрагентыОтчетногоГодаКомандаДобавитьКонтрагентов" id="13">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Command.КомандаДобавитьКонтрагентов</CommandName>
+						<ExtendedTooltip name="КонтрагентыОтчетногоГодаКомандаДобавитьКонтрагентовРасширеннаяПодсказка" id="16"/>
+					</Button>
+					<Button name="КонтрагентыОтчетногоГодаИзменитьФорму" id="12">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<ExtendedTooltip name="КонтрагентыОтчетногоГодаИзменитьФормуРасширеннаяПодсказка" id="17"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="КонтрагентыОтчетногоГодаРасширеннаяПодсказка" id="18"/>
+			<SearchStringAddition name="КонтрагентыОтчетногоГодаСтрокаПоиска" id="19">
+				<AdditionSource>
+					<Item>КонтрагентыОтчетногоГода</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыОтчетногоГодаСтрокаПоискаКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="КонтрагентыОтчетногоГодаСтрокаПоискаРасширеннаяПодсказка" id="21"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КонтрагентыОтчетногоГодаСостояниеПросмотра" id="22">
+				<AdditionSource>
+					<Item>КонтрагентыОтчетногоГода</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыОтчетногоГодаСостояниеПросмотраКонтекстноеМеню" id="23"/>
+				<ExtendedTooltip name="КонтрагентыОтчетногоГодаСостояниеПросмотраРасширеннаяПодсказка" id="24"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КонтрагентыОтчетногоГодаУправлениеПоиском" id="25">
+				<AdditionSource>
+					<Item>КонтрагентыОтчетногоГода</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыОтчетногоГодаУправлениеПоискомКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="КонтрагентыОтчетногоГодаУправлениеПоискомРасширеннаяПодсказка" id="27"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="КонтрагентыОтчетногоГодаВыбран" id="10">
+					<DataPath>КонтрагентыОтчетногоГода.Выбран</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КонтрагентыОтчетногоГодаВыбранКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="КонтрагентыОтчетногоГодаВыбранРасширеннаяПодсказка" id="28"/>
+				</CheckBoxField>
+				<InputField name="КонтрагентыОтчетногоГодаКонтрагент" id="4">
+					<DataPath>КонтрагентыОтчетногоГода.Контрагент</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтрагентыОтчетногоГодаКонтрагентКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="КонтрагентыОтчетногоГодаКонтрагентРасширеннаяПодсказка" id="29"/>
+				</InputField>
+				<InputField name="КонтрагентыОтчетногоГодаСтранаРегистрации" id="6">
+					<DataPath>КонтрагентыОтчетногоГода.СтранаРегистрации</DataPath>
+					<EditMode>Directly</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="КонтрагентыОтчетногоГодаСтранаРегистрацииКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КонтрагентыОтчетногоГодаСтранаРегистрацииРасширеннаяПодсказка" id="30"/>
+					<Events>
+						<Event name="OnChange">КонтрагентыОтчетногоГодаСтранаРегистрацииПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="КонтрагентыОтчетногоГодаЗарегистрированВСтранеСЛьготнымНалогообложением" id="8">
+					<DataPath>КонтрагентыОтчетногоГода.ЗарегистрированВСтранеСЛьготнымНалогообложением</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Офшор</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>Directly</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КонтрагентыОтчетногоГодаЗарегистрированВСтранеСЛьготнымНалогообложениемКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="КонтрагентыОтчетногоГодаЗарегистрированВСтранеСЛьготнымНалогообложениемРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="OnChange">КонтрагентыОтчетногоГодаЗарегистрированВСтранеСЛьготнымНалогообложениемПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<LabelDecoration name="Декорация1" id="14">
+			<Width>60</Width>
+			<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В списке показаны контрагенты, с которыми в отчетном году были сделки в валюте. Укажите для них страну регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="32"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникПодготовкиУведомленияОКонтролируемыхСделках</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КонтрагентыОтчетногоГода" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагенты отчетного года</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Контрагент" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтранаРегистрации" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страна регистрации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КлассификаторСтранМира</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗарегистрированВСтранеСЛьготнымНалогообложением" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зарегистрирован в стране с льготным налогообложением</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Выбран" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбран</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокОфшоров" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список офшоров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СтранаРегистрации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страна регистрации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КлассификаторСтранМира</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>КонтрагентыОтчетногоГодаЗарегистрированВСтранеСЛьготнымНалогообложением</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КонтрагентыОтчетногоГода.СтранаРегистрации</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КлассификаторСтранМира.Россия</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КонтрагентыОтчетногоГода.СтранаРегистрации</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КлассификаторСтранМира.ПустаяСсылка</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаДобавитьКонтрагентов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить выбранных контрагентов в список иностранных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДобавитьКонтрагентов</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДанныеОСотрудниках</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВзносыРаботника</dataPath>
+			<field>ВзносыРаботника</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Взносы работника</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Год</dataPath>
+			<field>Год</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Имя</dataPath>
+			<field>Имя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Головная организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отчество</dataPath>
+			<field>Отчество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Фамилия</dataPath>
+			<field>Фамилия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_АдресГород</dataPath>
+			<field>ФизЛицо_АдресГород</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо адрес город</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_АдресДом</dataPath>
+			<field>ФизЛицо_АдресДом</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо адрес дом</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_АдресИндекс</dataPath>
+			<field>ФизЛицо_АдресИндекс</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо адрес индекс</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_АдресКвартира</dataPath>
+			<field>ФизЛицо_АдресКвартира</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо адрес квартира</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_АдресКорпус</dataPath>
+			<field>ФизЛицо_АдресКорпус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо адрес корпус</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_АдресНаселенныйПункт</dataPath>
+			<field>ФизЛицо_АдресНаселенныйПункт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо адрес населенный пункт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_АдресРайон</dataPath>
+			<field>ФизЛицо_АдресРайон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо адрес район</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_АдресРегион</dataPath>
+			<field>ФизЛицо_АдресРегион</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо адрес регион</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_АдресУлица</dataPath>
+			<field>ФизЛицо_АдресУлица</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо адрес улица</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_ИНН</dataPath>
+			<field>ФизЛицо_ИНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо ИНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_КодДокументаУдЛичн</dataPath>
+			<field>ФизЛицо_КодДокументаУдЛичн</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо код документа уд личн</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо_СерияНомерДокументаУдЛичн</dataPath>
+			<field>ФизЛицо_СерияНомерДокументаУдЛичн</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо серия номер документа уд личн</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация_ИНН</dataPath>
+			<field>Организация_ИНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация ИНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация_КПП</dataPath>
+			<field>Организация_КПП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация КПП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация_Наименование</dataPath>
+			<field>Организация_Наименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация наименование</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный_Должность</dataPath>
+			<field>Ответственный_Должность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный должность</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный_ФИО</dataPath>
+			<field>Ответственный_ФИО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный ФИО</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СотрудникиОрганизаций.Ссылка КАК Ссылка,
+	СотрудникиОрганизаций.Физлицо,
+	СотрудникиОрганизаций.Организация
+ПОМЕСТИТЬ ВТОтветственныйСотрудник
+ИЗ
+	Справочник.Пользователи КАК ДанныеОбОтветственном
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.СотрудникиОрганизаций КАК СотрудникиОрганизаций
+		ПО ДанныеОбОтветственном.ФизЛицо = СотрудникиОрганизаций.Физлицо
+ГДЕ
+	ДанныеОбОтветственном.Ссылка = &amp;Ответственный
+	И СотрудникиОрганизаций.ВидЗанятости &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.ВнутреннееСовместительство)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Организации.ИндивидуальныйПредприниматель КАК Физлицо
+ПОМЕСТИТЬ ВТДанныеОбИП
+ИЗ
+	Справочник.Организации КАК Организации
+ГДЕ
+	Организации.ЮрФизЛицо &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ЮрЛицо)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВЫБОР
+		КОГДА Организации.ЮрФизЛицо = ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ЮрЛицо)
+			ТОГДА Организации.Наименование
+		ИНАЧЕ ФИОПредпринимателя.Фамилия + " " + ФИОПредпринимателя.Имя + " " + ФИОПредпринимателя.Отчество
+	КОНЕЦ КАК Организация_Наименование,
+	ВЫБОР
+		КОГДА Организации.ЮрФизЛицо = ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ЮрЛицо)
+			ТОГДА Организации.ИНН
+		ИНАЧЕ Организации.ИндивидуальныйПредприниматель.ИНН
+	КОНЕЦ КАК Организация_ИНН,
+	ВЫБОР
+		КОГДА Организации.ЮрФизЛицо = ЗНАЧЕНИЕ(Перечисление.ЮрФизЛицо.ЮрЛицо)
+			ТОГДА Организации.КПП
+		ИНАЧЕ ""
+	КОНЕЦ КАК Организация_КПП,
+	ЕСТЬNULL(ФИОФизлицаОтветственного.Фамилия + " " + ФИОФизлицаОтветственного.Имя + " " + ФИОФизлицаОтветственного.Отчество, ЕСТЬNULL(ДанныеОбОтветственном.ФизЛицо.Наименование, ДанныеОбОтветственном.Наименование)) КАК Ответственный_ФИО,
+	ВЫБОР
+		КОГДА ДолжностьОтветственного.ПериодЗавершения &lt;= &amp;ДатаАктуальности
+				И ДолжностьОтветственного.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА ДолжностьОтветственного.ДолжностьЗавершения.Наименование
+		ИНАЧЕ ДолжностьОтветственного.Должность.Наименование
+	КОНЕЦ КАК Ответственный_Должность,
+	Организации.Ссылка КАК Организация
+ПОМЕСТИТЬ Организации
+{ВЫБРАТЬ
+	Организация_Наименование,
+	Организация_ИНН,
+	Организация_КПП,
+	Ответственный_ФИО,
+	Ответственный_Должность,
+	Организация.*}
+ИЗ
+	Справочник.Организации КАК Организации
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Пользователи КАК ДанныеОбОтветственном
+		ПО (ДанныеОбОтветственном.Ссылка = &amp;Ответственный)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизЛиц.СрезПоследних(
+				&amp;ДатаАктуальности,
+				ФизЛицо В
+					(ВЫБРАТЬ
+						Сотрудники.Физлицо
+					ИЗ
+						ВТОтветственныйСотрудник КАК Сотрудники)) КАК ФИОФизлицаОтветственного
+		ПО (ИСТИНА)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций.СрезПоследних(
+				&amp;ДатаАктуальности,
+				Сотрудник В
+					(ВЫБРАТЬ
+						Сотрудники.Ссылка
+					ИЗ
+						ВТОтветственныйСотрудник КАК Сотрудники)) КАК ДолжностьОтветственного
+		ПО (ВЫБОР
+				КОГДА ДолжностьОтветственного.ПериодЗавершения &lt;= &amp;ДатаАктуальности
+						И ДолжностьОтветственного.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					ТОГДА ДолжностьОтветственного.ПричинаИзмененияСостоянияЗавершения
+				ИНАЧЕ ДолжностьОтветственного.ПричинаИзмененияСостояния
+			КОНЕЦ &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПричиныИзмененияСостояния.Увольнение))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизЛиц.СрезПоследних(
+				&amp;ДатаАктуальности,
+				ФизЛицо В
+					(ВЫБРАТЬ
+						ДанныеОбИП.Физлицо
+					ИЗ
+						ВТДанныеОбИП КАК ДанныеОбИП)) КАК ФИОПредпринимателя
+		ПО Организации.ИндивидуальныйПредприниматель = ФИОПредпринимателя.ФизЛицо
+{ГДЕ
+	Организации.Ссылка.* КАК Организация}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	УдержанияРаботниковОрганизаций.ФизЛицо КАК ФизЛицо,
+	УдержанияРаботниковОрганизаций.Результат КАК Результат,
+	УдержанияРаботниковОрганизаций.Организация КАК ОбособленноеПодразделение,
+	УдержанияРаботниковОрганизаций.ПериодРегистрации КАК ПериодРегистрации
+ПОМЕСТИТЬ Удержания
+ИЗ
+	РегистрРасчета.УдержанияРаботниковОрганизаций КАК УдержанияРаботниковОрганизаций
+ГДЕ
+	УдержанияРаботниковОрганизаций.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И УдержанияРаботниковОрганизаций.ВидРасчета.ЯвляетсяДСВ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	УдержанияРаботниковОрганизаций.ФизЛицо КАК ФизЛицо,
+	СУММА(УдержанияРаботниковОрганизаций.Результат) КАК ВзносыРаботника,
+	УдержанияРаботниковОрганизаций.Организация,
+	НАЧАЛОПЕРИОДА(УдержанияРаботниковОрганизаций.ПериодРегистрации, ГОД) КАК Год
+ПОМЕСТИТЬ ВТФизЛица
+ИЗ
+	(ВЫБРАТЬ
+		Удержания.ФизЛицо КАК ФизЛицо,
+		Удержания.Результат КАК Результат,
+		Удержания.ОбособленноеПодразделение КАК Организация,
+		Удержания.ПериодРегистрации КАК ПериодРегистрации
+	ИЗ
+		Удержания КАК Удержания
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		&amp;ФизЛицо,
+		0,
+		&amp;Организация,
+		&amp;НачалоПериода
+	ГДЕ
+		(НЕ &amp;Организация В
+							(ВЫБРАТЬ
+								Удержания.ОбособленноеПодразделение
+							ИЗ
+								Удержания КАК Удержания)
+					И &amp;Организация &lt;&gt; ЗНАЧЕНИЕ(Справочник.Организации.ПустаяССылка)
+				ИЛИ НЕ &amp;ФизЛицо В
+							(ВЫБРАТЬ
+								Удержания.ФизЛицо
+							ИЗ
+								Удержания КАК Удержания)
+					И &amp;ФизЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяССылка))) КАК УдержанияРаботниковОрганизаций
+
+СГРУППИРОВАТЬ ПО
+	УдержанияРаботниковОрганизаций.ФизЛицо,
+	УдержанияРаботниковОрганизаций.Организация,
+	НАЧАЛОПЕРИОДА(УдержанияРаботниковОрганизаций.ПериодРегистрации, ГОД)
+
+ИНДЕКСИРОВАТЬ ПО
+	ФизЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ФИОФизЛица.Фамилия КАК Фамилия,
+	ФИОФизЛица.Имя КАК Имя,
+	ФИОФизЛица.Отчество КАК Отчество,
+	ФизЛица.ВзносыРаботника КАК ВзносыРаботника,
+	ПаспортныеДанныеФизЛица.ДокументВид.КодИМНС КАК ФизЛицо_КодДокументаУдЛичн,
+	ПаспортныеДанныеФизЛица.ДокументСерия + " " + ПаспортныеДанныеФизЛица.ДокументНомер КАК ФизЛицо_СерияНомерДокументаУдЛичн,
+	ФизЛица.ФизЛицо.ИНН КАК ФизЛицо_ИНН,
+	АдресРегистрацииФизЛица.Поле1 КАК ФизЛицо_АдресИндекс,
+	РегионРегистрацииФизЛица.Код КАК ФизЛицо_АдресРегион,
+	АдресРегистрацииФизЛица.Поле3 КАК ФизЛицо_АдресРайон,
+	АдресРегистрацииФизЛица.Поле4 КАК ФизЛицо_АдресГород,
+	АдресРегистрацииФизЛица.Поле5 КАК ФизЛицо_АдресНаселенныйПункт,
+	АдресРегистрацииФизЛица.Поле6 КАК ФизЛицо_АдресУлица,
+	АдресРегистрацииФизЛица.Поле7 КАК ФизЛицо_АдресДом,
+	АдресРегистрацииФизЛица.Поле8 КАК ФизЛицо_АдресКорпус,
+	АдресРегистрацииФизЛица.Поле9 КАК ФизЛицо_АдресКвартира,
+	ФизЛица.ФизЛицо КАК ФизЛицо,
+	ФизЛица.Организация КАК Организация,
+	ГОД(ФизЛица.Год) КАК Год,
+	Организации.Организация_Наименование КАК Организация_Наименование,
+	Организации.Организация_ИНН КАК Организация_ИНН,
+	Организации.Организация_КПП КАК Организация_КПП,
+	Организации.Ответственный_ФИО КАК Ответственный_ФИО,
+	Организации.Ответственный_Должность КАК Ответственный_Должность
+{ВЫБРАТЬ
+	Фамилия,
+	Имя,
+	Отчество,
+	ФизЛицо_КодДокументаУдЛичн,
+	ФизЛицо_СерияНомерДокументаУдЛичн,
+	ФизЛицо_ИНН,
+	ФизЛицо_АдресИндекс,
+	ФизЛицо_АдресРегион,
+	ФизЛицо_АдресРайон,
+	ФизЛицо_АдресГород,
+	ФизЛицо_АдресНаселенныйПункт,
+	ФизЛицо_АдресУлица,
+	ФизЛицо_АдресДом,
+	ФизЛицо_АдресКорпус,
+	ФизЛицо_АдресКвартира,
+	ФизЛицо.*,
+	ВзносыРаботника,
+	Организация.*,
+	Год,
+	Организация_Наименование,
+	Организация_ИНН,
+	Организация_КПП,
+	Ответственный_ФИО,
+	Ответственный_Должность}
+ИЗ
+	ВТФизЛица КАК ФизЛица
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизЛиц.СрезПоследних(
+				&amp;ДатаАктуальности,
+				ФизЛицо В
+					(ВЫБРАТЬ
+						ФизЛица.ФизЛицо
+					ИЗ
+						ВТФизЛица КАК ФизЛица)) КАК ФИОФизЛица
+		ПО ФизЛица.ФизЛицо = ФИОФизЛица.ФизЛицо
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПаспортныеДанныеФизЛиц.СрезПоследних(
+				&amp;ДатаАктуальности,
+				ФизЛицо В
+					(ВЫБРАТЬ
+						ФизЛица.ФизЛицо
+					ИЗ
+						ВТФизЛица КАК ФизЛица)) КАК ПаспортныеДанныеФизЛица
+		ПО ФизЛица.ФизЛицо = ПаспортныеДанныеФизЛица.ФизЛицо
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КонтактнаяИнформация КАК АдресРегистрацииФизЛица
+		ПО ФизЛица.ФизЛицо = АдресРегистрацииФизЛица.Объект
+			И (АдресРегистрацииФизЛица.Вид = ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ЮрАдресФизЛица))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.АдресныйКлассификатор КАК РегионРегистрацииФизЛица
+		ПО (РегионРегистрацииФизЛица.ТипАдресногоЭлемента = 1)
+			И (РегионРегистрацииФизЛица.Наименование + " " + РегионРегистрацииФизЛица.Сокращение = АдресРегистрацииФизЛица.Поле2)
+		ЛЕВОЕ СОЕДИНЕНИЕ Организации КАК Организации
+		ПО ФизЛица.Организация = Организации.Организация
+{ГДЕ
+	ФизЛица.ФизЛицо.*,
+	ФизЛица.Организация.*,
+	ФизЛица.Год}
+
+УПОРЯДОЧИТЬ ПО
+	Фамилия,
+	Имя,
+	Отчество,
+	ФизЛицо</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<totalField>
+		<dataPath>ВзносыРаботника</dataPath>
+		<expression>Сумма(ВзносыРаботника)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Отчество</dataPath>
+		<expression>Максимум(Отчество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Фамилия</dataPath>
+		<expression>Максимум(Фамилия)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_АдресГород</dataPath>
+		<expression>Максимум(ФизЛицо_АдресГород)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_АдресДом</dataPath>
+		<expression>Максимум(ФизЛицо_АдресДом)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_АдресИндекс</dataPath>
+		<expression>Максимум(ФизЛицо_АдресИндекс)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_АдресКвартира</dataPath>
+		<expression>Максимум(ФизЛицо_АдресКвартира)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_АдресКорпус</dataPath>
+		<expression>Максимум(ФизЛицо_АдресКорпус)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_АдресНаселенныйПункт</dataPath>
+		<expression>Максимум(ФизЛицо_АдресНаселенныйПункт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_АдресРайон</dataPath>
+		<expression>Максимум(ФизЛицо_АдресРайон)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_АдресРегион</dataPath>
+		<expression>Максимум(ФизЛицо_АдресРегион)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_АдресУлица</dataPath>
+		<expression>Максимум(ФизЛицо_АдресУлица)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_ИНН</dataPath>
+		<expression>Максимум(ФизЛицо_ИНН)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_КодДокументаУдЛичн</dataPath>
+		<expression>Максимум(ФизЛицо_КодДокументаУдЛичн)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФизЛицо_СерияНомерДокументаУдЛичн</dataPath>
+		<expression>Максимум(ФизЛицо_СерияНомерДокументаУдЛичн)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Имя</dataPath>
+		<expression>Максимум(Имя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Организация_ИНН</dataPath>
+		<expression>Максимум(Организация_ИНН)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Организация_КПП</dataPath>
+		<expression>Максимум(Организация_КПП)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Организация_Наименование</dataPath>
+		<expression>Максимум(Организация_Наименование)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Ответственный_Должность</dataPath>
+		<expression>Максимум(Ответственный_Должность)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Ответственный_ФИО</dataPath>
+		<expression>Максимум(Ответственный_ФИО)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаАктуальности</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата актуальности</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Ответственный</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ответственный</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ФизЛицо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Физ лицо</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ФизическиеЛица</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ФизическиеЛица.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПервыйНомер</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Первый номер</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>5</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаАктуальности</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ответственный</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПервыйНомер</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

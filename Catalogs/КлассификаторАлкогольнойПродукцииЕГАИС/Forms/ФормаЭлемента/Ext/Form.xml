@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>19</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="173"/>
+		</InputField>
+		<UsualGroup name="ГруппаДанныеЕГАИС" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные ЕГАИС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа данные ЕГАИС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДанныеЕГАИСРасширеннаяПодсказка" id="174"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="175"/>
+				</InputField>
+				<InputField name="НаименованиеПолное" id="25">
+					<DataPath>Объект.НаименованиеПолное</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="176"/>
+				</InputField>
+				<InputField name="ТипПродукции" id="162">
+					<DataPath>Объект.ТипПродукции</DataPath>
+					<ContextMenu name="ТипПродукцииКонтекстноеМеню" id="163"/>
+					<ExtendedTooltip name="ТипПродукцииРасширеннаяПодсказка" id="177"/>
+				</InputField>
+				<InputField name="ВидПродукции" id="32">
+					<DataPath>Объект.ВидПродукции</DataPath>
+					<ContextMenu name="ВидПродукцииКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ВидПродукцииРасширеннаяПодсказка" id="178"/>
+				</InputField>
+				<UsualGroup name="ГруппаОбъем" id="165">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа объем</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа объем</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОбъемРасширеннаяПодсказка" id="179"/>
+					<ChildItems>
+						<InputField name="Объем" id="119">
+							<DataPath>Объект.Объем</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОбъемКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="ОбъемРасширеннаяПодсказка" id="180"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияОбъем" id="133">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>л</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОбъемКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="ДекорацияОбъемРасширеннаяПодсказка" id="181"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКрепость" id="167">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа крепость</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа крепость</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКрепостьРасширеннаяПодсказка" id="182"/>
+					<ChildItems>
+						<InputField name="Крепость" id="122">
+							<DataPath>Объект.Крепость</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КрепостьКонтекстноеМеню" id="123"/>
+							<ExtendedTooltip name="КрепостьРасширеннаяПодсказка" id="183"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияПроцентыКрепости" id="136">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>% об.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПроцентыКрепостиКонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="ДекорацияПроцентыКрепостиРасширеннаяПодсказка" id="184"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПроизводительИмпортерРедактирование" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа данные ЕГАИС: производитель и импортер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа производитель импортер редактирование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПроизводительИмпортерРедактированиеРасширеннаяПодсказка" id="185"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИмпортерРедактирование" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа импортер редактирование</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа импортер редактирование</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИмпортерРедактированиеРасширеннаяПодсказка" id="186"/>
+							<ChildItems>
+								<InputField name="Импортер" id="22">
+									<DataPath>Объект.Импортер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИмпортерКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ИмпортерРасширеннаяПодсказка" id="187"/>
+									<Events>
+										<Event name="OnChange">ИмпортерПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelField name="ИмпортерВИБ" id="50">
+									<DataPath>КонтрагентИмпортер</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Импортер</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ИмпортерВИБКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ИмпортерВИБРасширеннаяПодсказка" id="188"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПроизводительРедактирование" id="60">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа производитель редактирование</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа производитель редактирование</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроизводительРедактированиеРасширеннаяПодсказка" id="189"/>
+							<ChildItems>
+								<InputField name="Производитель" id="19">
+									<DataPath>Объект.Производитель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроизводительКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ПроизводительРасширеннаяПодсказка" id="190"/>
+									<Events>
+										<Event name="OnChange">ПроизводительПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelField name="ПроизводительВИБ" id="53">
+									<DataPath>КонтрагентПроизводитель</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Производитель</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ПроизводительВИБКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ПроизводительВИБРасширеннаяПодсказка" id="191"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПроизводительИмпортерТолькоПросмотр" id="142">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа данные ЕГАИС: производитель и импортер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа данные ЕГАИСПроизводитель импортер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПроизводительИмпортерТолькоПросмотрРасширеннаяПодсказка" id="192"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИмпортерПросмотр" id="144">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа импортер</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа лево</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИмпортерПросмотрРасширеннаяПодсказка" id="193"/>
+							<ChildItems>
+								<LabelField name="ИмпортерТолькоПросмотр" id="146">
+									<DataPath>ИмпортерТекстовоеПредставление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИмпортерТолькоПросмотрКонтекстноеМеню" id="147"/>
+									<ExtendedTooltip name="ИмпортерТолькоПросмотрРасширеннаяПодсказка" id="194"/>
+									<Events>
+										<Event name="OnChange">ИмпортерПриИзменении</Event>
+									</Events>
+								</LabelField>
+								<LabelField name="ИмпортерВИБТолькоПросмотр" id="154">
+									<DataPath>КонтрагентИмпортерТекстовоеПредставление</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Импортер</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ИмпортерВИБТолькоПросмотрКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="ИмпортерВИБТолькоПросмотрРасширеннаяПодсказка" id="195"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПроизводительТолькоПросмотр" id="152">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа производитель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сопоставлено ВИБПраво</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроизводительТолькоПросмотрРасширеннаяПодсказка" id="196"/>
+							<ChildItems>
+								<LabelField name="ПроизводительТолькоПросмотр" id="149">
+									<DataPath>ПроизводительТекстовоеПредставление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроизводительТолькоПросмотрКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="ПроизводительТолькоПросмотрРасширеннаяПодсказка" id="197"/>
+									<Events>
+										<Event name="OnChange">ПроизводительПриИзменении</Event>
+									</Events>
+								</LabelField>
+								<LabelField name="ПроизводительВИБТолькоПросмотр" id="157">
+									<DataPath>КонтрагентПроизводительТекстовоеПредставление</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Производитель</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ПроизводительВИБТолькоПросмотрКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="ПроизводительВИБТолькоПросмотрРасширеннаяПодсказка" id="198"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСопоставлено" id="172">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сопоставлено</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сопоставлено</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСопоставленоРасширеннаяПодсказка" id="199"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КлассификаторАлкогольнойПродукцииЕГАИС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.УдалитьУпаковки"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="КонтрагентИмпортер" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импортер в ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентПроизводитель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель в ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентИмпортерТекстовоеПредставление" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импортер в ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентПроизводительТекстовоеПредставление" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель в ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмпортерТекстовоеПредставление" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импортер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроизводительТекстовоеПредставление" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сопоставлено" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставлено в ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+</Form>

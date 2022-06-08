@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>УчетЗатрат</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаВидаУчета</dataPath>
+			<field>АналитикаВидаУчета</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаРаспределенияЗатрат</dataPath>
+			<field>АналитикаРаспределенияЗатрат</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаЗатрат</dataPath>
+			<field>АналитикаУчетаЗатрат</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПартий</dataPath>
+			<field>АналитикаУчетаПартий</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидПодразделения</dataPath>
+			<field>ВидПодразделения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Затрата</dataPath>
+			<field>Затрата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатурнаяГруппа</dataPath>
+			<field>НоменклатурнаяГруппа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продукция</dataPath>
+			<field>Продукция</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияЗатраты</dataPath>
+			<field>СерияЗатраты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияПродукции</dataPath>
+			<field>СерияПродукции</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатьяЗатрат</dataPath>
+			<field>СтатьяЗатрат</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактерЗатрат</dataPath>
+			<field>ХарактерЗатрат</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаЗатраты</dataPath>
+			<field>ХарактеристикаЗатраты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаПродукции</dataPath>
+			<field>ХарактеристикаПродукции</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазделУчета</dataPath>
+			<field>РазделУчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	АналитикаВидаУчета.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ОтборАналитикаВидаУчета
+ИЗ
+	РегистрСведений.АналитикаВидаУчета КАК АналитикаВидаУчета
+ГДЕ
+	АналитикаВидаУчета.РазделУчета = ЗНАЧЕНИЕ(Перечисление.РазделыУчета.Затраты)
+{ГДЕ
+	АналитикаВидаУчета.Подразделение.*,
+	АналитикаВидаУчета.Подразделение.ВидПодразделения.* КАК ВидПодразделения}
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АналитикаУчетаЗатрат.Ссылка
+ПОМЕСТИТЬ ОтборАналитикаУчетаЗатрат
+ИЗ
+	РегистрСведений.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат
+{ГДЕ
+	АналитикаУчетаЗатрат.СтатьяЗатрат.*,
+	АналитикаУчетаЗатрат.ХарактерЗатрат.*}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	УчетЗатрат.АналитикаВидаУчета,
+	УчетЗатрат.АналитикаУчетаЗатрат,
+	УчетЗатрат.АналитикаУчетаПартий,
+	УчетЗатрат.АналитикаРаспределенияЗатрат,
+	0 КАК Количество
+ПОМЕСТИТЬ КлючиАналитики
+ИЗ
+	РегистрНакопления.УчетЗатрат КАК УчетЗатрат
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ОтборАналитикаВидаУчета КАК ОтборАналитикаВидаУчета
+		ПО УчетЗатрат.АналитикаВидаУчета = ОтборАналитикаВидаУчета.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ОтборАналитикаУчетаЗатрат КАК ОтборАналитикаУчетаЗатрат
+		ПО УчетЗатрат.АналитикаУчетаЗатрат = ОтборАналитикаУчетаЗатрат.Ссылка
+ГДЕ
+	УчетЗатрат.Период МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УчетЗатрат.КорАналитикаВидаУчета,
+	УчетЗатрат.КорАналитикаУчетаЗатрат,
+	УчетЗатрат.КорАналитикаУчетаПартий,
+	УчетЗатрат.КорАналитикаРаспределенияЗатрат,
+	0
+ИЗ
+	РегистрНакопления.УчетЗатрат КАК УчетЗатрат
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ОтборАналитикаВидаУчета КАК ОтборАналитикаВидаУчета
+		ПО УчетЗатрат.КорАналитикаВидаУчета = ОтборАналитикаВидаУчета.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ОтборАналитикаУчетаЗатрат КАК ОтборАналитикаУчетаЗатрат
+		ПО УчетЗатрат.КорАналитикаУчетаЗатрат = ОтборАналитикаУчетаЗатрат.Ссылка
+ГДЕ
+	УчетЗатрат.Период МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УчетЗатратОстатки.АналитикаВидаУчета,
+	УчетЗатратОстатки.АналитикаУчетаЗатрат,
+	УчетЗатратОстатки.АналитикаУчетаПартий,
+	УчетЗатратОстатки.АналитикаРаспределенияЗатрат,
+	УчетЗатратОстатки.КоличествоОстаток
+ИЗ
+	РегистрНакопления.УчетЗатрат.Остатки(
+			ДОБАВИТЬКДАТЕ(&amp;ДатаОкончания, СЕКУНДА, 1),
+			АналитикаВидаУчета В
+					(ВЫБРАТЬ
+						Отбор.Ссылка
+					ИЗ
+						ОтборАналитикаВидаУчета КАК Отбор)
+				И АналитикаУчетаЗатрат В
+					(ВЫБРАТЬ
+						Отбор.Ссылка
+					ИЗ
+						ОтборАналитикаУчетаЗатрат КАК Отбор)) КАК УчетЗатратОстатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РасшифровкаАналитикаВидаУчета.Подразделение КАК Подразделение,
+	РасшифровкаАналитикаВидаУчета.Подразделение.ВидПодразделения КАК ВидПодразделения,
+	РасшифровкаАналитикаВидаУчета.Проект КАК Проект,
+	РасшифровкаАналитикаРаспределенияЗатрат.НоменклатурнаяГруппа КАК НоменклатурнаяГруппа,
+	РасшифровкаАналитикаРаспределенияЗатрат.Продукция КАК Продукция,
+	РасшифровкаАналитикаРаспределенияЗатрат.ХарактеристикаПродукции КАК ХарактеристикаПродукции,
+	РасшифровкаАналитикаРаспределенияЗатрат.СерияПродукции КАК СерияПродукции,
+	РасшифровкаАналитикаУчетаЗатрат.СтатьяЗатрат КАК СтатьяЗатрат,
+	РасшифровкаАналитикаУчетаЗатрат.Затрата КАК Затрата,
+	РасшифровкаАналитикаУчетаЗатрат.ХарактеристикаЗатраты КАК ХарактеристикаЗатраты,
+	РасшифровкаАналитикаУчетаЗатрат.СерияЗатраты КАК СерияЗатраты,
+	РасшифровкаАналитикаУчетаЗатрат.ХарактерЗатрат КАК ХарактерЗатрат,
+	РасшифровкаАналитикаУчетаПартий.Заказ КАК Заказ,
+	СУММА(ЗначенияАналитики.Количество) КАК Количество,
+	ЗначенияАналитики.АналитикаВидаУчета КАК АналитикаВидаУчета,
+	ЗначенияАналитики.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат,
+	ЗначенияАналитики.АналитикаУчетаПартий КАК АналитикаУчетаПартий,
+	ЗначенияАналитики.АналитикаРаспределенияЗатрат КАК АналитикаРаспределенияЗатрат,
+	РасшифровкаАналитикаВидаУчета.РазделУчета КАК РазделУчета
+{ВЫБРАТЬ
+	Количество,
+	АналитикаВидаУчета.*,
+	АналитикаУчетаЗатрат.*,
+	АналитикаУчетаПартий.*,
+	АналитикаРаспределенияЗатрат.*,
+	Подразделение.*,
+	ВидПодразделения.*,
+	Проект.*,
+	НоменклатурнаяГруппа.*,
+	Продукция.*,
+	ХарактеристикаПродукции.*,
+	СерияПродукции.*,
+	СтатьяЗатрат.*,
+	Затрата.*,
+	ХарактеристикаЗатраты.*,
+	СерияЗатраты.*,
+	ХарактерЗатрат.*,
+	Заказ.*,
+	РазделУчета.*}
+ИЗ
+	КлючиАналитики КАК ЗначенияАналитики
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаВидаУчета КАК РасшифровкаАналитикаВидаУчета
+		ПО ЗначенияАналитики.АналитикаВидаУчета = РасшифровкаАналитикаВидаУчета.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаРаспределенияЗатрат КАК РасшифровкаАналитикаРаспределенияЗатрат
+		ПО ЗначенияАналитики.АналитикаРаспределенияЗатрат = РасшифровкаАналитикаРаспределенияЗатрат.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаЗатрат КАК РасшифровкаАналитикаУчетаЗатрат
+		ПО ЗначенияАналитики.АналитикаУчетаЗатрат = РасшифровкаАналитикаУчетаЗатрат.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаПартий КАК РасшифровкаАналитикаУчетаПартий
+		ПО ЗначенияАналитики.АналитикаУчетаПартий = РасшифровкаАналитикаУчетаПартий.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	РасшифровкаАналитикаРаспределенияЗатрат.НоменклатурнаяГруппа,
+	РасшифровкаАналитикаВидаУчета.Проект,
+	РасшифровкаАналитикаВидаУчета.Подразделение,
+	РасшифровкаАналитикаРаспределенияЗатрат.Продукция,
+	РасшифровкаАналитикаРаспределенияЗатрат.ХарактеристикаПродукции,
+	РасшифровкаАналитикаРаспределенияЗатрат.СерияПродукции,
+	РасшифровкаАналитикаУчетаЗатрат.СтатьяЗатрат,
+	РасшифровкаАналитикаУчетаЗатрат.Затрата,
+	РасшифровкаАналитикаУчетаЗатрат.ХарактеристикаЗатраты,
+	РасшифровкаАналитикаУчетаЗатрат.СерияЗатраты,
+	РасшифровкаАналитикаУчетаЗатрат.ХарактерЗатрат,
+	РасшифровкаАналитикаУчетаПартий.Заказ,
+	ЗначенияАналитики.АналитикаВидаУчета,
+	ЗначенияАналитики.АналитикаУчетаЗатрат,
+	ЗначенияАналитики.АналитикаУчетаПартий,
+	ЗначенияАналитики.АналитикаРаспределенияЗатрат,
+	РасшифровкаАналитикаВидаУчета.Подразделение.ВидПодразделения,
+	РасшифровкаАналитикаВидаУчета.РазделУчета</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АналитикаВидаУчета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АналитикаРаспределенияЗатрат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АналитикаУчетаЗатрат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АналитикаУчетаПартий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазделУчета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ХарактерЗатрат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидПодразделения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Подразделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатьяЗатрат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НоменклатурнаяГруппа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заказ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Затрата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Продукция</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СерияЗатраты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СерияПродукции</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ХарактеристикаЗатраты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ХарактеристикаПродукции</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Проект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ХарактерЗатрат</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ХарактерЗатрат.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВидПодразделения</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыПодразделений.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Подразделения.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СтатьяЗатрат</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СтатьиЗатрат.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:userSettingID>3781919e-2097-4a82-821f-70727b955904</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

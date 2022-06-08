@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Товары мировой биржевой торговли</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаТовары" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа товары</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа товары</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТоварыРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<Table name="ПредметыКонтролируемыхСделок" id="10">
+					<Representation>List</Representation>
+					<Width>43</Width>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ПредметыКонтролируемыхСделок</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПредметыКонтролируемыхСделокКонтекстноеМеню" id="11"/>
+					<AutoCommandBar name="ПредметыКонтролируемыхСделокКоманднаяПанель" id="12"/>
+					<ExtendedTooltip name="ПредметыКонтролируемыхСделокРасширеннаяПодсказка" id="36"/>
+					<SearchStringAddition name="ПредметыКонтролируемыхСделокСтрокаПоиска" id="37">
+						<AdditionSource>
+							<Item>ПредметыКонтролируемыхСделок</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПредметыКонтролируемыхСделокСтрокаПоискаКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ПредметыКонтролируемыхСделокСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПредметыКонтролируемыхСделокСостояниеПросмотра" id="40">
+						<AdditionSource>
+							<Item>ПредметыКонтролируемыхСделок</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПредметыКонтролируемыхСделокСостояниеПросмотраКонтекстноеМеню" id="41"/>
+						<ExtendedTooltip name="ПредметыКонтролируемыхСделокСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПредметыКонтролируемыхСделокУправлениеПоиском" id="43">
+						<AdditionSource>
+							<Item>ПредметыКонтролируемыхСделок</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПредметыКонтролируемыхСделокУправлениеПоискомКонтекстноеМеню" id="44"/>
+						<ExtendedTooltip name="ПредметыКонтролируемыхСделокУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ПредметыКонтролируемыхСделокВыбор</Event>
+						<Event name="BeforeAddRow">ПредметыКонтролируемыхСделокПередНачаломДобавления</Event>
+						<Event name="ChoiceProcessing">ПредметыКонтролируемыхСделокОбработкаВыбора</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ПредметыКонтролируемыхСделокПредметСделки" id="13">
+							<DataPath>ПредметыКонтролируемыхСделок.ПредметСделки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПредметыКонтролируемыхСделокПредметСделкиКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПредметыКонтролируемыхСделокПредметСделкиРасширеннаяПодсказка" id="46"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<LabelDecoration name="ДекорацияПредметыМировойБиржевойТорговли" id="15">
+					<TextColor>0:4cf793cf-87d8-460a-b7dc-198493035595</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Укажите предметы мировой биржевой торговли в соответствии с пунктами 5 и 6 статьи 105.14 НК РФ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПредметыМировойБиржевойТорговлиКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ДекорацияПредметыМировойБиржевойТорговлиРасширеннаяПодсказка" id="47"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ПанельКнопок" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель кнопок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель кнопок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ПанельКнопокРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Button name="КомандаСохранить" id="33">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаСохранить</CommandName>
+					<ExtendedTooltip name="КомандаСохранитьРасширеннаяПодсказка" id="49"/>
+				</Button>
+				<Button name="КомандаОтмена" id="34">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.КомандаОтмена</CommandName>
+					<ExtendedTooltip name="КомандаОтменаРасширеннаяПодсказка" id="50"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникПодготовкиУведомленияОКонтролируемыхСделках</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПредметыКонтролируемыхСделок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предметы контролируемых сделок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПредметСделки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предметы сделок, являющиеся товарами мировой торговли</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаСохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСохранить</Action>
+		</Command>
+		<Command name="КомандаОтмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтмена</Action>
+		</Command>
+	</Commands>
+</Form>

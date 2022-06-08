@@ -1,0 +1,1574 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CancelSearch</ExcludedCommand>
+		<ExcludedCommand>Change</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Create</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Find</ExcludedCommand>
+		<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>ListSettings</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OutputList</ExcludedCommand>
+		<ExcludedCommand>Post</ExcludedCommand>
+		<ExcludedCommand>Refresh</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>SetDateInterval</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>UndoPosting</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeLoadDataFromSettingsAtServer">ПередЗагрузкойДанныхИзНастроекНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="104">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="270"/>
+			<ChildItems>
+				<Page name="СтраницаОформлено" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Акты постановки на баланс ЕГАИС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа оформлено</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОформленоРасширеннаяПодсказка" id="271"/>
+					<ChildItems>
+						<UsualGroup name="СтраницаОформленоОтбор" id="144">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа оформлено отбор</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа оформлено отбор</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтраницаОформленоОтборРасширеннаяПодсказка" id="272"/>
+							<ChildItems>
+								<InputField name="СтраницаОформленоОтборСтатусЕГАИС" id="148">
+									<DataPath>СтатусЕГАИС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="СтраницаОформленоОтборСтатусЕГАИСКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="СтраницаОформленоОтборСтатусЕГАИСРасширеннаяПодсказка" id="273"/>
+									<Events>
+										<Event name="OnChange">СтраницаОформленоОтборСтатусЕГАИСПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СтраницаОформленоОтборДальнейшееДействиеЕГАИС" id="151">
+									<DataPath>ДальнейшееДействиеЕГАИС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дальнейшее действие</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<ClearButton>true</ClearButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="СтраницаОформленоОтборДальнейшееДействиеЕГАИСКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="СтраницаОформленоОтборДальнейшееДействиеЕГАИСРасширеннаяПодсказка" id="274"/>
+									<Events>
+										<Event name="OnChange">СтраницаОформленоОтборДальнейшееДействиеЕГАИСПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Pages name="СтраницыОформленоОтборОрганизацияЕГАИС" id="173">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы отбора по организации ЕГАИС (Оформлено)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы отбора по организации ЕГАИС (Оформлено)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="СтраницыОформленоОтборОрганизацияЕГАИСРасширеннаяПодсказка" id="275"/>
+									<ChildItems>
+										<Page name="СтраницаОформленоОрганизацииЕГАИС" id="175">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организациям ЕГАИС (Оформлено)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организациям ЕГАИС (Оформлено)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаОформленоОрганизацииЕГАИСРасширеннаяПодсказка" id="276"/>
+											<ChildItems>
+												<InputField name="ОформленоОрганизацииЕГАИС" id="177">
+													<DataPath>ОрганизацииЕГАИСПредставление</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организации ЕГАИС</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<ChoiceButton>true</ChoiceButton>
+													<ClearButton>true</ClearButton>
+													<QuickChoice>false</QuickChoice>
+													<ChooseType>false</ChooseType>
+													<TextEdit>false</TextEdit>
+													<ChoiceParameters>
+														<app:item name="Отбор.СоответствуетОрганизации">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:boolean">true</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="ОформленоОрганизацииЕГАИСКонтекстноеМеню" id="178"/>
+													<ExtendedTooltip name="ОформленоОрганизацииЕГАИСРасширеннаяПодсказка" id="277"/>
+													<Events>
+														<Event name="OnChange">ОформленоОрганизацииЕГАИСПриИзменении</Event>
+														<Event name="StartChoice">ОформленоОрганизацииЕГАИСНачалоВыбора</Event>
+														<Event name="Clearing">ОформленоОрганизацииЕГАИСОчистка</Event>
+														<Event name="ChoiceProcessing">ОформленоОрганизацииЕГАИСОбработкаВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаОформленоОрганизацияЕГАИС" id="180">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организации ЕГАИС (Оформлено)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организации ЕГАИС (Оформлено)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаОформленоОрганизацияЕГАИСРасширеннаяПодсказка" id="278"/>
+											<ChildItems>
+												<InputField name="ОформленоОрганизацияЕГАИС" id="182">
+													<DataPath>ОрганизацииЕГАИСПредставление</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организация ЕГАИС</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<ChoiceButton>true</ChoiceButton>
+													<ClearButton>true</ClearButton>
+													<OpenButton>false</OpenButton>
+													<QuickChoice>false</QuickChoice>
+													<ChooseType>false</ChooseType>
+													<ChoiceParameters>
+														<app:item name="Отбор.СоответствуетОрганизации">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:boolean">true</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="ОформленоОрганизацияЕГАИСКонтекстноеМеню" id="183"/>
+													<ExtendedTooltip name="ОформленоОрганизацияЕГАИСРасширеннаяПодсказка" id="279"/>
+													<Events>
+														<Event name="OnChange">ОформленоОрганизацияЕГАИСПриИзменении</Event>
+														<Event name="StartChoice">ОформленоОрганизацияЕГАИСНачалоВыбора</Event>
+														<Event name="Clearing">ОформленоОрганизацияЕГАИСОчистка</Event>
+														<Event name="ChoiceProcessing">ОформленоОрганизацияЕГАИСОбработкаВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+								<InputField name="СтраницаОформленоОтборОтветственный" id="43">
+									<DataPath>Ответственный</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="СтраницаОформленоОтборОтветственныйКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="СтраницаОформленоОтборОтветственныйРасширеннаяПодсказка" id="280"/>
+									<Events>
+										<Event name="OnChange">СтраницаОформленоОтборОтветственныйПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="СтраницаОформленоПользовательскиеНастройки" id="102">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользовательские настройки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользовательские настройки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтраницаОформленоПользовательскиеНастройкиРасширеннаяПодсказка" id="281"/>
+						</UsualGroup>
+						<Table name="Список" id="3">
+							<Representation>List</Representation>
+							<Width>90</Width>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+								<ChildItems>
+									<Button name="СписокПередатьДанные" id="81">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПередатьДанные</CommandName>
+										<ExtendedTooltip name="СписокПередатьДанныеРасширеннаяПодсказка" id="282"/>
+									</Button>
+									<ButtonGroup name="СписокГруппаОбменЕГАИС" id="77">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Обмен ЕГАИС</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список группа обмен ЕГАИС</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="СписокГруппаОбменЕГАИСРасширеннаяПодсказка" id="283"/>
+										<ChildItems>
+											<Button name="СписокВыполнитьОбмен" id="83">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
+												<ExtendedTooltip name="СписокВыполнитьОбменРасширеннаяПодсказка" id="284"/>
+											</Button>
+											<Button name="СписокОбщаяКомандаПротоколОбменаЕГАИС" id="63">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>CommonCommand.ПротоколОбменаЕГАИС</CommandName>
+												<DataPath>Items.Список.CurrentData.Ref</DataPath>
+												<ExtendedTooltip name="СписокОбщаяКомандаПротоколОбменаЕГАИСРасширеннаяПодсказка" id="285"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Popup name="ПодменюСоздатьНаОсновании" id="94">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать на основании</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать на основании</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Picture>
+											<xr:Ref>StdPicture.InputOnBasis</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Representation>Picture</Representation>
+										<ExtendedTooltip name="ПодменюСоздатьНаОснованииРасширеннаяПодсказка" id="286"/>
+										<ChildItems>
+											<ButtonGroup name="ПодменюСоздатьНаОснованииВажное" id="265">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Создать на основании (Важное)</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Создать на основании (Важное)</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ПодменюСоздатьНаОснованииВажноеРасширеннаяПодсказка" id="287"/>
+											</ButtonGroup>
+											<ButtonGroup name="ПодменюСоздатьНаОснованииОбычное" id="267">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Создать на основании (Обычное)</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Создать на основании (Обычное)</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ПодменюСоздатьНаОснованииОбычноеРасширеннаяПодсказка" id="288"/>
+											</ButtonGroup>
+											<ButtonGroup name="ПодменюСоздатьНаОснованииСмТакже" id="269">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Создать на основании (См. также)</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Создать на основании (См. также)</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ПодменюСоздатьНаОснованииСмТакжеРасширеннаяПодсказка" id="289"/>
+											</ButtonGroup>
+										</ChildItems>
+									</Popup>
+									<ButtonGroup name="ГруппаГлобальныеКоманды" id="96">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа команды формы</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа команды формы</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+										<ExtendedTooltip name="ГруппаГлобальныеКомандыРасширеннаяПодсказка" id="290"/>
+									</ButtonGroup>
+									<Popup name="ПодменюПечать" id="92">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Печать</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Команды печати</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Picture>
+											<xr:Ref>StdPicture.Print</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="291"/>
+									</Popup>
+									<Popup name="ПодменюОтчеты" id="55">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отчеты</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отчеты</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Picture>
+											<xr:Ref>CommonPicture.Отчеты</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Representation>Picture</Representation>
+										<ExtendedTooltip name="ПодменюОтчетыРасширеннаяПодсказка" id="292"/>
+										<ChildItems>
+											<ButtonGroup name="ПодменюОтчетыВажное" id="57">
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Подменю отчеты важное</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ПодменюОтчетыВажноеРасширеннаяПодсказка" id="293"/>
+											</ButtonGroup>
+											<ButtonGroup name="ПодменюОтчетыОбычное" id="59">
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Подменю отчеты важное</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ПодменюОтчетыОбычноеРасширеннаяПодсказка" id="294"/>
+											</ButtonGroup>
+											<ButtonGroup name="ПодменюОтчетыСмТакже" id="61">
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Подменю отчеты важное</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ПодменюОтчетыСмТакжеРасширеннаяПодсказка" id="295"/>
+											</ButtonGroup>
+										</ChildItems>
+									</Popup>
+									<Button name="СписокИзменитьВыделенные" id="98">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>false</OnlyInAllActions>
+										<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
+										<ExtendedTooltip name="СписокИзменитьВыделенныеРасширеннаяПодсказка" id="296"/>
+									</Button>
+									<Button name="СписокИзменитьФорму" id="85">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="СписокИзменитьФормуРасширеннаяПодсказка" id="297"/>
+									</Button>
+									<ButtonGroup name="ГруппаКомандыФормы" id="73">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа команды формы</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа команды формы</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>Form</CommandSource>
+										<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="298"/>
+									</ButtonGroup>
+									<Button name="СписокСправка" id="87">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<ExtendedTooltip name="СписокСправкаРасширеннаяПодсказка" id="299"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="300"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="301">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="302"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="303"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="304">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="305"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="306"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="307">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="308"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="309"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="Номер" id="19">
+									<DataPath>Список.Number</DataPath>
+									<Width>10</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="310"/>
+								</LabelField>
+								<LabelField name="Дата" id="16">
+									<DataPath>Список.Date</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Width>9</Width>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="311"/>
+								</LabelField>
+								<LabelField name="СтатусЕГАИС" id="25">
+									<DataPath>Список.СтатусЕГАИС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СтатусЕГАИСКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="СтатусЕГАИСРасширеннаяПодсказка" id="312"/>
+								</LabelField>
+								<LabelField name="ДальнейшееДействиеЕГАИС" id="154">
+									<DataPath>Список.ДальнейшееДействиеЕГАИС1</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дальнейшее действие</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДальнейшееДействиеЕГАИСКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="ДальнейшееДействиеЕГАИСРасширеннаяПодсказка" id="313"/>
+								</LabelField>
+								<LabelField name="ОрганизацияЕГАИС" id="32">
+									<DataPath>Список.ОрганизацияЕГАИС</DataPath>
+									<ContextMenu name="ОрганизацияЕГАИСКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ОрганизацияЕГАИСРасширеннаяПодсказка" id="314"/>
+								</LabelField>
+								<LabelField name="ВидДокумента" id="89">
+									<DataPath>Список.ВидДокумента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Операция</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВидДокументаКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="315"/>
+								</LabelField>
+								<LabelField name="Ответственный" id="46">
+									<DataPath>Список.Ответственный</DataPath>
+									<ContextMenu name="ОтветственныйКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="316"/>
+								</LabelField>
+								<LabelField name="Ссылка" id="35">
+									<DataPath>Список.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СсылкаКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="317"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКОформлению" id="108">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К оформлению (регистры № 1,2)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К оформлению</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаКОформлениюРасширеннаяПодсказка" id="318"/>
+					<ChildItems>
+						<UsualGroup name="СтраницаКОформлениюОтбор" id="146">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа оформлено отбор</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа оформлено отбор</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтраницаКОформлениюОтборРасширеннаяПодсказка" id="319"/>
+							<ChildItems>
+								<Pages name="СтраницыКОформлениюОтборОрганизацияЕГАИС" id="185">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы отбора по организации ЕГАИС (К оформлению)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы отбора по организации ЕГАИС (К оформлению)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="СтраницыКОформлениюОтборОрганизацияЕГАИСРасширеннаяПодсказка" id="320"/>
+									<ChildItems>
+										<Page name="СтраницаКОформлениюОрганизацииЕГАИС" id="187">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организациям ЕГАИС (К оформлению)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организациям ЕГАИС (К оформлению)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаКОформлениюОрганизацииЕГАИСРасширеннаяПодсказка" id="321"/>
+											<ChildItems>
+												<InputField name="КОформлениюОрганизацииЕГАИС" id="189">
+													<DataPath>ОрганизацииЕГАИСПредставление</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организации ЕГАИС</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<ChoiceButton>true</ChoiceButton>
+													<ClearButton>true</ClearButton>
+													<QuickChoice>false</QuickChoice>
+													<ChooseType>false</ChooseType>
+													<TextEdit>false</TextEdit>
+													<ChoiceParameters>
+														<app:item name="Отбор.СоответствуетОрганизации">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:boolean">true</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="КОформлениюОрганизацииЕГАИСКонтекстноеМеню" id="190"/>
+													<ExtendedTooltip name="КОформлениюОрганизацииЕГАИСРасширеннаяПодсказка" id="322"/>
+													<Events>
+														<Event name="OnChange">КОформлениюОрганизацииЕГАИСПриИзменении</Event>
+														<Event name="StartChoice">КОформлениюОрганизацииЕГАИСНачалоВыбора</Event>
+														<Event name="Clearing">КОформлениюОрганизацииЕГАИСОчистка</Event>
+														<Event name="ChoiceProcessing">КОформлениюОрганизацииЕГАИСОбработкаВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаКОформлениюОрганизацияЕГАИС" id="192">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организации ЕГАИС (К оформлению)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организации ЕГАИС (К оформлению)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаКОформлениюОрганизацияЕГАИСРасширеннаяПодсказка" id="323"/>
+											<ChildItems>
+												<InputField name="КОформлениюОрганизацияЕГАИС" id="194">
+													<DataPath>ОрганизацияЕГАИС</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организация ЕГАИС</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<ChoiceButton>true</ChoiceButton>
+													<ClearButton>true</ClearButton>
+													<OpenButton>false</OpenButton>
+													<QuickChoice>false</QuickChoice>
+													<ChooseType>false</ChooseType>
+													<ChoiceParameters>
+														<app:item name="Отбор.СоответствуетОрганизации">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:boolean">true</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="КОформлениюОрганизацияЕГАИСКонтекстноеМеню" id="195"/>
+													<ExtendedTooltip name="КОформлениюОрганизацияЕГАИСРасширеннаяПодсказка" id="324"/>
+													<Events>
+														<Event name="OnChange">КОформлениюОрганизацияЕГАИСПриИзменении</Event>
+														<Event name="StartChoice">КОформлениюОрганизацияЕГАИСНачалоВыбора</Event>
+														<Event name="Clearing">КОформлениюОрганизацияЕГАИСОчистка</Event>
+														<Event name="ChoiceProcessing">КОформлениюОрганизацияЕГАИСОбработкаВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+								<InputField name="СтраницаКОформлениюОтборОтветственный" id="170">
+									<DataPath>Ответственный</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="СтраницаКОформлениюОтборОтветственныйКонтекстноеМеню" id="171"/>
+									<ExtendedTooltip name="СтраницаКОформлениюОтборОтветственныйРасширеннаяПодсказка" id="325"/>
+									<Events>
+										<Event name="OnChange">СтраницаКОформлениюОтборОтветственныйПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="СписокКОформлению" id="110">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<SelectionMode>SingleRow</SelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокКОформлению</DataPath>
+							<RowPictureDataPath>СписокКОформлению.Картинка</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>StdPicture.Document</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</RowsPicture>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокКОформлениюКонтекстноеМеню" id="111"/>
+							<AutoCommandBar name="СписокКОформлениюКоманднаяПанель" id="112">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СписокКОформлениюОформитьАктПостановкиНаБаланс" id="160">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОформитьАктПостановкиНаБаланс</CommandName>
+										<ExtendedTooltip name="СписокКОформлениюОформитьАктПостановкиНаБалансРасширеннаяПодсказка" id="326"/>
+									</Button>
+									<ButtonGroup name="СписокКОформлениюГруппаСтандартные" id="249">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список к оформлению группа стандартные</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список к оформлению группа стандартные</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>Item.СписокКОформлению</CommandSource>
+										<ExtendedTooltip name="СписокКОформлениюГруппаСтандартныеРасширеннаяПодсказка" id="327"/>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокКОформлениюРасширеннаяПодсказка" id="328"/>
+							<SearchStringAddition name="СписокКОформлениюСтрокаПоиска" id="329">
+								<AdditionSource>
+									<Item>СписокКОформлению</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКОформлениюСтрокаПоискаКонтекстноеМеню" id="330"/>
+								<ExtendedTooltip name="СписокКОформлениюСтрокаПоискаРасширеннаяПодсказка" id="331"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокКОформлениюСостояниеПросмотра" id="332">
+								<AdditionSource>
+									<Item>СписокКОформлению</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКОформлениюСостояниеПросмотраКонтекстноеМеню" id="333"/>
+								<ExtendedTooltip name="СписокКОформлениюСостояниеПросмотраРасширеннаяПодсказка" id="334"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокКОформлениюУправлениеПоиском" id="335">
+								<AdditionSource>
+									<Item>СписокКОформлению</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКОформлениюУправлениеПоискомКонтекстноеМеню" id="336"/>
+								<ExtendedTooltip name="СписокКОформлениюУправлениеПоискомРасширеннаяПодсказка" id="337"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокКОформлениюВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокКОформлениюДокумент" id="126">
+									<DataPath>СписокКОформлению.Документ</DataPath>
+									<ContextMenu name="СписокКОформлениюДокументКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="СписокКОформлениюДокументРасширеннаяПодсказка" id="338"/>
+								</LabelField>
+								<LabelField name="СписокКОформлениюСтатусОформления" id="164">
+									<DataPath>СписокКОформлению.СтатусОформления</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус оформления</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокКОформлениюСтатусОформленияКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="СписокКОформлениюСтатусОформленияРасширеннаяПодсказка" id="339"/>
+								</LabelField>
+								<LabelField name="СписокКОформлениюНомер" id="132">
+									<DataPath>СписокКОформлению.Номер</DataPath>
+									<Width>10</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СписокКОформлениюНомерКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="СписокКОформлениюНомерРасширеннаяПодсказка" id="340"/>
+								</LabelField>
+								<LabelField name="СписокКОформлениюДата" id="123">
+									<DataPath>СписокКОформлению.Дата</DataPath>
+									<Width>9</Width>
+									<ContextMenu name="СписокКОформлениюДатаКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="СписокКОформлениюДатаРасширеннаяПодсказка" id="341"/>
+								</LabelField>
+								<LabelField name="СписокКОформлениюОрганизацияЕГАИС" id="135">
+									<DataPath>СписокКОформлению.ОрганизацияЕГАИС</DataPath>
+									<ContextMenu name="СписокКОформлениюОрганизацияЕГАИСКонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="СписокКОформлениюОрганизацияЕГАИСРасширеннаяПодсказка" id="342"/>
+								</LabelField>
+								<LabelField name="СписокКОформлениюОтветственный" id="167">
+									<DataPath>СписокКОформлению.Ответственный</DataPath>
+									<ContextMenu name="СписокКОформлениюОтветственныйКонтекстноеМеню" id="168"/>
+									<ExtendedTooltip name="СписокКОформлениюОтветственныйРасширеннаяПодсказка" id="343"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаВРегистр3" id="197">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К оформлению (регистр № 3)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В регистр 3</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВРегистр3РасширеннаяПодсказка" id="344"/>
+					<ChildItems>
+						<UsualGroup name="СтраницаВРегистр3Отбор" id="214">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа в регистр 3 отбор</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа в регистр 3 отбор</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтраницаВРегистр3ОтборРасширеннаяПодсказка" id="345"/>
+							<ChildItems>
+								<Pages name="СтраницыВРегистр3ОтборОрганизацияЕГАИС" id="199">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы отбора по организации ЕГАИС (В регистр 3)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы отбора по организации ЕГАИС (В регистр 3)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="СтраницыВРегистр3ОтборОрганизацияЕГАИСРасширеннаяПодсказка" id="346"/>
+									<ChildItems>
+										<Page name="СтраницаВРегистр3ОрганизацииЕГАИС" id="201">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организациям ЕГАИС (В регистр 3)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организациям ЕГАИС (В регистр 3)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаВРегистр3ОрганизацииЕГАИСРасширеннаяПодсказка" id="347"/>
+											<ChildItems>
+												<InputField name="ВРегистр3ОрганизацииЕГАИС" id="203">
+													<DataPath>ОрганизацииЕГАИСПредставление</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организации ЕГАИС</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<ChoiceButton>true</ChoiceButton>
+													<ClearButton>true</ClearButton>
+													<QuickChoice>false</QuickChoice>
+													<ChooseType>false</ChooseType>
+													<TextEdit>false</TextEdit>
+													<ChoiceParameters>
+														<app:item name="Отбор.СоответствуетОрганизации">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:boolean">true</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="ВРегистр3ОрганизацииЕГАИСКонтекстноеМеню" id="204"/>
+													<ExtendedTooltip name="ВРегистр3ОрганизацииЕГАИСРасширеннаяПодсказка" id="348"/>
+													<Events>
+														<Event name="OnChange">ВРегистр3ОрганизацииЕГАИСПриИзменении</Event>
+														<Event name="StartChoice">ВРегистр3ОрганизацииЕГАИСНачалоВыбора</Event>
+														<Event name="Clearing">ВРегистр3ОрганизацииЕГАИСОчистка</Event>
+														<Event name="ChoiceProcessing">ВРегистр3ОрганизацииЕГАИСОбработкаВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаВРегистр3ОрганизацияЕГАИС" id="206">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организации ЕГАИС (В регистр 3)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по организации ЕГАИС (В регистр 3)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаВРегистр3ОрганизацияЕГАИСРасширеннаяПодсказка" id="349"/>
+											<ChildItems>
+												<InputField name="ВРегистр3ОрганизацияЕГАИС" id="208">
+													<DataPath>ОрганизацииЕГАИСПредставление</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организация ЕГАИС</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<ChoiceButton>true</ChoiceButton>
+													<ClearButton>true</ClearButton>
+													<OpenButton>false</OpenButton>
+													<QuickChoice>false</QuickChoice>
+													<ChooseType>false</ChooseType>
+													<ChoiceParameters>
+														<app:item name="Отбор.СоответствуетОрганизации">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:boolean">true</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="ВРегистр3ОрганизацияЕГАИСКонтекстноеМеню" id="209"/>
+													<ExtendedTooltip name="ВРегистр3ОрганизацияЕГАИСРасширеннаяПодсказка" id="350"/>
+													<Events>
+														<Event name="OnChange">ВРегистр3ОрганизацияЕГАИСПриИзменении</Event>
+														<Event name="StartChoice">ВРегистр3ОрганизацияЕГАИСНачалоВыбора</Event>
+														<Event name="Clearing">ВРегистр3ОрганизацияЕГАИСОчистка</Event>
+														<Event name="ChoiceProcessing">ВРегистр3ОрганизацияЕГАИСОбработкаВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="СписокВРегистр3" id="216">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокВРегистр3</DataPath>
+							<RowPictureDataPath>СписокВРегистр3.Картинка</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокВРегистр3КонтекстноеМеню" id="217"/>
+							<AutoCommandBar name="СписокВРегистр3КоманднаяПанель" id="218">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СписокВРегистр3ОформитьВРегистр3" id="244">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Command.ОформитьВРегистр3</CommandName>
+										<ExtendedTooltip name="СписокВРегистр3ОформитьВРегистр3РасширеннаяПодсказка" id="351"/>
+									</Button>
+									<ButtonGroup name="СписокВРегистр3ГруппаСтандартные" id="251">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список в регистр3 группа стандартные</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список в регистр3 группа стандартные</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>Item.СписокВРегистр3</CommandSource>
+										<ExtendedTooltip name="СписокВРегистр3ГруппаСтандартныеРасширеннаяПодсказка" id="352"/>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокВРегистр3РасширеннаяПодсказка" id="353"/>
+							<SearchStringAddition name="СписокВРегистр3СтрокаПоиска" id="354">
+								<AdditionSource>
+									<Item>СписокВРегистр3</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВРегистр3СтрокаПоискаКонтекстноеМеню" id="355"/>
+								<ExtendedTooltip name="СписокВРегистр3СтрокаПоискаРасширеннаяПодсказка" id="356"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокВРегистр3СостояниеПросмотра" id="357">
+								<AdditionSource>
+									<Item>СписокВРегистр3</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВРегистр3СостояниеПросмотраКонтекстноеМеню" id="358"/>
+								<ExtendedTooltip name="СписокВРегистр3СостояниеПросмотраРасширеннаяПодсказка" id="359"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокВРегистр3УправлениеПоиском" id="360">
+								<AdditionSource>
+									<Item>СписокВРегистр3</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВРегистр3УправлениеПоискомКонтекстноеМеню" id="361"/>
+								<ExtendedTooltip name="СписокВРегистр3УправлениеПоискомРасширеннаяПодсказка" id="362"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокВРегистр3АкцизнаяМарка" id="229">
+									<DataPath>СписокВРегистр3.АкцизнаяМарка</DataPath>
+									<ContextMenu name="СписокВРегистр3АкцизнаяМаркаКонтекстноеМеню" id="230"/>
+									<ExtendedTooltip name="СписокВРегистр3АкцизнаяМаркаРасширеннаяПодсказка" id="363"/>
+								</LabelField>
+								<LabelField name="СписокВРегистр3АлкогольнаяПродукция" id="232">
+									<DataPath>СписокВРегистр3.АлкогольнаяПродукция</DataPath>
+									<ContextMenu name="СписокВРегистр3АлкогольнаяПродукцияКонтекстноеМеню" id="233"/>
+									<ExtendedTooltip name="СписокВРегистр3АлкогольнаяПродукцияРасширеннаяПодсказка" id="364"/>
+								</LabelField>
+								<LabelField name="СписокВРегистр3Справка2" id="238">
+									<DataPath>СписокВРегистр3.Справка2</DataPath>
+									<ContextMenu name="СписокВРегистр3Справка2КонтекстноеМеню" id="239"/>
+									<ExtendedTooltip name="СписокВРегистр3Справка2РасширеннаяПодсказка" id="365"/>
+								</LabelField>
+								<LabelField name="СписокВРегистр3ОрганизацияЕГАИС" id="235">
+									<DataPath>СписокВРегистр3.ОрганизацияЕГАИС</DataPath>
+									<ContextMenu name="СписокВРегистр3ОрганизацияЕГАИСКонтекстноеМеню" id="236"/>
+									<ExtendedTooltip name="СписокВРегистр3ОрганизацияЕГАИСРасширеннаяПодсказка" id="366"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>~Список.ДальнейшееДействие</Field>
+				<Field>~Список.ДальнейшееДействиеЕГАИС</Field>
+				<Field>~Список.СостояниеФиксации</Field>
+				<Field>Список.Posted</Field>
+				<Field>Список.Ref</Field>
+				<Field>Список.ВидДокумента</Field>
+				<Field>Список.ДальнейшееДействиеЕГАИС1</Field>
+				<Field>Список.ДальнейшееДействиеЕГАИС2</Field>
+				<Field>Список.ДальнейшееДействиеЕГАИС3</Field>
+				<Field>Список.ОрганизацияЕГАИС</Field>
+				<Field>Список.СтатусЕГАИС</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументАктПостановкиНаБалансЕГАИС.Ссылка,
+	ДокументАктПостановкиНаБалансЕГАИС.ПометкаУдаления,
+	ДокументАктПостановкиНаБалансЕГАИС.Номер,
+	ДокументАктПостановкиНаБалансЕГАИС.Дата,
+	ДокументАктПостановкиНаБалансЕГАИС.Проведен,
+	ДокументАктПостановкиНаБалансЕГАИС.ВидДокумента,
+	ДокументАктПостановкиНаБалансЕГАИС.ОрганизацияЕГАИС,
+	ДокументАктПостановкиНаБалансЕГАИС.Идентификатор,
+	ДокументАктПостановкиНаБалансЕГАИС.ИдентификаторЕГАИС,
+	ДокументАктПостановкиНаБалансЕГАИС.ПричинаПостановкиНаБаланс,
+	ДокументАктПостановкиНаБалансЕГАИС.ДокументОснование,
+	ДокументАктПостановкиНаБалансЕГАИС.Ответственный,
+	ДокументАктПостановкиНаБалансЕГАИС.АктСписанияЕГАИС,
+	ДокументАктПостановкиНаБалансЕГАИС.ДатаРегистрацииДвижений,
+	ДокументАктПостановкиНаБалансЕГАИС.Комментарий,
+	
+	СтатусыДокументовЕГАИС.Статус              КАК СтатусЕГАИС,
+	СтатусыДокументовЕГАИС.ДальнейшееДействие1 КАК ДальнейшееДействиеЕГАИС1,
+	СтатусыДокументовЕГАИС.ДальнейшееДействие2 КАК ДальнейшееДействиеЕГАИС2,
+	СтатусыДокументовЕГАИС.ДальнейшееДействие3 КАК ДальнейшееДействиеЕГАИС3
+ИЗ
+	Документ.АктПостановкиНаБалансЕГАИС КАК ДокументАктПостановкиНаБалансЕГАИС
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СтатусыДокументовЕГАИС КАК СтатусыДокументовЕГАИС
+			ПО (СтатусыДокументовЕГАИС.Документ = ДокументАктПостановкиНаБалансЕГАИС.Ссылка)
+</QueryText>
+				<MainTable>Document.АктПостановкиНаБалансЕГАИС</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОрганизацияЕГАИС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация ЕГАИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КлассификаторОрганизацийЕГАИС</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОрганизацияЕГАИС</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Ответственный" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+			<Save>
+				<Field>Ответственный</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтруктураБыстрогоОтбора" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура быстрого отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СписокКОформлению" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список к оформлению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокКОформлению.Документ</Field>
+				<Field>СписокКОформлению.ОрганизацияЕГАИС</Field>
+				<Field>СписокКОформлению.Ответственный</Field>
+				<Field>СписокКОформлению.СтатусОформления</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Таблица.Основание        КАК Документ,
+	Таблица.Ответственный    КАК Ответственный,
+	Таблица.Дата             КАК Дата,
+	Таблица.Номер            КАК Номер,
+	Классификатор.Ссылка     КАК ОрганизацияЕГАИС,
+	Таблица.СтатусОформления КАК СтатусОформления,
+	ИСТИНА КАК Картинка
+ИЗ
+	РегистрСведений.СтатусыОформленияДокументовЕГАИС КАК Таблица
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.КлассификаторОрганизацийЕГАИС КАК Классификатор
+		ПО Классификатор.ТорговыйОбъект = Таблица.ТорговыйОбъект
+		 И Классификатор.Контрагент = Таблица.Контрагент
+ГДЕ
+	  Таблица.Документ = ЗНАЧЕНИЕ(Документ.АктПостановкиНаБалансЕГАИС.ПустаяСсылка)
+	И Таблица.СтатусОформления В (
+		ЗНАЧЕНИЕ(Перечисление.СтатусыОформленияДокументовЕГАИС.НеОформлено),
+		ЗНАЧЕНИЕ(Перечисление.СтатусыОформленияДокументовЕГАИС.ОформленоЧастично),
+		ЗНАЧЕНИЕ(Перечисление.СтатусыОформленияДокументовЕГАИС.ТребуетсяСопоставлениеНоменклатуры)
+	)
+	И НЕ Таблица.Основание.Ссылка ЕСТЬ NULL</QueryText>
+				<MainTable>InformationRegister.СтатусыОформленияДокументовЕГАИС</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СтатусЕГАИС" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус ЕГАИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СтатусыОбработкиАктаПостановкиНаБалансЕГАИС</v8:Type>
+			</Type>
+			<Save>
+				<Field>СтатусЕГАИС</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДальнейшееДействиеЕГАИС" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дальнейшее действие ЕГАИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>cfg:EnumRef.ДальнейшиеДействияПоВзаимодействиюЕГАИС</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ДальнейшееДействиеЕГАИС</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОрганизацииЕГАИСПредставление" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организации ЕГАИСПредставление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацииЕГАИС" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организации ЕГАИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОрганизацииЕГАИС</Field>
+			</Save>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.КлассификаторОрганизацийЕГАИС</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключаемых команд</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СписокВРегистр3" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список в регистр 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	АкцизныеМаркиЕГАИС.ОрганизацияЕГАИС КАК ОрганизацияЕГАИС,
+	АкцизныеМаркиЕГАИС.АкцизнаяМарка КАК АкцизнаяМарка,
+	АкцизныеМаркиЕГАИС.Статус КАК Статус,
+	АкцизныеМаркиЕГАИС.Справка2 КАК Справка2,
+	АкцизныеМаркиЕГАИС.АлкогольнаяПродукция КАК АлкогольнаяПродукция,
+	ИСТИНА КАК Картинка
+ИЗ
+	РегистрСведений.АкцизныеМаркиЕГАИС КАК АкцизныеМаркиЕГАИС
+ГДЕ
+	АкцизныеМаркиЕГАИС.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыАкцизныхМарок.КПостановкеНаБаланс)
+	И НЕ АкцизныеМаркиЕГАИС.ОрганизацияЕГАИС.Ссылка ЕСТЬ NULL</QueryText>
+				<MainTable>InformationRegister.АкцизныеМаркиЕГАИС</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПередатьДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ИсходящийЗапросИС</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПередатьДанные</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыполнитьОбмен" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыполнитьОбменГИСМ</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьОбмен</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ИзменитьВыделенные" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьВыделенные</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ОформитьАктПостановкиНаБаланс" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить акт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить акт постановки на баланс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОформитьДокументПоРаспоряжениюГИСМ</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОформитьАктПостановкиНаБаланс</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОформитьВРегистр3" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить акт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить в регистр 3</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОформитьДокументПоРаспоряжениюГИСМ</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОформитьВРегистр3</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ОткрытьРаспоряжения">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0:bfa90848-930f-433d-8f6f-c11ac2c5eba2</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ПротоколОбменаЕГАИС</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarCreateBasedOn</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:fef727fa-f63b-4467-9367-73a2425b19e3</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>
